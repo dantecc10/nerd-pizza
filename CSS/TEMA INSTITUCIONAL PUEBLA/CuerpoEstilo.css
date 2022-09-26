@@ -180,22 +180,6 @@
         margin-right: 5%;
     }
 
-    img.LogoPartidista {
-        height: 100px;
-        border-radius: 25px;
-        margin: 15px;
-    }
-
-    img.LogoPartidista#LogoPRI {
-        background-color: white;
-        border-radius: 60px;
-    }
-
-    img.LogoPartidista#LogoPVEM {
-        background-color: lightgreen;
-        border-radius: 15px;
-    }
-
     div#ContenedorListas {
         padding: 10px;
         border-radius: 25px;
