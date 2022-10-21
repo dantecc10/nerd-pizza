@@ -81,7 +81,7 @@
         <div class="carousel slide" data-bs-ride="carousel" id="carousel-2" style="height: 600px;">
             <div class="carousel-inner h-100">
                 <div class="carousel-item active h-100"><img class="w-100 d-block position-absolute h-100 fit-cover"
-                        src="IMG\peperoni pizza banner.jpg" alt="Slide Image" style="z-index: 1;">
+                        src="IMG\pizzas\peperoni pizza banner.jpg" alt="Slide Image" style="z-index: 1;">
                     <div class="container d-flex flex-column justify-content-center h-100">
                         <div class="row">
                             <div class="col-md-6 col-xl-4 offset-md-2" style="z-index: 2;" style="color: white;">
@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <div class="carousel-item h-100"><img class="w-100 d-block position-absolute h-100 fit-cover"
-                        src="IMG\pizza mexicana banner.jpeg" alt="Slide Image" style="z-index: 1;">
+                        src="IMG\pizzas\pizza mexicana banner.jpeg" alt="Slide Image" style="z-index: 1;">
                     <div class="container d-flex flex-column justify-content-center h-100">
                         <div class="row">
                             <div class="col-md-6 col-xl-4 offset-md-2" style="z-index: 2;" style="background-color: #e49013;">
@@ -117,7 +117,7 @@
                     </div>
                 </div>
                 <div class="carousel-item h-100"><img class="w-100 d-block position-absolute h-100 fit-cover"
-                        src="IMG\Cheese Pizza.jpg" alt="Slide Image" style="z-index: 1;">
+                        src="IMG\pizzas\Cheese Pizza.jpg" alt="Slide Image" style="z-index: 1;">
                     <div class="container d-flex flex-column justify-content-center h-100">
                         <div class="row">
                             <div class="col-md-6 col-xl-4 offset-md-2" style="z-index: 2;">
