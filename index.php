@@ -29,9 +29,9 @@
                     </ul>
                     <div class="dropdown" style="padding-left: 0px;"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="text-decoration: none;color: #000000;padding-left: 0px;margin: 0px 0px 0px 80px;margin-left: 76px;">MENÚ</a>
                         <div class="dropdown-menu" style="background-color: #f62e28;padding-right: 0px;margin-right: 4px;padding-left: 0px;margin-left: -8px;">
-                            <a class="dropdown-item" href="ingredientes.html">Ingrediente</a>
-                            <a class="dropdown-item" href="Registro.html">Registro</a>
-                            <a class="dropdown-item" href="Login.html">Inicio de sesión</a>
+                            <a class="dropdown-item" href="ingredientes.php">Ingrediente</a>
+                            <a class="dropdown-item" href="Registro,php">Registro</a>
+                            <a class="dropdown-item" href="Login,php">Inicio de sesión</a>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
             <div class="text-center p-4 p-lg-5">
                 <p class="fw-bold text-primary mb-2" style="*color: #F62E28;"><span style="color: rgb(246, 46, 40);">Bienvenido a</span></p>
                 <h1 class="fw-bold mb-4">Nerd Pizza</h1>
-                <button onclick="location.href='ingredientes.html'" class="btn btn-primary active fs-5 me-2 py-2 px-4" type="button" style="background-color: #F62E28;">Menú</button>
+                <button onclick="location.href='ingredientes,php'" class="btn btn-primary active fs-5 me-2 py-2 px-4" type="button" style="background-color: #F62E28;">Menú</button>
                 <button class="btn btn-light fs-5 py-2 px-4" type="button">Información</button>
             </div>
         </div>
