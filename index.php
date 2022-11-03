@@ -30,8 +30,8 @@
                     <div class="dropdown" style="padding-left: 0px;"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="text-decoration: none;color: #000000;padding-left: 0px;margin: 0px 0px 0px 80px;margin-left: 76px;">MENÚ</a>
                         <div class="dropdown-menu" style="background-color: #f62e28;padding-right: 0px;margin-right: 4px;padding-left: 0px;margin-left: -8px;">
                             <a class="dropdown-item" href="ingredientes.php">Ingrediente</a>
-                            <a class="dropdown-item" href="Registro,php">Registro</a>
-                            <a class="dropdown-item" href="Login,php">Inicio de sesión</a>
+                            <a class="dropdown-item" href="Registro.php">Registro</a>
+                            <a class="dropdown-item" href="Login.php">Inicio de sesión</a>
                         </div>
                     </div>
                 </div>
