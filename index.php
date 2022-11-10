@@ -47,7 +47,7 @@
                 <button class="btn btn-light fs-5 py-2 px-4" type="button" onclick="location.href=''">Información</button>
             </div>
         </div>
-        <!--  Carrucel de lado
+        <!--  Carrusel de lado
         <div class="carousel slide" data-bs-ride="false" id="carousel-1">
             <div class="carousel-inner">
                 <div class="carousel-item active"></div>
