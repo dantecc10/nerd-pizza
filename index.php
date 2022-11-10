@@ -55,7 +55,7 @@
                 <h1 class="fw-bold mb-4">Nerd Pizza</h1>
                 <button onclick="location.href='ingredientes.php'" class="btn btn-primary active fs-5 me-2 py-2 px-4"
                     type="button" style="background-color: #F62E28;">Menú</button>
-                <button class="btn btn-light fs-5 py-2 px-4" type="button">Información</button>
+                <button class="btn btn-light fs-5 py-2 px-4" type="button" onclick="location.href=''">Información</button>
             </div>
         </div>
         <!--  Carrucel de lado
