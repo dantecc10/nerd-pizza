@@ -17,7 +17,7 @@ img.RedSocial {
   margin: 5px;
   cursor: pointer;
   transition: 300ms;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 img.RedSocial#Facebook:hover {
@@ -59,6 +59,11 @@ img.RedSocial#Instagram:hover {
   width: 50px;
   height: 50px;
   margin: 2.5px;
+  border-radius: 12px;
+}
+
+img.RedSocial#Instagram {
+  border-radius: 20px;
 }
 
 #ContactoCorreo {
