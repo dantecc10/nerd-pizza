@@ -40,7 +40,7 @@
                             style="background-color: #f62e28;padding-right: 0px;margin-right: 4px;padding-left: 0px;margin-left: -8px;">
                             <a class="dropdown-item" href="index.php">Inicio</a>
                             <a class="dropdown-item" href="ingredientes.php">Ingredientes</a>
-                            <a class="dropdown-item" href="Login.php">Registro</a>
+                            <a class="dropdown-item" href="Login.php">Login</a>
                         </div>
                     </div>
                 </div>
