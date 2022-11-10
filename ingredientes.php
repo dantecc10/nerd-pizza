@@ -41,12 +41,58 @@
         </div>
         <!-- Contenido -->
         <div class="container py-4 py-xl-5">
-            <div class="row mb-5">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2>Ingredientes</h2>
-                    <p class="w-lg-50">Seleccione un ingrediente para su pizza.</p>
-                </div>
-            </div>
+            <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center">
+                                    <div class="col align-middle">
+                        <div class="card shadow-sm">
+                                                        <img src="IMG/Nerd-Pizza.png">
+                            <div class="card-body">
+                                <h5 class="card-title">Zapatos color café</h5>
+                                <p class="card-text">$
+                                    599.00                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7" class="btn btn-primary">Detalles</a>
+                                    </div>
+                                    <button class="btn btn-outline-success" type="button" onclick="addProducto(1, 'bf072c2eadbfadc7cd53cf14a205624f33357ac7')">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col align-middle">
+                        <div class="card shadow-sm">
+                                                        <img src="images/productos/2/principal.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Laptop 15.6" con Windows 10</h5>
+                                <p class="card-text">$
+                                    11,999.00                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="details.php?id=2&amp;token=a2aa4aa1565d6465b4b68acd39aa795b030e94bb" class="btn btn-primary">Detalles</a>
+                                    </div>
+                                    <button class="btn btn-outline-success" type="button" onclick="addProducto(2, 'a2aa4aa1565d6465b4b68acd39aa795b030e94bb')">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col align-middle">
+                        <div class="card shadow-sm">
+                                                        <img src="images/productos/3/principal.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Smartphone Negro 32GB Dual SIM 3GB RAM</h5>
+                                <p class="card-text">$
+                                    2,899.00                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="details.php?id=3&amp;token=b68ac8fa63b0224c48a1ec5033a77a19561758f8" class="btn btn-primary">Detalles</a>
+                                    </div>
+                                    <button class="btn btn-outline-success" type="button" onclick="addProducto(3, 'b68ac8fa63b0224c48a1ec5033a77a19561758f8')">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </div>
             <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
                 <div class="col">
                     <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
