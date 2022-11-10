@@ -44,10 +44,10 @@
                 <p class="fw-bold text-primary mb-2" style="*color: #F62E28;"><span style="color: rgb(246, 46, 40);">Bienvenido a</span></p>
                 <h1 class="fw-bold mb-4">Nerd Pizza</h1>
                 <button onclick="location.href='ingredientes.php'" class="btn btn-primary active fs-5 me-2 py-2 px-4" type="button" style="background-color: #F62E28;">Menú</button>
-                <button class="btn btn-light fs-5 py-2 px-4" type="button" onclick="location.href=''">Información</button>
+                <button class="btn btn-light fs-5 py-2 px-4" type="button">Información</button>
             </div>
         </div>
-        <!--  Carrusel de lado
+        <!--  Carrucel de lado
         <div class="carousel slide" data-bs-ride="false" id="carousel-1">
             <div class="carousel-inner">
                 <div class="carousel-item active"></div>
@@ -69,13 +69,13 @@
         <!-- Carrucel con banner -->
         <div class="carousel slide" data-bs-ride="carousel" id="carousel-2" style="height: 600px;">
             <div class="carousel-inner h-100">
-                <div class="carousel-item active h-100"><img class="w-100 d-block position-absolute h-100 fit-cover" src="IMG\pizzas\peperoni pizza banner.jpg" alt="Slide Image" style="z-index: 1;">
+                <div class="carousel-item active h-100"><img class="w-100 d-block position-absolute h-100 fit-cover" src="assets\img\pizzas\peperoni pizza banner.jpg" alt="Slide Image" style="z-index: 1;">
                     <div class="container d-flex flex-column justify-content-center h-100">
                         <div class="row">
                             <div class="col-md-6 col-xl-4 offset-md-2" style="z-index: 2;" style="color: white;">
                                 <div style="max-width: 350px;">
-                                    <h1 class="text-uppercase fw-bold">Peperoni pizza<br></h1>
-                                    <h2>New pizza</h2>
+                                    <h1 class="text-uppercase fw-bold" id="textBannerTitle">Peperoni pizza<br></h1>
+                                    <h2 class="subtitleBanner">New pizza</h2>
                                     <p class="my-3">El pepperoni es una variedad de salami con pimiento de la cocina
                                         estadounidense.​ El pepperoni es característicamente suave, ligeramente ahumado
                                         y de color rojo brillante.​ El pepperoni en rodajas finas es un ingrediente
@@ -87,15 +87,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item h-100"><img class="w-100 d-block position-absolute h-100 fit-cover" src="IMG\pizzas\pizza mexicana banner.jpeg" alt="Slide Image" style="z-index: 1;">
+                <div class="carousel-item h-100"><img class="w-100 d-block position-absolute h-100 fit-cover" src="assets\img\pizzas\pizza mexicana banner.jpeg" alt="Slide Image" style="z-index: 1;">
                     <div class="container d-flex flex-column justify-content-center h-100">
                         <div class="row">
                             <div class="col-md-6 col-xl-4 offset-md-2" style="z-index: 2;" style="background-color: #e49013;">
-                                <div style="max-width: 350px;">
-                                    <h1 class="text-uppercase fw-bold">Mexican pizza<br></h1>
-                                    <h2>New pizza</h2>
+                                <div style="max-width: 350px;">22
+                                    <h1 class="text-uppercase fw-bold" id="textBannerTitle">Mexican pizza<br></h1>
+                                    <h2 class="subtitleBanner">New pizza</h2>
                                     <p class="my-3">La pizza mexicana es un tipo de pizza elaborada con los ingredientes
-                                        habituales de la cocina mexicana.</p>
+                                        habituales de la cocina mexicana.</p>2
                                     <a class="btn btn-primary btn-lg carouselButton1" role="button" href="#">Ordenar
                                         ahora</a>
                                 </div>
@@ -103,13 +103,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item h-100"><img class="w-100 d-block position-absolute h-100 fit-cover" src="IMG\pizzas\Cheese Pizza.jpg" alt="Slide Image" style="z-index: 1;">
+                <div class="carousel-item h-100"><img class="w-100 d-block position-absolute h-100 fit-cover" src="assets\img\pizzas\Cheese Pizza.jpg" alt="Slide Image" style="z-index: 1;">
                     <div class="container d-flex flex-column justify-content-center h-100">
                         <div class="row">
                             <div class="col-md-6 col-xl-4 offset-md-2" style="z-index: 2;">
                                 <div style="max-width: 350px;">
-                                    <h1 class="text-uppercase fw-bold">4 Cheese pizza<br></h1>
-                                    <h2>New pizza</h2>
+                                    <h1 class="text-uppercase fw-bold" id="textBannerTitle">4 Cheese pizza<br></h1>
+                                    <h2 class="subtitleBanner">New pizza</h2>
                                     <p class="my-3">La pizza cuatro quesos, en italiano Pizza quattro formaggi es una
                                         variante de pizza con cuatro quesos italianos, que generalmente son la mozarela,
                                         el gorgonzola, el fontina y el parmesano. Todos estos quesos son fundibles. Se
@@ -171,14 +171,14 @@
         <hr>
         <div id="RedesSociales" align="center">
             <hr id="AntesSociales">
-            <script lang="JavaScript" src="JavaScript/Redes Sociales.js"></script>
+            <script lang="JavaScript" src="assets\js\Redes Sociales.js"></script>
             <h3><a href="mailto:correo@server.com" class="TítuloArtículo" id="ContactoCorreo">Contacto</a></h3>
-            <img class="RedSocial" alt="Ícono de Facebook" id="Facebook" onclick="javascript:AbrirFacebook();" src="IMG/íconoFacebook.png" />
-            <img class="RedSocial" alt="Ícono de WhatsApp" id="WhatsApp" onclick="javascript:AbrirWhatsApp();" src="IMG/íconoWhatsApp.png" />
-            <img class="RedSocial" alt="Ícono de Messenger" id="Messenger" onclick="javascript:AbrirMessenger();" src="../IMG/íconoMessenger.png" />
-            <img class="RedSocial" alt="Ícono de Telegram" id="Telegram" onclick="javascript:AbrirTelegram();" src="../IMG/íconoTelegram.png" />
-            <img class="RedSocial" alt="Ícono de Twitter" id="Twitter" onclick="javascript:AbrirTwitter();" src="../IMG/íconoTwitter.png" />
-            <img class="RedSocial" alt="Ícono de Instagram" id="Instagram" onclick="javascript:AbrirInstagram();" src="IMG\íconoInstagram.png" />
+            <img class="RedSocial" alt="Ícono de Facebook" id="Facebook" onclick="javascript:AbrirFacebook();" src="assets\img\íconoFacebook.png" />
+            <img class="RedSocial" alt="Ícono de WhatsApp" id="WhatsApp" onclick="javascript:AbrirWhatsApp();" src="assets\img\íconoWhatsApp.png" />
+            <img class="RedSocial" alt="Ícono de Messenger" id="Messenger" onclick="javascript:AbrirMessenger();" src="assets\img\íconoMessenger.png" />
+            <img class="RedSocial" alt="Ícono de Telegram" id="Telegram" onclick="javascript:AbrirTelegram();" src="assets\img\íconoTelegram.png" />
+            <img class="RedSocial" alt="Ícono de Twitter" id="Twitter" onclick="javascript:AbrirTwitter();" src="assets\img\íconoTwitter.png" />
+            <img class="RedSocial" alt="Ícono de Instagram" id="Instagram" onclick="javascript:AbrirInstagram();" src="assets\img\íconoInstagram.png" />
         </div>
         <div class="text-center text-sm-center text-md-center text-lg-center text-xl-center text-xxl-center d-flex justify-content-center align-items-center align-content-center justify-content-md-center align-items-md-center pt-3">
             <p class="text-center text-muted d-flex d-md-flex align-items-center justify-content-md-center align-items-md-center mb-0">
