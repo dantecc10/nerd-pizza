@@ -85,6 +85,23 @@ img.RedSocial#Instagram {
 }
 
 .my-3 {
+  -webkit-text-stroke: 1px;
+  padding: 7.5%;
+  background-color: rgba(246, 205, 19, 0.5);
+  color: #000000;
+  border-radius: 10%;
+}
+
+#textBannerTitle{
+  -webkit-text-stroke: 1px;
+  padding: 7.5%;
+  background-color: rgba(246, 205, 19, 0.5);
+  color: #000000;
+  border-radius: 10%;
+}
+
+.subtitleBanner{
+  -webkit-text-stroke: 1px;
   padding: 7.5%;
   background-color: rgba(246, 205, 19, 0.5);
   color: #000000;
