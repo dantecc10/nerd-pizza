@@ -17,6 +17,7 @@ img.RedSocial {
   margin: 5px;
   cursor: pointer;
   transition: 300ms;
+  border-radius: 10px;
 }
 
 img.RedSocial#Facebook:hover {
@@ -77,4 +78,3 @@ img.RedSocial#Instagram:hover {
   background-color: white;
   color: black;
 }
-
