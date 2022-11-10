@@ -66,6 +66,10 @@ img.RedSocial#Instagram {
   border-radius: 20px;
 }
 
+img.RedSocial#Instagram:hover {
+  border-radius: 20px;
+}
+
 #ContactoCorreo {
   text-decoration: none;
 }
@@ -92,7 +96,7 @@ img.RedSocial#Instagram {
   border-radius: 10%;
 }
 
-#textBannerTitle{
+#textBannerTitle {
   -webkit-text-stroke: 1px;
   padding: 7.5%;
   background-color: rgba(246, 205, 19, 0.5);
@@ -100,7 +104,7 @@ img.RedSocial#Instagram {
   border-radius: 10%;
 }
 
-.subtitleBanner{
+.subtitleBanner {
   -webkit-text-stroke: 1px;
   padding: 7.5%;
   background-color: rgba(246, 205, 19, 0.5);
