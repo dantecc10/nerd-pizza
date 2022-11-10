@@ -1,3 +1,15 @@
+<?php
+require 'php scripts/config.php';
+require 'php scripts/database.php';
+$db = new Database();
+$con = $db->conectar();
+$sql = $con->prepare("SELECT id, nombre, precio FROM productos WHERE activo=1");
+$sql->execute();
+$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+#session_destroy();
+print_r($_SESSION);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,156 +52,51 @@
                 </div>
             </nav>
         </div>
-        <!-- Contenido -->
-        <div class="container py-4 py-xl-5">
+        <main>
+            <!-- Contenido -->
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center">
-                    <div class="col align-middle">
-                        <div class="card shadow-sm">
-                            <img src="IMG/Nerd-Pizza.png">
-                            <div class="card-body">
-                                <h5 class="card-title">Zapatos color café</h5>
-                                <p class="card-text">$
-                                    599.00 </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7" class="btn btn-primary">Detalles</a>
+                    <?php
+                    foreach ($resultado as $row) {
+                    ?>
+                        <div class="col align-middle">
+                            <div class="card shadow-sm">
+                                <?php
+                                $id = $row['id'];
+                                $imagen = "assets/img/pizzas/$id/principal.jpg";
+
+                                if (!file_exists($imagen)) {
+                                    $imagen = "assets/img/no-photo.jpg";
+                                }
+                                ?>
+                                <img src="<?php echo $imagen; ?>">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?php echo $row['nombre']; ?></h5>
+                                    <p class="card-text">$
+                                        <?php echo number_format($row['precio'], 2, '.', ',');
+                                        $row['precio']; ?>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href="details.php?id=<?php echo $row['id']; ?>&token=<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>" class="btn btn-primary">Detalles</a>
+                                        </div>
+                                        <button class="btn btn-outline-success" type="button" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Agregar al carrito</button>
                                     </div>
-                                    <button class="btn btn-outline-success" type="button" onclick="addProducto(1, 'bf072c2eadbfadc7cd53cf14a205624f33357ac7')">Agregar al carrito</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col align-middle">
-                        <div class="card shadow-sm">
-                            <img src="images/productos/2/principal.jpg">
-                            <div class="card-body">
-                                <h5 class="card-title">Laptop 15.6" con Windows 10</h5>
-                                <p class="card-text">$
-                                    11,999.00 </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="details.php?id=2&amp;token=a2aa4aa1565d6465b4b68acd39aa795b030e94bb" class="btn btn-primary">Detalles</a>
-                                    </div>
-                                    <button class="btn btn-outline-success" type="button" onclick="addProducto(2, 'a2aa4aa1565d6465b4b68acd39aa795b030e94bb')">Agregar al carrito</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col align-middle">
-                        <div class="card shadow-sm">
-                            <img src="images/productos/3/principal.jpg">
-                            <div class="card-body">
-                                <h5 class="card-title">Smartphone Negro 32GB Dual SIM 3GB RAM</h5>
-                                <p class="card-text">$
-                                    2,899.00 </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="details.php?id=3&amp;token=b68ac8fa63b0224c48a1ec5033a77a19561758f8" class="btn btn-primary">Detalles</a>
-                                    </div>
-                                    <button class="btn btn-outline-success" type="button" onclick="addProducto(3, 'b68ac8fa63b0224c48a1ec5033a77a19561758f8')">Agregar al carrito</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
-            <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-                <div class="col">
-                    <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                        <div class="card-body p-4">
-                            <p class="text-primary card-text mb-0">Article</p>
-                            <h4 class="card-title">Lorem libero donec</h4>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,
-                                dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                                metus.</p>
-                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                <div>
-                                    <input type="checkbox" name="" id="ingrediente1">Seleccionar
-                                    <p class="fw-bold mb-0"></p>
-                                    <p class="text-muted mb-0"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                        <div class="card-body p-4">
-                            <p class="text-primary card-text mb-0">Article</p>
-                            <h4 class="card-title">Lorem libero donec</h4>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,
-                                dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                                metus.</p>
-                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                <div>
-                                    <input type="checkbox" name="" id="ingrediente1">Seleccionar
-                                    <p class="fw-bold mb-0"></p>
-                                    <p class="text-muted mb-0"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                        <div class="card-body p-4">
-                            <p class="text-primary card-text mb-0">Article</p>
-                            <h4 class="card-title">Lorem libero donec</h4>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,
-                                dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                                metus.</p>
-                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                <div>
-                                    <input type="checkbox" name="" id="ingrediente1">Seleccionar
-                                    <p class="fw-bold mb-0"></p>
-                                    <p class="text-muted mb-0"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                        <div class="card-body p-4">
-                            <p class="text-primary card-text mb-0">Article</p>
-                            <h4 class="card-title">Lorem libero donec</h4>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,
-                                dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                                metus.</p>
-                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                <div>
-                                    <input type="checkbox" name="" id="ingrediente1">Seleccionar
-                                    <p class="fw-bold mb-0"></p>
-                                    <p class="text-muted mb-0"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                        <div class="card-body p-4">
-                            <p class="text-primary card-text mb-0">Article</p>
-                            <h4 class="card-title">Lorem libero donec</h4>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,
-                                dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                                metus.</p>
-                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                <div>
-                                    <input type="checkbox" name="" id="ingrediente1">Seleccionar
-                                    <p class="fw-bold mb-0"></p>
-                                    <p class="text-muted mb-0"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-            </div>
-        </div>
+        </main>
     </section>
-    <!-- Pie de pagina -->
+
+
+
+
+    <!-- Footer -->
     <div class="container text-center py-4 py-lg-5" style="background-color: #969A97;">
         <div class="row justify-content-center">
             <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last item social">
@@ -243,6 +150,25 @@
                 Copyright © 2022 Nerd Pizza</p>
         </div>
     </div>
+    <script>
+        function addProducto(id, token) {
+            let url = 'clases/carrito.php'
+            let formData = new FormData()
+            formData.append('id', id)
+            formData.append('token', token)
+            fetch(url, {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'cors'
+                }).then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        let elemento = document.getElementById("num_cart")
+                        elemento.innerHTML = data.número
+                    }
+                })
+        }
+    </script>
 </body>
 
 </html>
