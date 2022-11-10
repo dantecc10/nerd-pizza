@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>     <link rel="icon" type="image/jpeg" sizes="960x957" href="IMG/Nerd-Pizza.png">
+<head>
+    <link rel="icon" type="image/jpeg" sizes="960x957" href="IMG/Nerd-Pizza.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Ingredientes</title>
@@ -42,14 +43,14 @@
         <!-- Contenido -->
         <div class="container py-4 py-xl-5">
             <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center">
-                                    <div class="col align-middle">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center">
+                    <div class="col align-middle">
                         <div class="card shadow-sm">
-                                                        <img src="IMG/Nerd-Pizza.png">
+                            <img src="IMG/Nerd-Pizza.png">
                             <div class="card-body">
                                 <h5 class="card-title">Zapatos color café</h5>
                                 <p class="card-text">$
-                                    599.00                                </p>
+                                    599.00 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a href="details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7" class="btn btn-primary">Detalles</a>
@@ -59,13 +60,13 @@
                             </div>
                         </div>
                     </div>
-                                    <div class="col align-middle">
+                    <div class="col align-middle">
                         <div class="card shadow-sm">
-                                                        <img src="images/productos/2/principal.jpg">
+                            <img src="images/productos/2/principal.jpg">
                             <div class="card-body">
                                 <h5 class="card-title">Laptop 15.6" con Windows 10</h5>
                                 <p class="card-text">$
-                                    11,999.00                                </p>
+                                    11,999.00 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a href="details.php?id=2&amp;token=a2aa4aa1565d6465b4b68acd39aa795b030e94bb" class="btn btn-primary">Detalles</a>
@@ -75,13 +76,13 @@
                             </div>
                         </div>
                     </div>
-                                    <div class="col align-middle">
+                    <div class="col align-middle">
                         <div class="card shadow-sm">
-                                                        <img src="images/productos/3/principal.jpg">
+                            <img src="images/productos/3/principal.jpg">
                             <div class="card-body">
                                 <h5 class="card-title">Smartphone Negro 32GB Dual SIM 3GB RAM</h5>
                                 <p class="card-text">$
-                                    2,899.00                                </p>
+                                    2,899.00 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a href="details.php?id=3&amp;token=b68ac8fa63b0224c48a1ec5033a77a19561758f8" class="btn btn-primary">Detalles</a>
@@ -91,8 +92,8 @@
                             </div>
                         </div>
                     </div>
-                            </div>
-        </div>
+                </div>
+            </div>
             <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
                 <div class="col">
                     <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
@@ -228,14 +229,14 @@
         <hr>
         <div id="RedesSociales" align="center">
             <hr id="AntesSociales">
-            <script lang="JavaScript" src="JavaScript/Redes_Sociales.js"></script>
+            <script lang="JavaScript" src="assets\js\Redes Sociales.js"></script>
             <h3><a href="mailto:correo@server.com" class="TítuloArtículo" id="ContactoCorreo">Contacto</a></h3>
-            <img class="RedSocial" alt="Ícono de Facebook" id="Facebook" onclick="javascript:AbrirFacebook();" src="IMG/íconoFacebook.png" />
-            <img class="RedSocial" alt="Ícono de WhatsApp" id="WhatsApp" onclick="javascript:AbrirWhatsApp();" src="IMG/íconoWhatsApp.png" />
-            <img class="RedSocial" alt="Ícono de Messenger" id="Messenger" onclick="javascript:AbrirMessenger();" src="../IMG/íconoMessenger.png" />
-            <img class="RedSocial" alt="Ícono de Telegram" id="Telegram" onclick="javascript:AbrirTelegram();" src="../IMG/íconoTelegram.png" />
-            <img class="RedSocial" alt="Ícono de Twitter" id="Twitter" onclick="javascript:AbrirTwitter();" src="../IMG/íconoTwitter.png" />
-            <img class="RedSocial" alt="Ícono de Instagram" id="Instagram" onclick="javascript:AbrirInstagram();" src="IMG\íconoInstagram.png" />
+            <img class="RedSocial" alt="Ícono de Facebook" id="Facebook" onclick="javascript:AbrirFacebook();" src="assets\img\íconoFacebook.png" />
+            <img class="RedSocial" alt="Ícono de WhatsApp" id="WhatsApp" onclick="javascript:AbrirWhatsApp();" src="assets\img\íconoWhatsApp.png" />
+            <img class="RedSocial" alt="Ícono de Messenger" id="Messenger" onclick="javascript:AbrirMessenger();" src="assets\img\íconoMessenger.png" />
+            <img class="RedSocial" alt="Ícono de Telegram" id="Telegram" onclick="javascript:AbrirTelegram();" src="assets\img\íconoTelegram.png" />
+            <img class="RedSocial" alt="Ícono de Twitter" id="Twitter" onclick="javascript:AbrirTwitter();" src="assets\img\íconoTwitter.png" />
+            <img class="RedSocial" alt="Ícono de Instagram" id="Instagram" onclick="javascript:AbrirInstagram();" src="assets\img\íconoInstagram.png" />
         </div>
         <div class="text-center text-sm-center text-md-center text-lg-center text-xl-center text-xxl-center d-flex justify-content-center align-items-center align-content-center justify-content-md-center align-items-md-center pt-3">
             <p class="text-center text-muted d-flex d-md-flex align-items-center justify-content-md-center align-items-md-center mb-0">
