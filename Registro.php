@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Inicio de sesión</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Articles-Badges-images.css">
     <link rel="stylesheet" href="assets/css/Navbar-Centered-Links-icons.css">
@@ -38,7 +38,7 @@
                             style="text-decoration: none;color: #000000;padding-left: 0px;margin: 0px 0px 0px 80px;margin-left: 76px;">MENÚ</a>
                         <div class="dropdown-menu"
                             style="background-color: #f62e28;padding-right: 0px;margin-right: 4px;padding-left: 0px;margin-left: -8px;">
-                            <a class="dropdown-item" href="index,php">Inicio</a>
+                            <a class="dropdown-item" href="index.php">Inicio</a>
                             <a class="dropdown-item" href="ingredientes.php">Ingredientes</a>
                             <a class="dropdown-item" href="Registro.php">Registro</a>
                         </div>
