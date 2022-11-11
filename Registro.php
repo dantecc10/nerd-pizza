@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" type="image/jpeg" sizes="960x957" href="IMG/Nerd-Pizza.png">
+    <link rel="icon" type="image/jpeg" sizes="960x957" href="assets\img\Nerd-Pizza.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Registro</title>

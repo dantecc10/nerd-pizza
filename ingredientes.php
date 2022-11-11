@@ -1,15 +1,15 @@
-<?php
-require 'php scripts/config.php';
-require 'php scripts/database.php';
-$db = new Database();
-$con = $db->conectar();
-$sql = $con->prepare("SELECT id, nombre, precio FROM productos WHERE activo=1");
-$sql->execute();
-$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-#session_destroy();
-print_r($_SESSION);
-?>
+<!-- <?php
+//require 'php scripts/config.php';
+//require 'php scripts/database.php';
+//$db = new Database();
+//$con = $db->conectar();
+//$sql = $con->prepare("SELECT id, nombre, precio FROM productos WHERE activo=1");
+//$sql->execute();
+//$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+//
+//#session_destroy();
+//print_r($_SESSION);
+//?> -->
 <!DOCTYPE html>
 <html lang="en">
 
