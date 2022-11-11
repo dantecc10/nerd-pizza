@@ -1,5 +1,4 @@
 <?php
-    require 'db.php';
     $para = 'jeremy.hdez9@gmail.com';
     $asunto = 'Prueba 1';
     $mensaje = '¿Ves esto?';
