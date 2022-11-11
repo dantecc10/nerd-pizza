@@ -1,15 +1,16 @@
-<!-- <?php
-//require 'php scripts/config.php';
-//require 'php scripts/database.php';
-//$db = new Database();
-//$con = $db->conectar();
-//$sql = $con->prepare("SELECT id, nombre, precio FROM productos WHERE activo=1");
-//$sql->execute();
-//$resultado = $sql->fetchAll(PDO::FETCH_ASSOC); -->
-//
-//#session_destroy();
-//print_r($_SESSION);
-//?> -->
+<?php
+require 'php scripts/config.php';
+require 'php scripts/conexión_pdo.php';
+$db = new Database();
+$con = $db->conectar();
+$sql = $con->prepare("SELECT id, nombre, precio FROM productos WHERE activo=1");
+$sql->execute();
+$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+#session_destroy();
+print_r($_SESSION);
+
+?>
 <!DOCTYPE html>
 <html class="text-dark" lang="en">
 
@@ -59,25 +60,6 @@
                 <button class="btn btn-light fs-5 py-2 px-4" type="button">Información</button>
             </div>
         </div>
-        <!--  Carrucel de lado
-        <div class="carousel slide" data-bs-ride="false" id="carousel-1">
-            <div class="carousel-inner">
-                <div class="carousel-item active"></div>
-                <div class="carousel-item"><img class="w-100 d-block"
-                        src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image"></div>
-                <div class="carousel-item"><img class="w-100 d-block"
-                        src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image"></div>
-            </div>
-            <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span
-                        class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a
-                    class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span
-                        class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
-            <ol class="carousel-indicators">
-                <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
-                <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
-                <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
-            </ol>
-        </div> -->
         <!-- Carrucel con banner -->
         <div class="carousel slide" data-bs-ride="carousel" id="carousel-2" style="height: 600px;">
             <div class="carousel-inner h-100">
@@ -89,7 +71,7 @@
                                     <h1 class="text-uppercase fw-bold" id="textBannerTitle">Peperoni pizza<br></h1>
                                     <h2 class="subtitleBanner">New pizza</h2>
                                     <p class="my-3">El pepperoni es una variedad de salami con pimiento de la cocina
-                                        estadounidense.​ El pepperoni es característicamente suave, ligeramente ahumado
+                                        estadounidense. El pepperoni es característicamente suave, ligeramente ahumado
                                         y de color rojo brillante.​ El pepperoni en rodajas finas es un ingrediente
                                         popular en las pizzas de los Estados Unidos.​</p>
                                     <a class="btn btn-primary btn-lg carouselButton1" role="button" href="#">Ordenar
