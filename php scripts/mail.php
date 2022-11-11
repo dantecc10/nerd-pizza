@@ -5,5 +5,5 @@ include('Mail.php');
     $mensaje = '¿Ves esto?';
     $remitente = "From: nerdpizza@equipo1.prog5a.com" . " \r\n" . "CC: " . $para;
     mail($para, $asunto, $mensaje, $remitente);
-    echo "Correo enviado";
+    echo $para . $asunto . $mensaje . $remitente;
 ?>
