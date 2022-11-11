@@ -1,8 +1,8 @@
 <?php
     require 'db.php';
-    $para = 'dantecc10@gmail.com';
+    $para = 'jeremy.hdez9@gmail.com';
     $asunto = 'Prueba 1';
     $mensaje = '¿Ves esto?';
-    $remitente = "From: nerdpizza@email.com";
-    mail($para, $asunto, $mensaje);
+    $remitente = "From: nerdpizza@equipo1.prog5a.com" . " \r\n" . "CC: " . $para;
+    mail($para, $asunto, $mensaje, $remitente);
 ?>
