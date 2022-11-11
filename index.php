@@ -28,8 +28,6 @@ print_r($_SESSION);
                         <img src="assets\img\Nerd-Pizza.png" alt="Nerd Pizza" id="LogoNerdPizza">
                     </span><span>Nerd Pizza</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
 
-
-
                 <div class="collapse navbar-collapse" id="navcol-3">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"></li>
