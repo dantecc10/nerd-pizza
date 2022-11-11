@@ -26,7 +26,6 @@
 <body class="text-body" style="background-color: #969A97;">
     <section style="background-color: #F6CD13;">
         <!-- Header -->
-        <div class="container">
             <nav class="navbar navbar-light navbar-expand-md py-3">
                 <div class="container"><a class="navbar-brand d-flex align-items-center" href="#">
                         <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
@@ -52,7 +51,6 @@
                     </div>
                 </div>
             </nav>
-        </div>
         <main>
             <!-- Contenido -->
             <div class="container">
