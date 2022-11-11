@@ -99,7 +99,7 @@ img.RedSocial#Instagram:hover {
 #textBannerTitle {
   -webkit-text-stroke: 1px;
   padding: 7.5%;
-  background-color: rgba(246, 205, 19, 0.5);
+  background-color: rgba(246, 121, 19, 0.5);
   color: #000000;
   border-radius: 10%;
 }
@@ -107,7 +107,7 @@ img.RedSocial#Instagram:hover {
 .subtitleBanner {
   -webkit-text-stroke: 1px;
   padding: 7.5%;
-  background-color: rgba(246, 205, 19, 0.5);
+  background-color: rgba(246, 121, 19, 0.5);
   color: #000000;
   border-radius: 10%;
 }
