@@ -71,7 +71,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                 $ingredientes = $columna['ingredientes'];
                                 $fotoPizza = $columna['fotoPizza'];
 
-                                if ($contador = 1) {
+                                if ($contador == 1) {
                                     $activeCSS = 'active';
                                 } else {
                                     $activeCSS = '';
@@ -93,7 +93,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                         </div>
                                     </div>
                                 </div>");
-                                $contador = ($contador + 1);
+                                $contador++;
                             }
 
                             break;
