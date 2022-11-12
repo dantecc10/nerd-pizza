@@ -90,9 +90,10 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                             </div>
                                         </div>
                                     </div>
-                                ");
+                                </div>");
                                 $contador = ($contador + 1);
                             }
+
                             break;
                         case 'complementos':
                             while ($columna = mysqli_fetch_array($resultado)) {
@@ -148,7 +149,6 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                             echo "Algo anda mal en el switch.";
                             break;
                     }
-                    echo '</div>';
                 }
                 $categoría = 'pizzas';
                 $consulta = "SELECT * FROM `$categoría`";
@@ -167,15 +167,12 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                 ?>
                 <!-- Terminan banners-->
             </div>
-        </div>
-
-        <div><a class="carousel-control-prev" href="#carousel-2" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-2" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
-        <ol class="carousel-indicators">
-            <li data-bs-target="#carousel-2" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#carousel-2" data-bs-slide-to="1"></li>
-            <li data-bs-target="#carousel-2" data-bs-slide-to="2"></li>
-        </ol>
-        </div>
+            <div><a class="carousel-control-prev" href="#carousel-2" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-2" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carousel-2" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carousel-2" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carousel-2" data-bs-slide-to="2"></li>
+            </ol>
     </section>
     <!-- Pie de pagina -->
     <div class="container text-center py-4 py-lg-5" style="background-color: #969A97;">
