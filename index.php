@@ -169,9 +169,11 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                 <ol class='carousel-indicators'>
                     <li data-bs-target='#carousel-2' data-bs-slide-to='0' class='active'></li>
                 ";
-                #for ($i = 1; $i = $contador; $i++) {
-                #    echo ("<li data-bs-target='#carousel-2' data-bs-slide-to='" . $i . "'></li>");
-                #}
+                $i = 1;
+                while ($i != $contador) {
+                    echo ("<li data-bs-target='#carousel-2' data-bs-slide-to='" . ($i - 1) . "'></li>");
+                    $i++;
+                }
                 echo "</ol>";
             }
             $categoría = 'pizzas';
