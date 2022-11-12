@@ -52,16 +52,16 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                 <p class="fw-bold text-primary mb-2" style="*color: #F62E28;"><span style="color: rgb(246, 46, 40);">Bienvenido a</span></p>
                 <h1 class="fw-bold mb-4">Nerd Pizza</h1>
                 <button onclick="location.href='ingredientes.php'" class="btn btn-primary active fs-5 me-2 py-2 px-4" type="button" style="background-color: #F62E28;">Menú</button>
-                <button class="btn btn-light fs-5 py-2 px-4" type="button" >Información</button>
+                <button class="btn btn-light fs-5 py-2 px-4" type="button">Información</button>
             </div>
         </div>
         <!-- Carrucel con banner -->
         <div class="carousel slide" data-bs-ride="carousel" id="carousel-2" style="height: 600px;">
             <div class="carousel-inner h-100">
+                <!-- Inician banners-->
                 <?php
                 function crearBanners($conexión, $consulta, $categoría)
                 {
-                    $consulta = "SELECT * FROM `$categoría`";
                     $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
 
                     #echo ('<tr>');
@@ -71,54 +71,95 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                     #echo ('<th>Ruta de foto</th>');
                     #echo ('</tr>');
 
-                    while ($columna = mysqli_fetch_array($resultado)) {
-                        $idPizza = $columna['idPizza'];
-                        $nombrePizza = $columna['nombrePizza'];
-                        $ingredientes = $columna['ingredientes'];
-                        $fotoPizza = $columna['fotoPizza'];
-                        echo ("<div class='carousel-item active h-100'>
-                        <img class='w-100 d-block position-absolute h-100 fit-cover' src='assets/img/" . $idPizza .  "/principal.jpg' alt='Imagen de " . $nombrePizza . "' style='z-index: 1;'>
-                        <div class='container d-flex flex-column justify-content-center h-100'>
-                            <div class='row'>
-                                <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
-                                    <div style='max-width: 350px;'>
-                                        <h1 class='text-uppercase fw-bold' id='textBannerTitle'>" . $nombrePizza . "<br></h1>
-                                        <h2 class='subtitleBanner'>Pruébala</h2>
-                                        <p class='my-3'>Contiene: " . $ingredientes . "</p>
-                                        <a class='btn btn-primary btn-lg carouselButton1' role='button' href=''>Pedir</a>
+                    switch ($categoría) {
+                        case 'pizzas':
+                            while ($columna = mysqli_fetch_array($resultado)) {
+                                $idPizza = $columna['idPizza'];
+                                $nombrePizza = $columna['nombrePizza'];
+                                $ingredientes = $columna['ingredientes'];
+                                $fotoPizza = $columna['fotoPizza'];
+                                echo ("<div class='carousel-item active h-100'>
+                                <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoPizza . "' alt='Imagen de pizza " . $nombrePizza . "' style='z-index: 1;'>
+                                <div class='container d-flex flex-column justify-content-center h-100'>
+                                    <div class='row'>
+                                        <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
+                                            <div style='max-width: 350px;'>
+                                                <h1 class='text-uppercase fw-bold' id='textBannerTitle'>" . $nombrePizza . "<br></h1>
+                                                <h2 class='subtitleBanner'>Nueva</h2>
+                                                <p class='my-3'>Contiene: " . $ingredientes . "</p>
+                                                <a class='btn btn-primary btn-lg carouselButton1' role='button' href='https://equipo1.prog5a.com/ingredientes.php'>Pedir</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>");
+                            </div>");
+                            }
+                            break;
+                        case 'complementos':
+                            while ($columna = mysqli_fetch_array($resultado)) {
+                                $idComplemento = $columna['idComplemento'];
+                                $nombreComplemento = $columna['nombreComplemento'];
+                                $precioComplemento = $columna['precioComplemento'];
+                                $descripciónC = $columna['descripcionC'];
+                                $fotoComplemento = ("assets/img/complementos/" . $idComplemento . "/principal.jpg");
+                                echo ("<div class='carousel-item active h-100'>
+                                <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoComplemento . "' alt='Imagen de complemento " . $nombreComplemento . "' style='z-index: 1;'>
+                                <div class='container d-flex flex-column justify-content-center h-100'>
+                                    <div class='row'>
+                                        <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
+                                            <div style='max-width: 350px;'>
+                                                <h1 class='text-uppercase fw-bold' id='textBannerTitle'>" . $nombreComplemento . "<br></h1>
+                                                <h2 class='subtitleBanner'>Nuevo</h2>
+                                                <p class='my-3'>" . $descripciónC . "</p>
+                                                <a class='btn btn-primary btn-lg carouselButton1' role='button' href='https://equipo1.prog5a.com/ingredientes.php'>Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>");
+                            }
+                            break;
+                        case 'bebidas':
+                            while ($columna = mysqli_fetch_array($resultado)) {
+                                $idBebidas = $columna['idBebidas'];
+                                $nombreBebida = $columna['nombreBebida'];
+                                $precioBebida = $columna['precioBebida'];
+                                $contenidoB = $columna['contenidoB'];
+                                $fotoBebida = ("assets/img/complementos/" . $idBebidas . "/principal.jpg");
+                                echo ("<div class='carousel-item active h-100'>
+                                <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoBebida . "' alt='Imagen de bebida " . $nombreBebida . "' style='z-index: 1;'>
+                                <div class='container d-flex flex-column justify-content-center h-100'>
+                                    <div class='row'>
+                                        <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
+                                            <div style='max-width: 350px;'>
+                                                <h1 class='text-uppercase fw-bold' id='textBannerTitle'>" . $nombreBebida . "<br></h1>
+                                                <h2 class='subtitleBanner'>Nueva</h2>
+                                                <p class='my-3'>Contiene: " . $contenidoB . "</p>
+                                                <a class='btn btn-primary btn-lg carouselButton1' role='button' href='https://equipo1.prog5a.com/ingredientes.php'>Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>");
+                            }
+                            break;
+
+                        default:
+                            echo "Algo anda mal en el switch.";
+                            break;
                     }
                 }
+                $consulta = "SELECT * FROM `$categoría`";
                 $categoría = 'pizzas';
                 crearBanners($conexión, $consulta, $categoría);
+                $consulta = "SELECT * FROM `$categoría`";
                 $categoría = 'complementos';
                 crearBanners($conexión, $consulta, $categoría);
-
+                $consulta = "SELECT * FROM `$categoría`";
+                $categoría = 'bebidas';
+                crearBanners($conexión, $consulta, $categoría);
                 ?>
-
-                <!-- Inician banners-->
-                <div class='carousel-item active h-100'>
-                    <img class='w-100 d-block position-absolute h-100 fit-cover' src='assets\img\pizzas\$id\principal' alt='Slide Image' style='z-index: 1;'>
-                    <div class='container d-flex flex-column justify-content-center h-100'>
-                        <div class='row'>
-                            <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
-                                <div style='max-width: 350px;'>
-                                    <h1 class='text-uppercase fw-bold' id='textBannerTitle'>Nombre Pizza<br></h1>
-                                    <h2 class='subtitleBanner'>Pruébala</h2>
-                                    <p class='my-3'>Descripción</p>
-                                    <a class='btn btn-primary btn-lg carouselButton1' role='button' href='#'>Pedir</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Terminan banners-->
-
             </div>
             <div><a class="carousel-control-prev" href="#carousel-2" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-2" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
             <ol class="carousel-indicators">
