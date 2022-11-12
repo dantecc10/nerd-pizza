@@ -179,7 +179,6 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
             #$categoría = 'complementos'; #$consulta = "SELECT * FROM `$categoría`"; #$resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos"); #crearBanners($conexión, $consulta, $categoría, $resultado); #$categoría = 'bebidas'; #$consulta = "SELECT * FROM `$categoría`"; #$resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos"); #crearBanners($conexión, $consulta, $categoría, $resultado);
             ?>
             <!-- Terminan banners-->
-
         </div>
     </section>
     <!-- Pie de pagina -->
