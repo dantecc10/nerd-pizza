@@ -166,9 +166,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                         <span class='visually-hidden'>Next </span>
                     </a>
                 </div>
-                <ol class='carousel-indicators'>
-                    <li data-bs-target='#carousel-2' data-bs-slide-to='0' class='active'></li>
-                ";
+                <ol class='carousel-indicators'>";
                 $i = 1;
                 while ($i != $contador) {
                     echo ("<li data-bs-target='#carousel-2' data-bs-slide-to='" . ($i - 1) . "'></li>");
