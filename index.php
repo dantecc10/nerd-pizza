@@ -170,8 +170,8 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                     <li data-bs-target='#carousel-2' data-bs-slide-to='0' class='active'></li>
                 ";
                 $i = 1;
-                while ($i != $contador) {
-                    echo ("<li data-bs-target='#carousel-2' data-bs-slide-to='" . ($i - 1) . "'></li>");
+                while ($i != ($contador - 1)) {
+                    echo ("<li data-bs-target='#carousel-2' data-bs-slide-to='" . ($i) . "'></li>");
                     $i++;
                 }
                 echo "</ol>";
