@@ -72,12 +72,10 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                 $fotoPizza = $columna['fotoPizza'];
 
                                 if ($contador = 1) {
-                                    $activeCSS = true;
+                                    $activeCSS = 'active';
                                 } else {
-                                    $activeCSS = false;
+                                    $activeCSS = '';
                                 }
-
-
 
                                 echo ("<div class='carousel-item active h-100'>
                                 <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoPizza . "' alt='Imagen de pizza " . $nombrePizza . "' style='z-index: 1;'>
@@ -95,6 +93,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                 </div>
                             </div>
                         </div>");
+                                $contador = ($contador + 1);
                             }
                             break;
                         case 'complementos':
