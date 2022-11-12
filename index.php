@@ -103,7 +103,8 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                 $precioComplemento = $columna['precioComplemento'];
                                 $descripciónC = $columna['descripcionC'];
                                 $fotoComplemento = ("assets/img/complementos/" . $idComplemento . "/principal.jpg");
-                                echo ("<div class='carousel-item active h-100'>
+                                echo ("
+                                <div class='carousel-item active h-100'>
                                 <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoComplemento . "' alt='Imagen de complemento " . $nombreComplemento . "' style='z-index: 1;'>
                                 <div class='container d-flex flex-column justify-content-center h-100'>
                                     <div class='row'>
@@ -117,7 +118,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                         </div>
                                     </div>
                                 </div>
-                            </div>");
+                                </div>");
                             }
                             break;
                         case 'bebidas':
@@ -167,13 +168,14 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                 ?>
                 <!-- Terminan banners-->
             </div>
+        </div>
 
-            <div><a class="carousel-control-prev" href="#carousel-2" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-2" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
-            <ol class="carousel-indicators">
-                <li data-bs-target="#carousel-2" data-bs-slide-to="0" class="active"></li>
-                <li data-bs-target="#carousel-2" data-bs-slide-to="1"></li>
-                <li data-bs-target="#carousel-2" data-bs-slide-to="2"></li>
-            </ol>
+        <div><a class="carousel-control-prev" href="#carousel-2" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-2" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carousel-2" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carousel-2" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carousel-2" data-bs-slide-to="2"></li>
+        </ol>
         </div>
     </section>
     <!-- Pie de pagina -->
