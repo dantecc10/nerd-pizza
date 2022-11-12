@@ -60,8 +60,10 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
             <div class="carousel-inner h-100">
                 <!-- Inician banners-->
                 <?php
-                function crearBanners($conexión, $consulta, $categoría, $resultado)
+                function crearBanners($categoría, $resultado, $conexión)
                 {
+                    $consulta = "SELECT * FROM `$categoría`";
+                    $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
                     switch ($categoría) {
                         case 'pizzas':
                             $contador = 1;
@@ -153,9 +155,8 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                     }
                 }
                 $categoría = 'pizzas';
-                $consulta = "SELECT * FROM `$categoría`";
-                $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
-                crearBanners($conexión, $consulta, $categoría, $resultado);
+
+                crearBanners($categoría, $resultado, $conexión);
 
                 #$categoría = 'complementos'; #$consulta = "SELECT * FROM `$categoría`"; #$resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos"); #crearBanners($conexión, $consulta, $categoría, $resultado); #$categoría = 'bebidas'; #$consulta = "SELECT * FROM `$categoría`"; #$resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos"); #crearBanners($conexión, $consulta, $categoría, $resultado);
                 ?>
