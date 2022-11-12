@@ -90,7 +90,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                             </div>
                                         </div>
                                     </div>
-                                </div>");
+                                ");
                                 $contador = ($contador + 1);
                             }
                             break;
@@ -148,6 +148,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                             echo "Algo anda mal en el switch.";
                             break;
                     }
+                    echo '</div>';
                 }
                 $categoría = 'pizzas';
                 $consulta = "SELECT * FROM `$categoría`";
