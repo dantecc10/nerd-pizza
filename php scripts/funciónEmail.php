@@ -6,7 +6,7 @@ function enviarEmail($destinatario, $remitente, $asunto, $mensaje)
     mail($destinatario, $asunto, $mensaje, $origenDestino);
 }
 
-enviarEmail('dantecc10@gmail.com', 'nerdpizza@equipo1.prog5a.com', 'Esto llega de inmediato', 'hola');
+enviarEmail('jeremy.hdez9@gmail.com', 'nerdpizza@equipo1.prog5a.com', 'Esto llega de inmediato', 'hola');
 #$para = 'jeremy.hdez9@gmail.com';
 #$asunto = 'Prueba 1';
 #$mensaje = '¿Ves esto?';
