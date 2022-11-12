@@ -57,29 +57,31 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
         </div>
         <!-- Carrucel con banner -->
         <div class="carousel slide" data-bs-ride="carousel" id="carousel-2" style="height: 600px;">
-            <div class="carousel-inner h-100">
-                <!-- Inician banners-->
-                <?php
-                function crearBanners($categoría, $resultado, $conexión)
-                {
-                    $consulta = "SELECT * FROM `$categoría`";
-                    $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
-                    switch ($categoría) {
-                        case 'pizzas':
-                            $contador = 1;
-                            while ($columna = mysqli_fetch_array($resultado)) {
-                                $idPizza = $columna['idPizza'];
-                                $nombrePizza = $columna['nombrePizza'];
-                                $ingredientes = $columna['ingredientes'];
-                                $fotoPizza = $columna['fotoPizza'];
 
-                                if ($contador == 1) {
-                                    $activeCSS = 'active';
-                                } else {
-                                    $activeCSS = '';
-                                }
+            <!-- Inician banners-->
+            <?php
+            function crearBanners($categoría, $resultado, $conexión)
+            {
+                echo "<div class='carousel-inner h-100'>";
+                $contador = 1;
+                $consulta = "SELECT * FROM `$categoría`";
+                $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
+                switch ($categoría) {
+                    case 'pizzas':
+                        #
+                        while ($columna = mysqli_fetch_array($resultado)) {
+                            $idPizza = $columna['idPizza'];
+                            $nombrePizza = $columna['nombrePizza'];
+                            $ingredientes = $columna['ingredientes'];
+                            $fotoPizza = $columna['fotoPizza'];
 
-                                echo ("
+                            if ($contador == 1) {
+                                $activeCSS = 'active';
+                            } else {
+                                $activeCSS = '';
+                            }
+
+                            echo ("
                                 <div class='carousel-item " . $activeCSS . " h-100'>
                                     <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoPizza . "' alt='Imagen de pizza " . $nombrePizza . "' style='z-index: 1;'>
                                     <div class='container d-flex flex-column justify-content-center h-100'>
@@ -95,18 +97,17 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                         </div>
                                     </div>
                                 </div>");
-                                $contador++;
-                            }
-
-                            break;
-                        case 'complementos':
-                            while ($columna = mysqli_fetch_array($resultado)) {
-                                $idComplemento = $columna['idComplemento'];
-                                $nombreComplemento = $columna['nombreComplemento'];
-                                $precioComplemento = $columna['precioComplemento'];
-                                $descripciónC = $columna['descripcionC'];
-                                $fotoComplemento = ("assets/img/complementos/" . $idComplemento . "/principal.jpg");
-                                echo ("
+                            $contador++;
+                        }
+                        break;
+                    case 'complementos':
+                        while ($columna = mysqli_fetch_array($resultado)) {
+                            $idComplemento = $columna['idComplemento'];
+                            $nombreComplemento = $columna['nombreComplemento'];
+                            $precioComplemento = $columna['precioComplemento'];
+                            $descripciónC = $columna['descripcionC'];
+                            $fotoComplemento = ("assets/img/complementos/" . $idComplemento . "/principal.jpg");
+                            echo ("
                                 <div class='carousel-item active h-100'>
                                 <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoComplemento . "' alt='Imagen de complemento " . $nombreComplemento . "' style='z-index: 1;'>
                                 <div class='container d-flex flex-column justify-content-center h-100'>
@@ -122,16 +123,16 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                     </div>
                                 </div>
                                 </div>");
-                            }
-                            break;
-                        case 'bebidas':
-                            while ($columna = mysqli_fetch_array($resultado)) {
-                                $idBebidas = $columna['idBebidas'];
-                                $nombreBebida = $columna['nombreBebida'];
-                                $precioBebida = $columna['precioBebida'];
-                                $contenidoB = $columna['contenidoB'];
-                                $fotoBebida = ("assets/img/complementos/" . $idBebidas . "/principal.jpg");
-                                echo ("<div class='carousel-item active h-100'>
+                        }
+                        break;
+                    case 'bebidas':
+                        while ($columna = mysqli_fetch_array($resultado)) {
+                            $idBebidas = $columna['idBebidas'];
+                            $nombreBebida = $columna['nombreBebida'];
+                            $precioBebida = $columna['precioBebida'];
+                            $contenidoB = $columna['contenidoB'];
+                            $fotoBebida = ("assets/img/complementos/" . $idBebidas . "/principal.jpg");
+                            echo ("<div class='carousel-item active h-100'>
                                 <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoBebida . "' alt='Imagen de bebida " . $nombreBebida . "' style='z-index: 1;'>
                                 <div class='container d-flex flex-column justify-content-center h-100'>
                                     <div class='row'>
@@ -146,38 +147,39 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                     </div>
                                 </div>
                             </div>");
-                            }
-                            break;
+                        }
+                        break;
 
-                        default:
-                            echo "Algo anda mal en el switch.";
-                            break;
-                    }
+                    default:
+                        echo "Algo anda mal en el switch.";
+                        break;
                 }
-                $categoría = 'pizzas';
+                #echo $contador;
+                echo "</div>
+                <div>
+                    <a class='carousel-control-prev' href='#carousel-2' role='button' data-bs-slide='prev'>
+                        <span class='carousel-control-prev-icon'></span>
+                        <span class='visually-hidden'>Previous</span>
+                    </a>
+                    <a class='carousel-control-next' href='#carousel-2' role='button' data-bs-slide='next'>
+                        <span class='carousel-control-next-icon'></span>
+                        <span class='visually-hidden'>Next </span>
+                    </a>
+                </div>
+                <ol class='carousel-indicators'>
+                    <li data-bs-target='#carousel-2' data-bs-slide-to='0' class='active'></li>
+                ";
+                for ($i = 1; $i = $contador; $i++) {
+                    echo ("<li data-bs-target='#carousel-2' data-bs-slide-to='" . $i . "'></li>");
+                }
+                echo "</ol>";
+            }
+            $categoría = 'pizzas';
+            crearBanners($categoría, $resultado, $conexión);
+            #$categoría = 'complementos'; #$consulta = "SELECT * FROM `$categoría`"; #$resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos"); #crearBanners($conexión, $consulta, $categoría, $resultado); #$categoría = 'bebidas'; #$consulta = "SELECT * FROM `$categoría`"; #$resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos"); #crearBanners($conexión, $consulta, $categoría, $resultado);
+            ?>
+            <!-- Terminan banners-->
 
-                crearBanners($categoría, $resultado, $conexión);
-
-                #$categoría = 'complementos'; #$consulta = "SELECT * FROM `$categoría`"; #$resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos"); #crearBanners($conexión, $consulta, $categoría, $resultado); #$categoría = 'bebidas'; #$consulta = "SELECT * FROM `$categoría`"; #$resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos"); #crearBanners($conexión, $consulta, $categoría, $resultado);
-                ?>
-                <!-- Terminan banners-->
-
-            </div>
-            <div>
-                <a class="carousel-control-prev" href="#carousel-2" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                    <span class="visually-hidden">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carousel-2" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                    <span class="visually-hidden">Next </span>
-                </a>
-            </div>
-            <ol class="carousel-indicators">
-                <li data-bs-target="#carousel-2" data-bs-slide-to="0" class="active"></li>
-                <li data-bs-target="#carousel-2" data-bs-slide-to="1"></li>
-                <li data-bs-target="#carousel-2" data-bs-slide-to="2"></li>
-            </ol>
         </div>
     </section>
     <!-- Pie de pagina -->
