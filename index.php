@@ -64,11 +64,21 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                 {
                     switch ($categoría) {
                         case 'pizzas':
+                            $contador = 1;
                             while ($columna = mysqli_fetch_array($resultado)) {
                                 $idPizza = $columna['idPizza'];
                                 $nombrePizza = $columna['nombrePizza'];
                                 $ingredientes = $columna['ingredientes'];
                                 $fotoPizza = $columna['fotoPizza'];
+
+                                if ($contador = 1) {
+                                    $activeCSS = true;
+                                } else {
+                                    $activeCSS = false;
+                                }
+
+
+
                                 echo ("<div class='carousel-item active h-100'>
                                 <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoPizza . "' alt='Imagen de pizza " . $nombrePizza . "' style='z-index: 1;'>
                                 <div class='container d-flex flex-column justify-content-center h-100'>
@@ -83,7 +93,8 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                         </div>
                                     </div>
                                 </div>
-                            </div>");
+                            </div>
+                        </div>");
                             }
                             break;
                         case 'complementos':
@@ -157,6 +168,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                 ?>
                 <!-- Terminan banners-->
             </div>
+
             <div><a class="carousel-control-prev" href="#carousel-2" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-2" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
             <ol class="carousel-indicators">
                 <li data-bs-target="#carousel-2" data-bs-slide-to="0" class="active"></li>
