@@ -78,7 +78,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                 }
 
                                 echo ("
-                                <div class='carousel-item h-100'>
+                                <div class='carousel-item " . $activeCSS . " h-100'>
                                     <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoPizza . "' alt='Imagen de pizza " . $nombrePizza . "' style='z-index: 1;'>
                                     <div class='container d-flex flex-column justify-content-center h-100'>
                                         <div class='row'>
