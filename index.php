@@ -5,7 +5,8 @@ require 'php scripts/conexión_pdo.php';
 #session_destroy();
 print_r($_SESSION);
 
-?>
+$conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
+
 <!DOCTYPE html>
 <html class="text-dark" lang="en">
 
@@ -57,7 +58,38 @@ print_r($_SESSION);
         <!-- Carrucel con banner -->
         <div class="carousel slide" data-bs-ride="carousel" id="carousel-2" style="height: 600px;">
             <div class="carousel-inner h-100">
-                <div class="carousel-item active h-100"><img class="w-100 d-block position-absolute h-100 fit-cover" src="assets\img\pizzas\peperoni pizza banner.jpg" alt="Slide Image" style="z-index: 1;">
+                <?php
+                function crearBanners($conexión, $consulta, $categoría)
+                {
+                    $consulta = "SELECT * FROM `$categoría`";
+                    $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
+
+                    echo ('<tr>');
+                    echo ('<th>ID</th>');
+                    echo ('<th>Pizza</th>');
+                    echo ('<th>Ingredientes</th>');
+                    echo ('<th>Ruta de foto</th>');
+                    echo ('</tr>');
+                    while ($columna = mysqli_fetch_array($resultado)) {
+                        echo ("<tr>");
+                        echo ("<td>" . $columna['idPizza'] . "</td>");
+                        echo ("<td>" . $columna['nombrePizza'] . "</td>");
+                        echo ("<td>" . $columna['ingredientes'] . "</td>");
+                        echo ("<td>" . $columna['fotoPizza'] . "</td>");
+
+                        echo ("</tr>");
+                    }
+                }
+                $categoría = 'pizzas';
+                crearBanners($conexión, $consulta, $categoría);
+                $categoría = 'complementos';
+                crearBanners($conexión, $consulta, $categoría);
+
+                ?>
+
+                <!-- Inician banners-->
+                <div class="carousel-item active h-100">
+                    <img class="w-100 d-block position-absolute h-100 fit-cover" src="assets\img\pizzas\peperoni pizza banner.jpg" alt="Slide Image" style="z-index: 1;">
                     <div class="container d-flex flex-column justify-content-center h-100">
                         <div class="row">
                             <div class="col-md-6 col-xl-4 offset-md-2" style="z-index: 2;" style="color: white;">
@@ -75,7 +107,8 @@ print_r($_SESSION);
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item h-100"><img class="w-100 d-block position-absolute h-100 fit-cover" src="assets\img\pizzas\pizza mexicana banner.jpeg" alt="Slide Image" style="z-index: 1;">
+                <div class="carousel-item h-100">
+                    <img class="w-100 d-block position-absolute h-100 fit-cover" src="assets\img\pizzas\pizza mexicana banner.jpeg" alt="Slide Image" style="z-index: 1;">
                     <div class="container d-flex flex-column justify-content-center h-100">
                         <div class="row">
                             <div class="col-md-6 col-xl-4 offset-md-2" style="z-index: 2;" style="background-color: #e49013;">
@@ -91,7 +124,8 @@ print_r($_SESSION);
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item h-100"><img class="w-100 d-block position-absolute h-100 fit-cover" src="assets\img\pizzas\Cheese Pizza.jpg" alt="Slide Image" style="z-index: 1;">
+                <div class="carousel-item h-100">
+                    <img class="w-100 d-block position-absolute h-100 fit-cover" src="assets\img\pizzas\Cheese Pizza.jpg" alt="Slide Image" style="z-index: 1;">
                     <div class="container d-flex flex-column justify-content-center h-100">
                         <div class="row">
                             <div class="col-md-6 col-xl-4 offset-md-2" style="z-index: 2;">
@@ -110,6 +144,8 @@ print_r($_SESSION);
                         </div>
                     </div>
                 </div>
+                <!-- Terminan banners-->
+
             </div>
             <div><a class="carousel-control-prev" href="#carousel-2" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-2" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
             <ol class="carousel-indicators">
