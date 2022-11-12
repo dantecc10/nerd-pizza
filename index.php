@@ -173,8 +173,14 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                 <li data-bs-target="#carousel-2" data-bs-slide-to="1"></li>
                 <li data-bs-target="#carousel-2" data-bs-slide-to="2"></li>
             </ol>
+        </div>
     </section>
     <!-- Pie de pagina -->
+
+
+
+
+
     <div class="container text-center py-4 py-lg-5" style="background-color: #969A97;">
         <div class="row justify-content-center">
             <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last item social">
