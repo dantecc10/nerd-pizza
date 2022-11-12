@@ -80,7 +80,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                 echo ("<div class='carousel-item " . $activeCSS . " h-100'>
                                 <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoPizza . "' alt='Imagen de pizza " . $nombrePizza . "' style='z-index: 1;'>
                                 <div class='container d-flex flex-column justify-content-center h-100'>
-                                <div class='row'>
+                                    <div class='row'>
                                         <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
                                             <div style='max-width: 350px;'>
                                                 <h1 class='text-uppercase fw-bold' id='textBannerTitle'>" . $nombrePizza . "<br></h1>
@@ -90,9 +90,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>");
+                                </div>");
                                 $contador = ($contador + 1);
                             }
                             break;
@@ -108,7 +106,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                 <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoComplemento . "' alt='Imagen de complemento " . $nombreComplemento . "' style='z-index: 1;'>
                                 <div class='container d-flex flex-column justify-content-center h-100'>
                                     <div class='row'>
-                                    <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
+                                        <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
                                             <div style='max-width: 350px;'>
                                                 <h1 class='text-uppercase fw-bold' id='textBannerTitle'>" . $nombreComplemento . "<br></h1>
                                                 <h2 class='subtitleBanner'>Nuevo</h2>
