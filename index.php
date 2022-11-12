@@ -90,6 +90,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                                 </div>");
                                 $contador = ($contador + 1);
                             }
