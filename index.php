@@ -64,20 +64,33 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                     $consulta = "SELECT * FROM `$categoría`";
                     $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
 
-                    echo ('<tr>');
-                    echo ('<th>ID</th>');
-                    echo ('<th>Pizza</th>');
-                    echo ('<th>Ingredientes</th>');
-                    echo ('<th>Ruta de foto</th>');
-                    echo ('</tr>');
-                    while ($columna = mysqli_fetch_array($resultado)) {
-                        echo ("<tr>");
-                        echo ("<td>" . $columna['idPizza'] . "</td>");
-                        echo ("<td>" . $columna['nombrePizza'] . "</td>");
-                        echo ("<td>" . $columna['ingredientes'] . "</td>");
-                        echo ("<td>" . $columna['fotoPizza'] . "</td>");
+                    #echo ('<tr>');
+                    #echo ('<th>ID</th>');
+                    #echo ('<th>Pizza</th>');
+                    #echo ('<th>Ingredientes</th>');
+                    #echo ('<th>Ruta de foto</th>');
+                    #echo ('</tr>');
 
-                        echo ("</tr>");
+                    while ($columna = mysqli_fetch_array($resultado)) {
+                        $idPizza = $columna['idPizza'];
+                        $nombrePizza = $columna['nombrePizza'];
+                        $ingredientes = $columna['ingredientes'];
+                        $fotoPizza = $columna['fotoPizza'];
+                        echo ("<div class='carousel-item active h-100'>
+                        <img class='w-100 d-block position-absolute h-100 fit-cover' src='assets/img/" . $idPizza .  "/principal.jpg' alt='Imagen de " . $nombrePizza . "' style='z-index: 1;'>
+                        <div class='container d-flex flex-column justify-content-center h-100'>
+                            <div class='row'>
+                                <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
+                                    <div style='max-width: 350px;'>
+                                        <h1 class='text-uppercase fw-bold' id='textBannerTitle'>" . $nombrePizza . "<br></h1>
+                                        <h2 class='subtitleBanner'>Pruébala</h2>
+                                        <p class='my-3'>Contiene: " . $ingredientes . "</p>
+                                        <a class='btn btn-primary btn-lg carouselButton1' role='button' href=''>Pedir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>");
                     }
                 }
                 $categoría = 'pizzas';
@@ -88,62 +101,22 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                 ?>
 
                 <!-- Inician banners-->
-                <div class="carousel-item active h-100">
-                    <img class="w-100 d-block position-absolute h-100 fit-cover" src="assets\img\pizzas\peperoni pizza banner.jpg" alt="Slide Image" style="z-index: 1;">
-                    <div class="container d-flex flex-column justify-content-center h-100">
-                        <div class="row">
-                            <div class="col-md-6 col-xl-4 offset-md-2" style="z-index: 2;" style="color: white;">
-                                <div style="max-width: 350px;">
-                                    <h1 class="text-uppercase fw-bold" id="textBannerTitle">Peperoni pizza<br></h1>
-                                    <h2 class="subtitleBanner">New pizza</h2>
-                                    <p class="my-3">El pepperoni es una variedad de salami con pimiento de la cocina
-                                        estadounidense. El pepperoni es característicamente suave, ligeramente ahumado
-                                        y de color rojo brillante.​ El pepperoni en rodajas finas es un ingrediente
-                                        popular en las pizzas de los Estados Unidos.​</p>
-                                    <a class="btn btn-primary btn-lg carouselButton1" role="button" href="#">Ordenar
-                                        ahora</a>
+                <div class='carousel-item active h-100'>
+                    <img class='w-100 d-block position-absolute h-100 fit-cover' src='assets\img\pizzas\$id\principal' alt='Slide Image' style='z-index: 1;'>
+                    <div class='container d-flex flex-column justify-content-center h-100'>
+                        <div class='row'>
+                            <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
+                                <div style='max-width: 350px;'>
+                                    <h1 class='text-uppercase fw-bold' id='textBannerTitle'>Nombre Pizza<br></h1>
+                                    <h2 class='subtitleBanner'>Pruébala</h2>
+                                    <p class='my-3'>Descripción</p>
+                                    <a class='btn btn-primary btn-lg carouselButton1' role='button' href='#'>Pedir</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item h-100">
-                    <img class="w-100 d-block position-absolute h-100 fit-cover" src="assets\img\pizzas\pizza mexicana banner.jpeg" alt="Slide Image" style="z-index: 1;">
-                    <div class="container d-flex flex-column justify-content-center h-100">
-                        <div class="row">
-                            <div class="col-md-6 col-xl-4 offset-md-2" style="z-index: 2;" style="background-color: #e49013;">
-                                <div style="max-width: 350px;">22
-                                    <h1 class="text-uppercase fw-bold" id="textBannerTitle">Mexican pizza<br></h1>
-                                    <h2 class="subtitleBanner">New pizza</h2>
-                                    <p class="my-3">La pizza mexicana es un tipo de pizza elaborada con los ingredientes
-                                        habituales de la cocina mexicana.</p>2
-                                    <a class="btn btn-primary btn-lg carouselButton1" role="button" href="#">Ordenar
-                                        ahora</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100">
-                    <img class="w-100 d-block position-absolute h-100 fit-cover" src="assets\img\pizzas\Cheese Pizza.jpg" alt="Slide Image" style="z-index: 1;">
-                    <div class="container d-flex flex-column justify-content-center h-100">
-                        <div class="row">
-                            <div class="col-md-6 col-xl-4 offset-md-2" style="z-index: 2;">
-                                <div style="max-width: 350px;">
-                                    <h1 class="text-uppercase fw-bold" id="textBannerTitle">4 Cheese pizza<br></h1>
-                                    <h2 class="subtitleBanner">New pizza</h2>
-                                    <p class="my-3">La pizza cuatro quesos, en italiano Pizza quattro formaggi es una
-                                        variante de pizza con cuatro quesos italianos, que generalmente son la mozarela,
-                                        el gorgonzola, el fontina y el parmesano. Todos estos quesos son fundibles. Se
-                                        derriten sobre una base de salsa de tomate, o también hay recetas sin tomate.
-                                    </p>
-                                    <a class="btn btn-primary btn-lg carouselButton1" role="button" href="#">Ordenar
-                                        ahora</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- Terminan banners-->
 
             </div>
