@@ -60,17 +60,8 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
             <div class="carousel-inner h-100">
                 <!-- Inician banners-->
                 <?php
-                function crearBanners($conexión, $consulta, $categoría)
+                function crearBanners($conexión, $consulta, $categoría, $resultado)
                 {
-                    $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
-
-                    #echo ('<tr>');
-                    #echo ('<th>ID</th>');
-                    #echo ('<th>Pizza</th>');
-                    #echo ('<th>Ingredientes</th>');
-                    #echo ('<th>Ruta de foto</th>');
-                    #echo ('</tr>');
-
                     switch ($categoría) {
                         case 'pizzas':
                             while ($columna = mysqli_fetch_array($resultado)) {
@@ -81,7 +72,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                 echo ("<div class='carousel-item active h-100'>
                                 <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoPizza . "' alt='Imagen de pizza " . $nombrePizza . "' style='z-index: 1;'>
                                 <div class='container d-flex flex-column justify-content-center h-100'>
-                                    <div class='row'>
+                                <div class='row'>
                                         <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
                                             <div style='max-width: 350px;'>
                                                 <h1 class='text-uppercase fw-bold' id='textBannerTitle'>" . $nombrePizza . "<br></h1>
@@ -106,7 +97,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                 <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoComplemento . "' alt='Imagen de complemento " . $nombreComplemento . "' style='z-index: 1;'>
                                 <div class='container d-flex flex-column justify-content-center h-100'>
                                     <div class='row'>
-                                        <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
+                                    <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
                                             <div style='max-width: 350px;'>
                                                 <h1 class='text-uppercase fw-bold' id='textBannerTitle'>" . $nombreComplemento . "<br></h1>
                                                 <h2 class='subtitleBanner'>Nuevo</h2>
@@ -149,15 +140,20 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                             break;
                     }
                 }
-                $consulta = "SELECT * FROM `$categoría`";
                 $categoría = 'pizzas';
-                crearBanners($conexión, $consulta, $categoría);
                 $consulta = "SELECT * FROM `$categoría`";
+                $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
+                crearBanners($conexión, $consulta, $categoría, $resultado);
+
                 $categoría = 'complementos';
-                crearBanners($conexión, $consulta, $categoría);
                 $consulta = "SELECT * FROM `$categoría`";
+                $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
+                crearBanners($conexión, $consulta, $categoría, $resultado);
+
                 $categoría = 'bebidas';
-                crearBanners($conexión, $consulta, $categoría);
+                $consulta = "SELECT * FROM `$categoría`";
+                $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
+                crearBanners($conexión, $consulta, $categoría, $resultado);
                 ?>
                 <!-- Terminan banners-->
             </div>
