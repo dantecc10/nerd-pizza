@@ -59,6 +59,7 @@
     <section style="background-color: #F6CD13;">
         <main>
             <!-- Contenido -->
+            <!-- Copia de carrusel dinámico de banners en Bootstrap -->
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center">
                     <?php
@@ -96,6 +97,8 @@
                 </div>
             </div>
         </main>
+
+        <!-- Copia de tarjetas de catálogo prueba-pagos -->
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center">
                 <div class="col align-middle">
@@ -145,6 +148,33 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copia de tarjetas con buen formato en Bootrstrap -->
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
         </div>
