@@ -55,6 +55,8 @@
                 </div>
             </div>
         </nav>
+    </section>
+    <section style="background-color: #F6CD13;">
         <main>
             <!-- Contenido -->
             <div class="container">
