@@ -8,8 +8,7 @@
         mail($destinatario, $asunto, $mensaje, $origenDestino);
     }
     $mensaje =
-    "<!DOCTYPE html>
-    <html lang='en'>
+    "<html lang='en'>
     <head>
     <head>
         <link rel='icon' type='image/jpeg' sizes='960x957' href='assets\img\Nerd-Pizza.png'>
