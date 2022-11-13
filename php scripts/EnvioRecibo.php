@@ -1,5 +1,5 @@
 <?php
-    require 'db.php';
+    //require 'db.php';
     require 'funcionEmail.php';
     $mensaje =
     "<!DOCTYPE html>
