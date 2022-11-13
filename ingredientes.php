@@ -151,7 +151,7 @@
                 </div>
             </div>
         </div>
-        <!-- Copia de tarjetas con buen formato en Bootrstrap -->
+        <!-- Copia de tarjetas con buen formato en Bootstrap -->
         <div class="card-deck">
             <div class="card">
                 <img class="card-img-top" src="..." alt="Card image cap">
