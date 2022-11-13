@@ -2,8 +2,7 @@
 require 'php scripts/config.php';
 require 'php scripts/conexión_pdo.php';
 
-#session_destroy();
-print_r($_SESSION);
+#print_r($_SESSION);
 
 $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
 
@@ -154,7 +153,6 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                         echo "Algo anda mal en el switch.";
                         break;
                 }
-                #echo $contador;
                 echo "</div>
                 <div>
                     <a class='carousel-control-prev' href='#carousel-2' role='button' data-bs-slide='prev'>
