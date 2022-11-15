@@ -12,7 +12,7 @@
     echo generateRandomString() . "espacio";
 
     function claveSecreto($randomString){
-        intval($randomString);
+        intval($randomString, $base = 10);
         $claveSecreta = ($randomString*2);
 
         return $claveSecreta;
