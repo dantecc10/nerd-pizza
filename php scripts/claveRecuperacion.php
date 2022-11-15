@@ -12,7 +12,7 @@
     echo generateRandomString();
 
     function claveSecreto($randomString){
-        $claveSecreta = ($randomString/2)^2;
+        $claveSecreta = ($randomString/2);
 
         return $claveSecreta;
     }
