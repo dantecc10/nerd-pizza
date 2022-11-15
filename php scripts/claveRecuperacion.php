@@ -18,4 +18,4 @@ function generateRandomString($length = 6)
 
         echo "<br>" . "Clave secreta" . $claveSecreta . "<br>";
     }
-    echo generateRandomString() . " espacio";
+    echo generateRandomString();
