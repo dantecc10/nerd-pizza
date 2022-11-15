@@ -7,11 +7,11 @@ function generaClave()
     $dígitoAleatorioGenerado = 0;
     $claveRecuperación = "";
     while ($contadorDígitos < 6) {
-        #if ($contadorDígitos = 1) {
-        #    $dígitoAleatorioGenerado = rand(1, $max);
-        #} else {
-        #    $dígitoAleatorioGenerado = rand($min, $max);
-        #}
+        if ($contadorDígitos = 1) {
+            $dígitoAleatorioGenerado = rand(1, $max);
+        } else {
+            $dígitoAleatorioGenerado = rand($min, $max);
+        }
 
         $claveRecuperación = ("" . "$dígitoAleatorioGenerado");
 
