@@ -1,5 +1,5 @@
 <?php
-    function generateRandomString($length = 10) {
+    function generateRandomString($length = 6) {
         $characters = '0123456789';
         $charactersLength = strlen($characters);
         $randomString = '';
@@ -9,5 +9,9 @@
         return $randomString;
     }
     
-    echo generateRandomString();
+    echo $randomString;
+
+    function claveSecreto($randomString){
+        $claveSecreta = ($randomString/2)^2;
+    }
 ?>
