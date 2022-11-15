@@ -20,5 +20,4 @@ function generaClave($claveRecuperación, $claveRecuperaciónEmail)
     $claveRecuperaciónEmail = $claveRecuperación;
     return $claveRecuperación;
 }
-generaClave($claveRecuperación, $claveRecuperaciónEmail);
-echo $claveRecuperaciónEmail;
+echo generaClave($claveRecuperación, $claveRecuperaciónEmail);
