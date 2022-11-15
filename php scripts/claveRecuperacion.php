@@ -13,11 +13,12 @@
 
     function claveSecreto($randomString){
         intval($randomString);
+
         $claveSecreta = ($randomString*2);
 
         return $claveSecreta;
         
     }
 
-    echo "Operacion: " . "<br>" . claveSecreto($randomString);
+    echo  "<br>" . "Operacion: " . $claveSecreta;
 ?>
