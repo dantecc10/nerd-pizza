@@ -1,11 +1,11 @@
 <?php
-function generaClave()
+$claveRecuperación = "";
+function generaClave($claveRecuperación)
 {
     $contadorDígitos = 0;
     $min = 0;
     $max = 9;
     $dígitoAleatorioGenerado = 0;
-    $claveRecuperación = "";
 
 
     $dígitoAleatorioGenerado = rand(1, $max);
@@ -18,4 +18,5 @@ function generaClave()
     }
     echo $claveRecuperación;
 }
-generaClave();
+generaClave($claveRecuperación);
+echo $claveRecuperación;
