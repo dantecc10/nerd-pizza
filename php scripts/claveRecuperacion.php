@@ -12,9 +12,11 @@
     echo generateRandomString();
 
     function claveSecreto($randomString){
+        intval($randomString);
         $claveSecreta = ($randomString/2);
 
         return $claveSecreta;
+        
     }
 
     echo "\n" . claveSecreto($randomString);
