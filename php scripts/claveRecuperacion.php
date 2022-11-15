@@ -15,5 +15,7 @@ function generateRandomString($length = 6)
         $claveSecreta = $numClave * 2;
 
         return $claveSecreta;
+
+        echo "<br>" . "Clave secreta" . $claveSecreta . "<br>";
     }
     echo generateRandomString() . " espacio";
