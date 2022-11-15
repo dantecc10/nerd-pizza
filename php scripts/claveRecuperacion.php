@@ -18,4 +18,6 @@
 
         echo  "<br>" . "Operacion: " . $claveSecreta;
     }
+    
+    echo generateRandomString();
 ?>
