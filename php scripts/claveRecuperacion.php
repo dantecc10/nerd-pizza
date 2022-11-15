@@ -9,12 +9,13 @@
         return $randomString;
     }
     
-    echo generateRandomString() . "espacio";
+    echo generateRandomString() . " espacio";
 
     function claveSecreto($randomString){
-        intval($randomString);
+        $numClave = intval($randomString);
         
-        $claveSecreta = ($randomString*2);
+
+        $claveSecreta = $numClave*2;
 
         return $claveSecreta;
         
