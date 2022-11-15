@@ -21,7 +21,7 @@
             </label>
         </p>
         <p>
-            <label>Escriba un mensajeS:
+            <label>Escriba un mensaje:
             <input type="text" name="mensaje">
             </label>
         </p>
