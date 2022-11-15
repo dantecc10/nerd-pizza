@@ -9,9 +9,13 @@
         return $randomString;
     }
     
-    echo $randomString;
+    echo generateRandomString();
 
     function claveSecreto($randomString){
         $claveSecreta = ($randomString/2)^2;
+
+        return $claveSecreta;
     }
+
+    echo claveSecreto($randomString);
 ?>
