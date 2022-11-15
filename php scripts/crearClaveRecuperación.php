@@ -13,7 +13,7 @@ function generaClave()
         #    $dígitoAleatorioGenerado = rand($min, $max);
         #}
         $dígitoAleatorioGenerado = rand($min, $max);
-        $claveRecuperación = ("" . "$dígitoAleatorioGenerado");
+        $claveRecuperación = ("$claveRecuperación" . "$dígitoAleatorioGenerado");
 
         $contadorDígitos++;
     }
