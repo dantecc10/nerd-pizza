@@ -7,18 +7,13 @@ function generateRandomString($length = 6)
     for ($i = 0; $i < $length; $i++) {
         $randomString .= $characters[rand(1, $charactersLength + 1)];
     }
-    return $randomString;
-}
+    
+        return $randomString;
+    
+        $numClave = intval($randomString);
 
-echo generateRandomString() . " espacio";
+        $claveSecreta = $numClave * 2;
 
-function claveSecreto($randomString)
-{
-    $numClave = intval($randomString);
-
-    $claveSecreta = $numClave * 2;
-
-    return $claveSecreta;
-}
-
-echo  "<br>" . "Operacion: " . claveSecreto($claveSecreta);
+        return $claveSecreta;
+    }
+    echo generateRandomString() . " espacio";
