@@ -17,5 +17,5 @@
         return $claveSecreta;
     }
 
-    echo claveSecreto($randomString);
+    echo "\n" . claveSecreto($randomString);
 ?>
