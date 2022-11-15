@@ -1,7 +1,7 @@
 <?php
 function generaClave()
 {
-    $contadorDígitos = 1;
+    $contadorDígitos = 0;
     $min = 0;
     $max = 9;
     $dígitoAleatorioGenerado = 0;
@@ -10,12 +10,7 @@ function generaClave()
 
     $dígitoAleatorioGenerado = rand(1, $max);
     $claveRecuperación = ("$claveRecuperación" . "$dígitoAleatorioGenerado");
-    while ($contadorDígitos < 6) {
-        #if ($contadorDígitos = 1) {
-        #    $dígitoAleatorioGenerado = rand(1, $max);
-        #} else {
-        #    $dígitoAleatorioGenerado = rand($min, $max);
-        #}
+    while ($contadorDígitos < 5) {
         $dígitoAleatorioGenerado = rand($min, $max);
         $claveRecuperación = ("$claveRecuperación" . "$dígitoAleatorioGenerado");
 
