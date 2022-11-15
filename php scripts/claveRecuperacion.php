@@ -16,7 +16,6 @@ function claveSecreto($randomString)
 {
     $numClave = intval($randomString);
 
-
     $claveSecreta = $numClave * 2;
 
     return $claveSecreta;
