@@ -13,11 +13,9 @@
         $claveSecreta = ($randomString*2);
 
         return $claveSecreta;
-        
+                
+        echo $randomString . "espacio";
+
+        echo  "<br>" . "Operacion: " . $claveSecreta;
     }
-
-    echo $randomString . "espacio";
-
-    echo  "<br>" . "Operacion: " . $claveSecreta;
-
 ?>
