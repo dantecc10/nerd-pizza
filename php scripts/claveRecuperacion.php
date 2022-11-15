@@ -12,12 +12,12 @@
     echo generateRandomString() . "espacio";
 
     function claveSecreto($randomString){
-        intval($randomString, $base = 10);
+        intval($randomString);
         $claveSecreta = ($randomString*2);
 
         return $claveSecreta;
         
     }
 
-    echo "\n" . claveSecreto($randomString);
+    echo "Operacion: " . "<br>" . claveSecreto($randomString);
 ?>
