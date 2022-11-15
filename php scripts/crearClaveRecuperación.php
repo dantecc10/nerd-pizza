@@ -17,6 +17,19 @@ function generaClave($claveRecuperación, $claveRecuperaciónEmail)
     }
     #return $claveRecuperación;
     echo $claveRecuperaciónEmail;
+    enviarEmail($destinatario, $remitente, $asunto, $mensaje)
+{
+    include('Mail.php');
+    $origenDestino = "From: $remitente" . " \r\n" . "CC: " . $destinatario;
+    mail($destinatario, $asunto, $mensaje, $origenDestino);
 }
-echo generaClave($claveRecuperación, $claveRecuperaciónEmail);
+}
+function enviarEmail($destinatario, $remitente, $asunto, $mensaje)
+{
+    include('Mail.php');
+    $origenDestino = "From: $remitente" . " \r\n" . "CC: " . $destinatario;
+    mail($destinatario, $asunto, $mensaje, $origenDestino);
+}
+
+
 generaClave($claveRecuperación, $claveRecuperaciónEmail);
