@@ -1,6 +1,7 @@
 <?php
 $claveRecuperación = "";
-function generaClave($claveRecuperación)
+$claveRecuperaciónEmail = "";
+function generaClave($claveRecuperación, $claveRecuperaciónEmail)
 {
     $contadorDígitos = 0;
     $min = 0;
@@ -16,7 +17,8 @@ function generaClave($claveRecuperación)
     }
 
     #echo $claveRecuperación;
+    $claveRecuperación = $claveRecuperaciónEmail;
     return $claveRecuperación;
 }
-generaClave($claveRecuperación);
-echo $claveRecuperación;
+generaClave($claveRecuperación, $claveRecuperaciónEmail);
+echo $claveRecuperaciónEmail;
