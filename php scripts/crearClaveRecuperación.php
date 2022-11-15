@@ -7,7 +7,6 @@ function generaClave($claveRecuperación)
     $max = 9;
     $dígitoAleatorioGenerado = 0;
 
-
     $dígitoAleatorioGenerado = rand(1, $max);
     $claveRecuperación = ("$claveRecuperación" . "$dígitoAleatorioGenerado");
     while ($contadorDígitos < 5) {
@@ -17,6 +16,7 @@ function generaClave($claveRecuperación)
         $contadorDígitos++;
     }
     echo $claveRecuperación;
+    return $claveRecuperación;
 }
 generaClave($claveRecuperación);
 echo $claveRecuperación;
