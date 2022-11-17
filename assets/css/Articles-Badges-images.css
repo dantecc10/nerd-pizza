@@ -122,8 +122,8 @@ a.navbar-brand.d-flex.align-items-center {
   -webkit-text-stroke: 1px #f62e28;
 }
 
-div.dropdown a.dropdown-toggle {
+a.dropdown-toggle {
   color: white;
-  padding: 30%; 
+  padding: 30%;
   border-radius: 30%;
 }
