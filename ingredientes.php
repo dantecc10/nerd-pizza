@@ -111,6 +111,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <a href="details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7" class="btn btn-primary">Detalles</a>
+                                    <input type="number" class="btn btn-primary">
                                 </div>
                                 <button class="btn btn-outline-success" type="button" onclick="addProducto(1, 'bf072c2eadbfadc7cd53cf14a205624f33357ac7')">Agregar al carrito</button>
                             </div>
