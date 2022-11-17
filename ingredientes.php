@@ -1,12 +1,13 @@
 <!-- <?php
-        //require 'php scripts/config.php';
-        //require 'php scripts/database.php';
+        require 'php scripts/config.php';
+        require 'php scripts/database.php';
         //$db = new Database();
         //$con = $db->conectar();
         //$sql = $con->prepare("SELECT id, nombre, precio FROM productos WHERE activo=1");
         //$sql->execute();
         //$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         //
+
         //#session_destroy();
         //print_r($_SESSION);
         //
@@ -99,65 +100,90 @@
         </main>
 
         <!-- Copia de tarjetas de catálogo prueba-pagos -->
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center">
-                <div class="col align-middle">
-                    <div class="card shadow-sm">
-                        <img src="images/productos/1/principal.jpg">
-                        <div class="card-body">
-                            <h5 class="card-title">Zapatos color café</h5>
-                            <p class="card-text">$
+        <div class='container'>
+
+            <?php
+            function generarCatálogo($categoría, $resultado, $conexión)
+            {
+                echo "<div class='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center'>";
+                $contador = 1;
+                $consulta = "SELECT * FROM `$categoría`";
+                $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
+                while ($columna = mysqli_fetch_array($resultado)) {
+                    $idBebidas = $columna['idBebidas'];
+                    $nombreBebida = $columna['nombreBebida'];
+                    $precioBebida = $columna['precioBebida'];
+                    $contenidoB = $columna['contenidoB'];
+                    $fotoBebida = ("assets/img/complementos/" . $idBebidas . "/principal.jpg");
+                    echo ("<div class='carousel-item active h-100'>
+                            <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoBebida . "' alt='Imagen de bebida " . $nombreBebida . "' style='z-index: 1;'>
+                            <div class='container d-flex flex-column justify-content-center h-100'>
+                                <div class='row'>
+                                    <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
+                                        <div style='max-width: 350px;'>
+                                            <h1 class='text-uppercase fw-bold' id='textBannerTitle'>" . $nombreBebida . "<br></h1>
+                                            <h2 class='subtitleBanner'>Nueva</h2>
+                                            <p class='my-3'>Contiene: " . $contenidoB . "</p>
+                                            <a class='btn btn-primary btn-lg carouselButton1' role='button' href='https://equipo1.prog5a.com/ingredientes.php'>Pedir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>");
+                }
+
+                echo ("
+                <div class='col align-middle'>
+                    <div class='card shadow-sm'>
+                        <img src='images/productos/1/principal.jpg'>
+                        <div class='card-body'>
+                            <h5 class='card-title'>Zapatos color café</h5>
+                            <p class='card-text'>$
                                 599.00 </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7" class="btn btn-primary">Detalles</a>
-                                    <input type="number" class="btn btn-primary">
-                                    <select>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                            <div class='d-flex justify-content-between align-items-center'>
+                                <div class='btn-group'>
+                                    <a href='details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7' class='btn btn-primary'>Detalles</a>
+                                    <input type='number' class='btn btn-primary'>
+                                    <select name='tamaño'>
+                                        <option for='tamaño' value=''></option>
+                                        <option for='tamaño' value=''></option>
+                                        <option for='tamaño' value=''></option>
+                                        <option for='tamaño' value=''></option>
+                                        <option for='tamaño' value=''></option>
                                     </select>
                                 </div>
-                                <button class="btn btn-outline-success" type="button" onclick="addProducto(1, 'bf072c2eadbfadc7cd53cf14a205624f33357ac7')">Agregar al carrito</button>
+                                <button class='btn btn-outline-success' type='button' onclick='addProducto(1, 'bf072c2eadbfadc7cd53cf14a205624f33357ac7')'>Agregar al carrito</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col align-middle">
-                    <div class="card shadow-sm">
-                        <img src="images/productos/2/principal.jpg">
-                        <div class="card-body">
-                            <h5 class="card-title">Laptop 15.6" con Windows 10</h5>
-                            <p class="card-text">$
-                                11,999.00 </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="details.php?id=2&amp;token=a2aa4aa1565d6465b4b68acd39aa795b030e94bb" class="btn btn-primary">Detalles</a>
-                                </div>
-                                <button class="btn btn-outline-success" type="button" onclick="addProducto(2, 'a2aa4aa1565d6465b4b68acd39aa795b030e94bb')">Agregar al carrito</button>
-                            </div>
-                        </div>
+                ");
+
+
+                echo "</div>
+                    <div>
+                        <a class='carousel-control-prev' href='#carousel-2' role='button' data-bs-slide='prev'>
+                            <span class='carousel-control-prev-icon'></span>
+                            <span class='visually-hidden'>Previous</span>
+                        </a>
+                        <a class='carousel-control-next' href='#carousel-2' role='button' data-bs-slide='next'>
+                            <span class='carousel-control-next-icon'></span>
+                            <span class='visually-hidden'>Next </span>
+                        </a>
                     </div>
-                </div>
-                <div class="col align-middle">
-                    <div class="card shadow-sm">
-                        <img src="images/productos/3/principal.jpg">
-                        <div class="card-body">
-                            <h5 class="card-title">Smartphone Negro 32GB Dual SIM 3GB RAM</h5>
-                            <p class="card-text">$
-                                2,899.00 </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="details.php?id=3&amp;token=b68ac8fa63b0224c48a1ec5033a77a19561758f8" class="btn btn-primary">Detalles</a>
-                                </div>
-                                <button class="btn btn-outline-success" type="button" onclick="addProducto(3, 'b68ac8fa63b0224c48a1ec5033a77a19561758f8')">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <ol class='carousel-indicators'>
+                        <li data-bs-target='#carousel-2' data-bs-slide-to='0' class='active'></li>
+                    ";
+                $i = 1;
+                while ($i != ($contador - 1)) {
+                    echo ("<li data-bs-target='#carousel-2' data-bs-slide-to='" . ($i) . "'></li>");
+                    $i++;
+                }
+                echo "</ol>";
+            }
+            ?>
+
+        </div>
         </div>
         <!-- Copia de tarjetas con buen formato en Bootstrap -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

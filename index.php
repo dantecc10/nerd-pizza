@@ -67,7 +67,6 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                 $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
                 switch ($categoría) {
                     case 'pizzas':
-                        #
                         while ($columna = mysqli_fetch_array($resultado)) {
                             $idPizza = $columna['idPizza'];
                             $nombrePizza = $columna['nombrePizza'];
