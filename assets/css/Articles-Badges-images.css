@@ -116,3 +116,9 @@ img#LogoNerdPizza {
   width: 200%;
   height: auto;
 }
+
+.formRecovery{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 5em;
+}
