@@ -59,78 +59,42 @@
     </section>
     <section style="background-color: #F6CD13;">
         <main>
-            <!-- Contenido -->
-            <!-- Copia de carrusel dinámico de banners en Bootstrap -->
-            <!--<div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center">
-                    <?php
-                    foreach ($resultado as $row) {
-                    ?>
-                        <div class="col align-middle">
-                            <div class="card shadow-sm">
-                                <?php
-                                $id = $row['id'];
-                                $imagen = "assets/img/pizzas/$id/principal.jpg";
 
-                                if (!file_exists($imagen)) {
-                                    $imagen = "assets/img/no-photo.jpg";
-                                }
-                                ?>
-                                <img src="<?php echo $imagen; ?>">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $row['nombre']; ?></h5>
-                                    <p class="card-text">$
-                                        <?php echo number_format($row['precio'], 2, '.', ',');
-                                        $row['precio']; ?>
-                                    </p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <a href="details.php?id=1" class="btn btn-primary">Detalles</a>
-                                        </div>
-                                        <button class="btn btn-outline-success" type="button" onclick="addProducto('1')">Agregar al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php
-                    }
-                    ?>
-                </div>
-            </div> -->
         </main>
 
         <!-- Copia de tarjetas de catálogo prueba-pagos -->
         <div class='container'>
 
             <?php
+            $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
             function generarCatálogo($categoría, $conexión)
             {
-                echo "<div class='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center'>";
+            echo "<div class='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center'>";
                 $contador = 1;
                 $consulta = "SELECT * FROM `$categoría`";
                 $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
                 while ($columna = mysqli_fetch_array($resultado)) {
 
-                    $idPizza = $columna['idPizza'];
-                    $nombrePizza = $columna['nombrePizza'];
-                    #$precioPizza = $columna['precioBebida'];
-                    $ingredientes = $columna['ingredientes'];
-                    $fotoPizza = ("assets/img/complementos/" . $idPizza . "/principal.png");
-                    echo ("<div class='carousel-item active h-100'>
-                            <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoPizza . "' alt='Imagen de pizza " . $nombrePizza . "' style='z-index: 1;'>
-                            <div class='container d-flex flex-column justify-content-center h-100'>
-                                <div class='row'>
-                                    <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
-                                        <div style='max-width: 350px;'>
-                                            <h1 class='text-uppercase fw-bold' id='textBannerTitle'>" . $nombrePizza . "<br></h1>
-                                            <h2 class='subtitleBanner'>Pizza</h2>
-                                            <p class='my-3'>Contiene: " . $ingredientes . "</p>
-                                            <a class='btn btn-primary btn-lg carouselButton1' role='button' href='https://equipo1.prog5a.com/ingredientes.php'>Pedir</a>
-                                        </div>
-                                    </div>
+                $idPizza = $columna['idPizza'];
+                $nombrePizza = $columna['nombrePizza'];
+                #$precioPizza = $columna['precioBebida'];
+                $ingredientes = $columna['ingredientes'];
+                $fotoPizza = ("assets/img/complementos/" . $idPizza . "/principal.png");
+                echo ("<div class='carousel-item active h-100'>
+                    <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoPizza . "' alt='Imagen de pizza " . $nombrePizza . "' style='z-index: 1;'>
+                    <div class='container d-flex flex-column justify-content-center h-100'>
+                        <div class='row'>
+                            <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
+                                <div style='max-width: 350px;'>
+                                    <h1 class='text-uppercase fw-bold' id='textBannerTitle'>" . $nombrePizza . "<br></h1>
+                                    <h2 class='subtitleBanner'>Pizza</h2>
+                                    <p class='my-3'>Contiene: " . $ingredientes . "</p>
+                                    <a class='btn btn-primary btn-lg carouselButton1' role='button' href='https://equipo1.prog5a.com/ingredientes.php'>Pedir</a>
                                 </div>
                             </div>
-                        </div>");
+                        </div>
+                    </div>
+                </div>");
                 }
                 echo ("
                 <div class='col align-middle'>
@@ -152,16 +116,16 @@
                                         <option for='tamaño' value=''></option>
                                     </select>
                                 </div>
-                                <button class='btn btn-outline-success' type='button' onclick='addProducto($idPizza, 'bf072c2eadbfadc7cd53cf14a205624f33357ac7')'>Agregar al carrito</button>
+                                <button class='btn btn-outline-success' type='button' onclick='addProducto($idPizza, ' bf072c2eadbfadc7cd53cf14a205624f33357ac7')'>Agregar al carrito</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 ");
-            }
-            generarCatálogo('pizzas', $conexión);
-            ?>
-        </div>
+                }
+                generarCatálogo('pizzas', $conexión);
+                ?>
+            </div>
         </div>
         <!-- Copia de tarjetas con buen formato en Bootstrap -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
