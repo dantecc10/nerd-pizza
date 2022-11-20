@@ -80,28 +80,12 @@
                     #$precioPizza = $columna['precioBebida'];
                     $ingredientes = $columna['ingredientes'];
                     $fotoPizza = ("assets/img/complementos/" . $idPizza . "/principal.png");
-                    echo ("<div class='carousel-item active h-100'>
-                    <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoPizza . "' alt='Imagen de pizza " . $nombrePizza . "' style='z-index: 1;'>
-                    <div class='container d-flex flex-column justify-content-center h-100'>
-                        <div class='row'>
-                            <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
-                                <div style='max-width: 350px;'>
-                                    <h1 class='text-uppercase fw-bold' id='textBannerTitle'>" . $nombrePizza . "<br></h1>
-                                    <h2 class='subtitleBanner'>Pizza</h2>
-                                    <p class='my-3'>Contiene: " . $ingredientes . "</p>
-                                    <a class='btn btn-primary btn-lg carouselButton1' role='button' href='https://equipo1.prog5a.com/ingredientes.php'>Pedir</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>");
-                }
-                echo ("
-                <div class='col align-middle'>
+
+                    echo ("<div class='col align-middle'>
                     <div class='card shadow-sm'>
                         <img src='$fotoPizza'>
                         <div class='card-body'>
-                            <h5 class='card-title'>Zapatos color café</h5>
+                            <h5 class='card-title'>$nombrePizza</h5>
                             <p class='card-text'>$
                                 599.00 </p>
                             <div class='d-flex justify-content-between align-items-center'>
@@ -109,19 +93,20 @@
                                     <a href='details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7' class='btn btn-primary'>Detalles</a>
                                     <input type='number' class='btn btn-primary'>
                                     <select name='tamaño'>
-                                        <option for='tamaño' value=''></option>
-                                        <option for='tamaño' value=''></option>
-                                        <option for='tamaño' value=''></option>
-                                        <option for='tamaño' value=''></option>
-                                        <option for='tamaño' value=''></option>
+                                        <option for='tamaño' value='1'>Chica</option>
+                                        <option for='tamaño' value='2'>Mediana</option>
+                                        <option for='tamaño' value='3'>Grande</option>
+                                        <option for='tamaño' value='4'>Familiar</option>
+                                        <option for='tamaño' value='5'>Jumbo</option>
                                     </select>
                                 </div>
                                 <button class='btn btn-outline-success' type='button' onclick='addProducto($idPizza, ' bf072c2eadbfadc7cd53cf14a205624f33357ac7')'>Agregar al carrito</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 ");
+                }
             }
             generarCatálogo('pizzas', $conexión);
             ?>
