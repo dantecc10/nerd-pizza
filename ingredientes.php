@@ -99,8 +99,7 @@
                                         <option for='tamaño' value='4'>Familiar</option>
                                         <option for='tamaño' value='5'>Jumbo</option>
                                     </select>
-                                </div>
-                                <button class='btn btn-outline-success' type='button' onclick='addProducto($idPizza, ' bf072c2eadbfadc7cd53cf14a205624f33357ac7')'>Agregar al carrito</button>
+                                    <button class='btn btn-outline-success' type='button' onclick='addProducto($idPizza, ' bf072c2eadbfadc7cd53cf14a205624f33357ac7')'>Agregar al carrito</button>
                                 </div>
                             </div>
                         </div>
