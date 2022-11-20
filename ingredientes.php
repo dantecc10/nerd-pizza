@@ -66,21 +66,21 @@
         <div class='container'>
 
             <?php
-            $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
+            $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
             function generarCatálogo($categoría, $conexión)
             {
-            echo "<div class='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center'>";
+                echo "<div class='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center'>";
                 $contador = 1;
                 $consulta = "SELECT * FROM `$categoría`";
                 $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
                 while ($columna = mysqli_fetch_array($resultado)) {
 
-                $idPizza = $columna['idPizza'];
-                $nombrePizza = $columna['nombrePizza'];
-                #$precioPizza = $columna['precioBebida'];
-                $ingredientes = $columna['ingredientes'];
-                $fotoPizza = ("assets/img/complementos/" . $idPizza . "/principal.png");
-                echo ("<div class='carousel-item active h-100'>
+                    $idPizza = $columna['idPizza'];
+                    $nombrePizza = $columna['nombrePizza'];
+                    #$precioPizza = $columna['precioBebida'];
+                    $ingredientes = $columna['ingredientes'];
+                    $fotoPizza = ("assets/img/complementos/" . $idPizza . "/principal.png");
+                    echo ("<div class='carousel-item active h-100'>
                     <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoPizza . "' alt='Imagen de pizza " . $nombrePizza . "' style='z-index: 1;'>
                     <div class='container d-flex flex-column justify-content-center h-100'>
                         <div class='row'>
@@ -122,10 +122,10 @@
                     </div>
                 </div>
                 ");
-                }
-                generarCatálogo('pizzas', $conexión);
-                ?>
-            </div>
+            }
+            generarCatálogo('pizzas', $conexión);
+            ?>
+        </div>
         </div>
         <!-- Copia de tarjetas con buen formato en Bootstrap -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
