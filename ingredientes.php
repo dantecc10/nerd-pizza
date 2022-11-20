@@ -110,20 +110,21 @@
                 $consulta = "SELECT * FROM `$categoría`";
                 $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
                 while ($columna = mysqli_fetch_array($resultado)) {
-                    $idBebidas = $columna['idBebidas'];
-                    $nombreBebida = $columna['nombreBebida'];
-                    $precioBebida = $columna['precioBebida'];
-                    $contenidoB = $columna['contenidoB'];
-                    $fotoBebida = ("assets/img/complementos/" . $idBebidas . "/principal.jpg");
+
+                    $idPizza = $columna['idPizza'];
+                    $nombrePizza = $columna['nombrePizza'];
+                    #$precioPizza = $columna['precioBebida'];
+                    $ingredientes = $columna['ingredientes'];
+                    $fotoPizza = ("assets/img/complementos/" . $idPizza . "/principal.png");
                     echo ("<div class='carousel-item active h-100'>
-                            <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoBebida . "' alt='Imagen de bebida " . $nombreBebida . "' style='z-index: 1;'>
+                            <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoPizza . "' alt='Imagen de pizza " . $nombrePizza . "' style='z-index: 1;'>
                             <div class='container d-flex flex-column justify-content-center h-100'>
                                 <div class='row'>
                                     <div class='col-md-6 col-xl-4 offset-md-2' style='z-index: 2;' style='color: white;'>
                                         <div style='max-width: 350px;'>
-                                            <h1 class='text-uppercase fw-bold' id='textBannerTitle'>" . $nombreBebida . "<br></h1>
-                                            <h2 class='subtitleBanner'>Nueva</h2>
-                                            <p class='my-3'>Contiene: " . $contenidoB . "</p>
+                                            <h1 class='text-uppercase fw-bold' id='textBannerTitle'>" . $nombrePizza . "<br></h1>
+                                            <h2 class='subtitleBanner'>Pizza</h2>
+                                            <p class='my-3'>Contiene: " . $ingredientes . "</p>
                                             <a class='btn btn-primary btn-lg carouselButton1' role='button' href='https://equipo1.prog5a.com/ingredientes.php'>Pedir</a>
                                         </div>
                                     </div>
@@ -131,11 +132,10 @@
                             </div>
                         </div>");
                 }
-
                 echo ("
                 <div class='col align-middle'>
                     <div class='card shadow-sm'>
-                        <img src='images/productos/1/principal.jpg'>
+                        <img src='$fotoPizza'>
                         <div class='card-body'>
                             <h5 class='card-title'>Zapatos color café</h5>
                             <p class='card-text'>$
@@ -152,34 +152,12 @@
                                         <option for='tamaño' value=''></option>
                                     </select>
                                 </div>
-                                <button class='btn btn-outline-success' type='button' onclick='addProducto(1, 'bf072c2eadbfadc7cd53cf14a205624f33357ac7')'>Agregar al carrito</button>
+                                <button class='btn btn-outline-success' type='button' onclick='addProducto($idPizza, 'bf072c2eadbfadc7cd53cf14a205624f33357ac7')'>Agregar al carrito</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 ");
-
-
-                echo "</div>
-                    <div>
-                        <a class='carousel-control-prev' href='#carousel-2' role='button' data-bs-slide='prev'>
-                            <span class='carousel-control-prev-icon'></span>
-                            <span class='visually-hidden'>Previous</span>
-                        </a>
-                        <a class='carousel-control-next' href='#carousel-2' role='button' data-bs-slide='next'>
-                            <span class='carousel-control-next-icon'></span>
-                            <span class='visually-hidden'>Next </span>
-                        </a>
-                    </div>
-                    <ol class='carousel-indicators'>
-                        <li data-bs-target='#carousel-2' data-bs-slide-to='0' class='active'></li>
-                    ";
-                $i = 1;
-                while ($i != ($contador - 1)) {
-                    echo ("<li data-bs-target='#carousel-2' data-bs-slide-to='" . ($i) . "'></li>");
-                    $i++;
-                }
-                echo "</ol>";
             }
             generarCatálogo('pizzas', $conexión);
             ?>
