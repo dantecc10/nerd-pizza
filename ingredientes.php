@@ -1,5 +1,5 @@
 <!-- <?php
-        require 'php scripts/config.php';
+        #require 'php scripts/config.php';
         require 'php scripts/database.php';
         //$db = new Database();
         //$con = $db->conectar();
