@@ -79,7 +79,7 @@
                     $nombrePizza = $columna['nombrePizza'];
                     #$precioPizza = $columna['precioBebida'];
                     $ingredientes = $columna['ingredientes'];
-                    $fotoPizza = ("assets/img/complementos/" . $idPizza . "/principal.png");
+                    $fotoPizza = ("assets/img/pizzas/" . $idPizza . "/principal.png");
 
                     echo ("<div class='col align-middle'>
                     <div class='card shadow-sm'>
