@@ -103,7 +103,7 @@
         <div class='container'>
 
             <?php
-            function generarCatálogo($categoría, $resultado, $conexión)
+            function generarCatálogo($categoría, $conexión)
             {
                 echo "<div class='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center'>";
                 $contador = 1;
@@ -181,8 +181,8 @@
                 }
                 echo "</ol>";
             }
+            generarCatálogo('pizzas', $conexión);
             ?>
-
         </div>
         </div>
         <!-- Copia de tarjetas con buen formato en Bootstrap -->
