@@ -117,7 +117,7 @@ img#LogoNerdPizza {
   height: auto;
 }
 
-.formRecovery{
+.formRecovery {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
   padding: 5em;
@@ -133,4 +133,8 @@ a.dropdown-toggle {
   padding: 10%;
   background-color: #f62e28;
   border-radius: 10%;
+}
+
+.inputCantidadPizzas {
+  width: 50%;
 }
