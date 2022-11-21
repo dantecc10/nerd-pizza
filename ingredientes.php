@@ -98,7 +98,7 @@
                                     <option for='tamaño' value='4'>Familiar</option>
                                     <option for='tamaño' value='5'>Jumbo</option>
                                     </select>
-                                    <input type='number' class='inputCantidadPizzas' step='1' class='cantidad-card'>
+                                    <input type='number' step='1' class='cantidad-card'>
                                     </div>
                                     <button class='btn btn-outline-success carrito-card' type='button' onclick='addProducto($idPizza, ' bf072c2eadbfadc7cd53cf14a205624f33357ac7')'>Agregar al carrito</button>
                                 </div>
