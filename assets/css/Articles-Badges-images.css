@@ -135,9 +135,11 @@ a.dropdown-toggle {
   border-radius: 10%;
 }
 
-
+.inputCantidadPizzas {
+  width: inherit;
+}
 
 div.card-body * {
-  border-radius: 15%;
+  border-radius: 10%;
   margin: 1.5%;
 }
