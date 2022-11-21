@@ -90,17 +90,17 @@
                                 599.00 </p>
                             <div class='d-flex justify-content-between align-items-center'>
                                 <div class='btn-group'>
-                                    <a href='details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7' class='btn btn-primary'>Detalles</a>
-                                    <select name='tamaño'>
+                                    <a href='details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7' class='btn btn-primary detalles-card'>Detalles</a>
+                                    <select name='tamaño' class='tamaño-card'>
                                     <option for='tamaño' value='1'>Chica</option>
                                     <option for='tamaño' value='2'>Mediana</option>
                                     <option for='tamaño' value='3'>Grande</option>
                                     <option for='tamaño' value='4'>Familiar</option>
                                     <option for='tamaño' value='5'>Jumbo</option>
                                     </select>
-                                    <input type='number' class='inputCantidadPizzas' step='1'>
+                                    <input type='number' class='inputCantidadPizzas' step='1' class='cantidad-card'>
                                     </div>
-                                    <button class='btn btn-outline-success' type='button' onclick='addProducto($idPizza, ' bf072c2eadbfadc7cd53cf14a205624f33357ac7')'>Agregar al carrito</button>
+                                    <button class='btn btn-outline-success carrito-card' type='button' onclick='addProducto($idPizza, ' bf072c2eadbfadc7cd53cf14a205624f33357ac7')'>Agregar al carrito</button>
                                 </div>
                             </div>
                         </div>
