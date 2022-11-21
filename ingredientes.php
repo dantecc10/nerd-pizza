@@ -30,7 +30,7 @@
     <section style="background-color: #F6CD13;">
         <!-- Header -->
         <nav class="navbar navbar-light navbar-expand-md py-3">
-            <div class="container"><a class="navbar-brand d-flex align-items-center" href="#">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="https://equipo1.prog5a.com">
                     <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
                         <img src="assets\img\Nerd-Pizza.png" alt="Nerd Pizza" id="LogoNerdPizza">
                     </span>
