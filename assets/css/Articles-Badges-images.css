@@ -138,3 +138,8 @@ a.dropdown-toggle {
 .inputCantidadPizzas {
   width: 50%;
 }
+
+div.d-flex.justify-content-between.align-items-center * {
+  border-radius: 5%;
+  margin: 2.5%;
+}
