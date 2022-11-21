@@ -139,7 +139,7 @@ a.dropdown-toggle {
   width: 50%;
 }
 
-div.d-flex.justify-content-between.align-items-center * {
+div.card-body * {
   border-radius: 10%;
   margin: 1.5%;
 }
