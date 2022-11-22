@@ -181,7 +181,6 @@
                 </ul>
             </div>
         </div>
-        <hr>
         <div id="RedesSociales" align="center">
             <hr id="AntesSociales">
             <script lang="JavaScript" src="assets\js\Redes Sociales.js"></script>
