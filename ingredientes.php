@@ -59,9 +59,7 @@
     </section>
     <section style="background-color: #F6CD13;">
         <main>
-
         </main>
-
         <!-- Copia de tarjetas de catálogo prueba-pagos -->
         <div class='container'>
 
