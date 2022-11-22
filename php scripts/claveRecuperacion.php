@@ -3,9 +3,9 @@ function generateRandomString($length = 6)
 {
     $characters = '0123456789';
     $charactersLength = strlen($characters);
-    $randomString = '';
+    $randomString = 0;
     for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(1, $charactersLength + 1)];
+        $randomString .= $characters[rand(1, 9)];
     }
     
         return $randomString;
