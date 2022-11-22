@@ -9,7 +9,7 @@
     function enviarEmail($destinatario, $remitente, $asunto, $mensaje)
     {
         include('Mail.php');
-        $origenDestino = "From: $remitente" . " \r\n" . "CC: " . $destinatario;
+        $origenDestino = "From: $remitente" . " /r/n" . "CC: " . $destinatario;
         mail($destinatario, $asunto, $mensaje, $origenDestino);
     }
     //enviarEmail($destinatario = $_POST["destinatario"], $remitente = "nerdpizza@equipo1.prog5a.com", $asunto = $_POST[""], $mensaje = "");

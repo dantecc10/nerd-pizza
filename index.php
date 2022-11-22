@@ -10,7 +10,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
 <html class="text-dark" lang="en">
 
 <head>
-    <link rel="icon" type="image/jpeg" sizes="960x957" href="assets\img\Nerd-Pizza.png">
+    <link rel="icon" type="image/jpeg" sizes="960x957" href="assets/img/Nerd-Pizza.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Nerd Pizza</title>
@@ -25,7 +25,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
         <nav class="navbar navbar-light navbar-expand-md py-3">
             <div class="container"><a class="navbar-brand d-flex align-items-center" href="https://equipo1.prog5a.com">
                     <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
-                        <img src="assets\img\Nerd-Pizza.png" alt="Nerd Pizza" id="LogoNerdPizza">
+                        <img src="assets/img/Nerd-Pizza.png" alt="Nerd Pizza" id="LogoNerdPizza">
                     </span><span>Nerd Pizza</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
 
                 <div class="collapse navbar-collapse" id="navcol-3">
@@ -191,7 +191,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
             <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last item social">
                 <div class="fw-bold d-flex align-items-center mb-2">
                     <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center bs-icon me-2">
-                        <img src="assets\img\Nerd-Pizza.png" alt="Nerd Pizza" id="LogoNerdPizza"> </span><span>Nerd Pizza</span>
+                        <img src="assets/img/Nerd-Pizza.png" alt="Nerd Pizza" id="LogoNerdPizza"> </span><span>Nerd Pizza</span>
                 </div>
                 <p>Con todo el sabor de la pizza con lentes...</p>
             </div>
@@ -223,7 +223,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
         <hr>
         <div id="RedesSociales" align="center">
             <hr id="AntesSociales">
-            <script lang="JavaScript" src="assets\js\Redes Sociales.js"></script>
+            <script lang="JavaScript" src="assets/js/Redes Sociales.js"></script>
             <h3><a href="mailto:correo@server.com" class="TítuloArtículo" id="ContactoCorreo">Contacto</a></h3>
             <img class="RedSocial" alt="Ícono de Facebook" id="Facebook" onclick="javascript:AbrirFacebook();" src="assets/img/íconoFacebook.png" />
             <img class="RedSocial" alt="Ícono de WhatsApp" id="WhatsApp" onclick="javascript:AbrirWhatsApp();" src="assets/img/íconoWhatsApp.png" />

@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post" action="php scripts\EnvioRecibo.php">
+    <form method="post" action="php scripts/EnvioRecibo.php">
         <fieldset>
         <legend> Ingrese su consulta</legend>
         <p>

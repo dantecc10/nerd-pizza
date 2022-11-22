@@ -2,7 +2,7 @@
 function enviarEmail($destinatario, $remitente, $asunto, $mensaje)
 {
     include('Mail.php');
-    $origenDestino = "From: $remitente" . " \r\n" . "CC: " . $destinatario;
+    $origenDestino = "From: $remitente" . " /r/n" . "CC: " . $destinatario;
     mail($destinatario, $asunto, $mensaje, $origenDestino);
 }
 
