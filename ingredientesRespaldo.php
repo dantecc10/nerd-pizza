@@ -14,7 +14,7 @@
 
         ?> -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <link rel="icon" type="image/jpeg" sizes="960x957" href="assets\img\Nerd-Pizza.png">
