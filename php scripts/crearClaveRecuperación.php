@@ -16,7 +16,7 @@ function generaClave($claveRecuperación, $claveRecuperaciónEmail)
 
         $contadorDígitos++;
     }
-    return $claveRecuperación;
+    #return $claveRecuperación;
     echo $claveRecuperaciónEmail;
 }
 
