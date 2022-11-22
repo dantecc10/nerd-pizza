@@ -62,7 +62,6 @@
         </main>
         <!-- Copia de tarjetas de catálogo prueba-pagos -->
         <div class='container'>
-
             <?php
             $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
             function generarCatálogo($categoría, $conexión)
@@ -153,7 +152,8 @@
                         break;
                 }
             }
-            generarCatálogo('pizzas', $conexión);
+            $categoría = 'pizzas';
+            generarCatálogo($categoría, $conexión);
             #generarCatálogo('complementos', $conexión);
             ?>
         </div>
