@@ -104,7 +104,7 @@
                 echo "</div>";
             }
             $categoría = 'pizzas';
-            generarCatálogo($categoría, $conexión);
+            generarCatálogo('pizzas', $conexión);
             #generarCatálogo('complementos', $conexión);
             ?>
         </div>
