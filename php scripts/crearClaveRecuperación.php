@@ -1,5 +1,5 @@
 <?php
-include 'funciónEmail.php';
+include "funciónEmail.php";
 $claveRecuperación = 0;
 $claveRecuperaciónEmail;
 function generaClave($claveRecuperación, $claveRecuperaciónEmail)
@@ -16,9 +16,13 @@ function generaClave($claveRecuperación, $claveRecuperaciónEmail)
 
         $contadorDígitos++;
     }
-    #return $claveRecuperación;
-    echo $claveRecuperaciónEmail;
+    return $claveRecuperación;
+    
+    echo $claveRecuperación;
 }
+
+
+/* 
 
 function enviarEmail($destinatario, $remitente, $asunto, $mensaje)
 {
@@ -26,5 +30,5 @@ function enviarEmail($destinatario, $remitente, $asunto, $mensaje)
     $origenDestino = "From: $remitente" . " /r/n" . "CC: " . $destinatario;
     mail($destinatario, $asunto, $mensaje, $origenDestino);
 }
-
 generaClave($claveRecuperación, $claveRecuperaciónEmail);
+?> */
