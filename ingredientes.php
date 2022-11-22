@@ -158,7 +158,7 @@
                 }
             }
             generarCatálogo('pizzas', $conexión);
-            generarCatálogo('complementos', $conexión);
+            #generarCatálogo('complementos', $conexión);
             ?>
         </div>
         <!-- Copia de tarjetas con buen formato en Bootstrap -->
