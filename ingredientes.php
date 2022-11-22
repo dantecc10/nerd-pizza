@@ -74,7 +74,6 @@
                 $consulta = "SELECT * FROM `$categoría`";
                 $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
                 while ($columna = mysqli_fetch_array($resultado)) {
-
                     $idPizza = $columna['idPizza'];
                     $nombrePizza = $columna['nombrePizza'];
                     #$precioPizza = $columna['precioBebida'];
