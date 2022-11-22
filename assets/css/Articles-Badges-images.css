@@ -148,6 +148,8 @@ div.card-body * {
   border-radius: 15%;
   margin: 0% 1.5% 0% 0%;
   width: min-content;
+  background-color: #f62e28;
+  color: #f6cd13;
 }
 
 .tamaños-card {
