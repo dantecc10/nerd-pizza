@@ -172,6 +172,7 @@ div.card-body * {
 
 div.card-body {
   background-color: #969a97;
+  border-radius: 7.5%;
 }
 
 div.card.shadow-ms,
