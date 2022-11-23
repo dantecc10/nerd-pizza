@@ -169,3 +169,7 @@ div.card-body * {
   margin: 0% 0% 0% 0%;
   width: auto;
 }
+
+div.card-body {
+  background-color: #969a97;
+}
