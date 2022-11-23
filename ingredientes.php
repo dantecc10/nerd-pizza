@@ -146,28 +146,28 @@
                 $consulta = "SELECT * FROM `complementos`";
                 $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
                 while ($columna = mysqli_fetch_array($resultado)) {
-                    $idPizza = $columna['idPizza'];
-                    $nombrePizza = $columna['nombrePizza'];
-                    #$precioPizza = $columna['precioBebida'];
-                    $ingredientes = $columna['ingredientes'];
-                    $fotoPizza = ("assets/img/pizzas/" . $idPizza . "/principal.png");
+                    $idComplemento = $columna['idComplemento'];
+                    $nombreComplemento = $columna['nombreComplemento'];
+                    $precioComplemento = $columna['precioComplemento'];
+                    $descripcionC = $columna['ingredientes'];
+                    $fotoComplemento = ("assets/img/complementos/" . $idComplemento . "/principal.png");
 
                     echo ("<div class='col align-middle'>
                     <div class='card shadow-sm'>
-                        <img src='$fotoPizza'>
+                        <img src='$fotoComplemento'>
                         <div class='card-body'>
-                            <h5 class='card-title'>$nombrePizza</h5>
-                            <p class='card-text'>Contiene: $ingredientes </p>
+                            <h5 class='card-title'>$nombreComplemento</h5>
+                            <p class='card-text'>Contiene: $descripcionC </p>
                             <div class='d-flex justify-content-between align-items-center'>
                                 <div class='btn-group'>
                                     <a href='details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7' class='btn btn-primary detalles-card'>Detalles</a>
-                                    <select name='tamaño' class='tamaño-card'>
+                                    <!--<select name='tamaño' class='tamaño-card'>
                                         <option for='tamaño' value='1'>Chica</option>
                                         <option for='tamaño' value='2'>Mediana</option>
                                         <option for='tamaño' value='3'>Grande</option>
                                         <option for='tamaño' value='4'>Familiar</option>
                                         <option for='tamaño' value='5'>Jumbo</option>
-                                    </select>
+                                    </select>-->
                                     <input type='number' step='1' class='cantidad-card'>
                                     </div>
                                     <button class='btn btn-outline-success carrito-card' type='button' onclick='addProducto($idPizza, ' bf072c2eadbfadc7cd53cf14a205624f33357ac7')'>Agregar al carrito</button>
