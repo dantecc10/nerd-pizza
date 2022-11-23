@@ -1,4 +1,5 @@
 <!-- <?php
+        session_start();
         #require 'php scripts/config.php';
         #require 'php scripts/database.php';
         //$db = new Database();
@@ -157,7 +158,7 @@
                         <img src='$fotoComplemento'>
                         <div class='card-body'>
                             <h5 class='card-title'>$nombreComplemento</h5>
-                            <p class='card-text'>Contiene: $descripcionC </p>
+                            <p class='card-text'>$descripcionC </p>
                             <div class='d-flex justify-content-between align-items-center'>
                                 <div class='btn-group'>
                                     <a href='details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7' class='btn btn-primary detalles-card'>Detalles</a>
@@ -170,7 +171,7 @@
                                     </select> -->
                                     <input type='number' step='1' class='cantidad-card'>
                                     </div>
-                                    <button class='btn btn-outline-success carrito-card' type='button' onclick='addProducto($idPizza, ' bf072c2eadbfadc7cd53cf14a205624f33357ac7')'>Agregar al carrito</button>
+                                    <button class='btn btn-outline-success carrito-card' type='button' onclick='addProducto($idComplemento, ' bf072c2eadbfadc7cd53cf14a205624f33357ac7')'>Agregar al carrito</button>
                                 </div>
                             </div>
                         </div>
