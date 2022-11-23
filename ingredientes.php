@@ -180,7 +180,8 @@
                 }
                 echo "</div>";
             }
-            generarCatálogo('pizzas', $conexión);
+            #generarCatálogo('pizzas', $conexión);
+            generarCatálogoTotal($conexión);
             ?>
         </div>
         <!-- Copia de tarjetas con buen formato en Bootstrap -->
