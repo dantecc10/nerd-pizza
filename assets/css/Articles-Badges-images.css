@@ -179,3 +179,7 @@ div.card.shadow-ms,
 div.card.shadow-ms img {
   border-radius: 10%;
 }
+
+div.card.shadow-ms {
+  border-radius: 8%;
+}
