@@ -7,7 +7,6 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
 include "php scripts/InicioSesión.php";
 
 if (!empty($_SESSION(['idUsuario']))) {
-    # code...
 } else {
 }
 ?>
@@ -23,6 +22,7 @@ if (!empty($_SESSION(['idUsuario']))) {
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Navbar-Centered-Links-icons.css">
     <link rel="stylesheet" href="assets/css/Articles-Badges-images.css">
+    <link rel="stylesheet" href="assets/css/Formulario.css">
 </head>
 
 <body class="text-body" style="background-color: #969A97;">
