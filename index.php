@@ -76,15 +76,13 @@ include "php scripts/InicioSesión.php";
                         <li class="nav-item"></li>
                         <li class="nav-item"></li>
                         <li class="nav-item"><a class="nav-link" href="#">
-                                <i class="far fa-user" style="font-size: 18px;"></i>&nbsp;Iniciar Sesión</a></li>
+                                <i class="far fa-user" style="font-size: 18px;"></i>&nbsp;Iniciar sesión</a></li>
                     </ul>
                     <div class="dropdown show">
                         <a class="dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown" href="#">MENU </a>
                         <div class="dropdown-menu show" data-bs-popper="none">
                             <a class="dropdown-item" href="prototipo.php">Inicio</a>
                             <a class="dropdown-item" href="ingredientes.php">Ingredientes</a>
-                            <a class="dropdown-item" href="Login.php">Inicio de sesión</a>
-                            <i class="far fa-user" style="font-size: 18px;"></i>&nbsp;Iniciar Sesión</a></li>
                             <!-- <a class="dropdown-item" href="#"><button onclick="document.getElementById('DivInicioSesión').style.display='block'" class="IniciarSesión DecoradoBotón" style="width:auto;" id="BotónAbreInicioSesión">Iniciar sesión</button></a> -->
                         </div>
                     </div>
