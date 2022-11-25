@@ -6,9 +6,9 @@ session_start();
 $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
 include "php scripts/InicioSesión.php";
 
-if (!empty($_SESSION(['idUsuario']))) {
-} else {
-}
+#if (!empty($_SESSION(['idUsuario']))) {
+#} else {
+#}
 ?>
 
 <!DOCTYPE html>
