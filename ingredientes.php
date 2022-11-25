@@ -55,9 +55,8 @@
                     <div class="dropdown show">
                         <a class="dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown" href="#">MENU </a>
                         <div class="dropdown-menu show" data-bs-popper="none" >
-                            <a class="dropdown-item" href="prototipo.html">Inicio</a>
-                            <a class="dropdown-item" href="ingredientes.html">Ingredientes</a>
-                            <a class="dropdown-item" href="Login.html">Inicio de sesión</a>
+                            <a class="dropdown-item" href="index.php">Inicio</a>
+                            <a class="dropdown-item" href="ingredientes.php">Ingredientes</a>
                         </div>
                     </div>
                 </div>
