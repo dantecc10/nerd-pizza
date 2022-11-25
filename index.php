@@ -84,7 +84,8 @@ include "php scripts/InicioSesión.php";
                             <a class="dropdown-item" href="prototipo.php">Inicio</a>
                             <a class="dropdown-item" href="ingredientes.php">Ingredientes</a>
                             <a class="dropdown-item" href="Login.php">Inicio de sesión</a>
-                            <a class="dropdown-item" href="#"><button onclick="document.getElementById('DivInicioSesión').style.display='block'" class="IniciarSesión DecoradoBotón" style="width:auto;" id="BotónAbreInicioSesión">Iniciar sesión</button></a>
+                            <i class="far fa-user" style="font-size: 18px;"></i>&nbsp;Iniciar Sesión</a></li>
+                            <!-- <a class="dropdown-item" href="#"><button onclick="document.getElementById('DivInicioSesión').style.display='block'" class="IniciarSesión DecoradoBotón" style="width:auto;" id="BotónAbreInicioSesión">Iniciar sesión</button></a> -->
                         </div>
                     </div>
                 </div>
