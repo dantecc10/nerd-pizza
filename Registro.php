@@ -92,7 +92,7 @@
         </div>
         <div class="text-center text-sm-center text-md-center text-lg-center text-xl-center text-xxl-center d-flex justify-content-center align-items-center align-content-center justify-content-md-center align-items-md-center pt-3">
             <p class="text-center text-muted d-flex d-md-flex align-items-center justify-content-md-center align-items-md-center mb-0">
-                Copyright © 2022 Nerd Pizza</p>
+                Copyright © Nerd Pizza 2022</p>
         </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
