@@ -183,3 +183,7 @@ div.card.shadow-ms img {
 div.card.shadow-ms {
   border-radius: 8% !important;
 }
+
+a{
+  text-decoration: none;
+}
