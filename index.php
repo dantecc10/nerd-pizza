@@ -5,6 +5,11 @@ require 'php scripts/conexión_pdo.php';
 session_start();
 $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
 include "php scripts/InicioSesión.php";
+
+if (!empty($_SESSION(['idUsuario']))) {
+    # code...
+} else {
+}
 ?>
 
 <!DOCTYPE html>
