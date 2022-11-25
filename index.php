@@ -2,12 +2,13 @@
 require 'php scripts/config.php';
 require 'php scripts/conexión_pdo.php';
 
-#print_r($_SESSION);
-
-$conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
+session_start();
+$conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
+include "php scripts/InicioSesión.php";
+?>
 
 <!DOCTYPE html>
-<html class="text-dark" lang="en">
+<html class="text-dark" lang="es">
 
 <head>
     <link rel="icon" type="image/jpeg" sizes="960x957" href="assets/img/Nerd-Pizza.png">
@@ -20,6 +21,37 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
 </head>
 
 <body class="text-body" style="background-color: #969A97;">
+    <div id="DivInicioSesión" class="modal">
+        <form class="modal-content animate myForm" action="" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('DivInicioSesión').style.display='none'" class="CerrarCuadro" title="Close Modal">×</span>
+                <img src="IMG/img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="Usuario"><b>Usuario</b></label>
+                <input type="text" placeholder="usuario@prog5a*" name="Usuario" required="">
+                <br>
+                <label for="Contraseña"><b>Contraseña</b></label>
+                <input type="password" placeholder="Contraseña (@prog5a!!)*" name="Contraseña" required="">
+
+                <input type="hidden" name="latitude" value="">
+                <input type="hidden" name="longitude" value="">
+
+                <input type="submit" name="InicioSesión" value="Iniciar sesión" class="IniciarSesión DecoradoBotón">
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember">Recordarme
+                </label>
+
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('DivInicioSesión').style.display='none'" class="BotónCancelar DecoradoBotón">Cancel</button>
+                <span class="psw">¿Olvidaste tu <a href="#">contraseña</a>?</span>
+            </div>
+        </form>
+    </div>
     <section class="py-4 py-xl-5" style="background-color: #F6CD13;">
         <!-- Header -->
         <nav class="navbar navbar-light navbar-expand-md py-3">
@@ -79,8 +111,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
                                 $activeCSS = '';
                             }
 
-                            echo ("
-                                <div class='carousel-item " . $activeCSS . " h-100'>
+                            echo ("<div class='carousel-item " . $activeCSS . " h-100'>
                                     <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoPizza . "' alt='Imagen de pizza " . $nombrePizza . "' style='z-index: 1;'>
                                     <div class='container d-flex flex-column justify-content-center h-100'>
                                         <div class='row'>
