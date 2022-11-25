@@ -5,17 +5,8 @@ function generateRandomString($length = 6)
     $charactersLength = strlen($characters);
     $randomString = 0;
     for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(1, 9)];
+        $randomString .= $characters[rand(1, $charactersLength - 1)];
     }
-    
         return $randomString;
-    
-        $numClave = intval($randomString);
-
-        $claveSecreta = $numClave * 2;
-
-        return $claveSecreta;
-
-        echo "<br>" . "Clave secreta" . $claveSecreta . "<br>";
     }
     echo generateRandomString();
