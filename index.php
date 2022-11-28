@@ -80,7 +80,7 @@ include "php scripts/InicioSesión.php";
                     </ul>
                     <div class="dropdown show">
                         <a class="dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown" href="#">MENU </a>
-                        <div class="dropdown-menu show" data-bs-popper="none">
+                        <div class="dropdown-menu" data-bs-popper="none">
                             <a class="dropdown-item" href="prototipo.php">Inicio</a>
                             <a class="dropdown-item" href="ingredientes.php">Ingredientes</a>
                             <!-- <a class="dropdown-item" href="#"><button onclick="document.getElementById('DivInicioSesión').style.display='block'" class="IniciarSesión DecoradoBotón" style="width:auto;" id="BotónAbreInicioSesión">Iniciar sesión</button></a> -->
@@ -123,7 +123,7 @@ include "php scripts/InicioSesión.php";
                                 $activeCSS = '';
                             }
 
-                            echo ("<div class='carousel-item " . $activeCSS . " h-100'>
+                            echo ("<a href='ingredientes.php'><div class='carousel-item " . $activeCSS . " h-100'>
                                     <img class='w-100 d-block position-absolute h-100 fit-cover' src='" . $fotoPizza . "' alt='Imagen de pizza " . $nombrePizza . "' style='z-index: 1;'>
                                     <div class='container d-flex flex-column justify-content-center h-100'>
                                         <div class='row'>
@@ -137,7 +137,7 @@ include "php scripts/InicioSesión.php";
                                             </div>
                                         </div>
                                     </div>
-                                </div>");
+                                </div></a>");
                             $contador++;
                         }
                         break;
