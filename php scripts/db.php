@@ -17,7 +17,6 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza"); ?>
         echo ("<td>" . $columna['ingredientes'] . "</td>");
         echo ("<td>" . $columna['fotoPizza'] . "</td>");
 
-
         echo ("</tr>");
     }
     ?>

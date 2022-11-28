@@ -73,7 +73,7 @@ span.psw {
 }
 
 /* The Modal (background) */
-.modal {
+.modal#DivInicioSesión {
     display: none;
     /* Hidden by default */
     position: fixed;
@@ -96,7 +96,7 @@ span.psw {
 }
 
 /* Modal Content/Box */
-.modal-content {
+div#DivInicioSesión .modal-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto;
     /* 5% from the top, 15% from the bottom and centered */
@@ -217,7 +217,7 @@ span.psw {
     }
 
     /* The Modal (background) */
-    .modal {
+    .modal#DivInicioSesión {
         display: none;
         /* Hidden by default */
         position: fixed;
@@ -240,7 +240,7 @@ span.psw {
     }
 
     /* Modal Content/Box */
-    .modal-content {
+    div#DivInicioSesión .modal-content {
         background-color: #fefefe;
         margin: 5% auto 15% auto;
         /* 5% from the top, 15% from the bottom and centered */

@@ -116,3 +116,74 @@ img#LogoNerdPizza {
   width: 200%;
   height: auto;
 }
+
+.formRecovery {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 5em;
+}
+
+h1.fw-bold.mb-4,
+a.navbar-brand.d-flex.align-items-center {
+  -webkit-text-stroke: 1px #f62e28;
+}
+
+a.dropdown-toggle {
+  color: white;
+  padding: 10%;
+  background-color: #f62e28;
+  border-radius: 10%;
+}
+
+.inputCantidadPizzas {
+  width: inherit;
+}
+
+div.card-body * {
+  border-radius: 10% !important;
+  margin: 1.5% !important;
+}
+
+.detalles-card {
+  border-radius: 15% !important;
+  margin: 0% 1.5% 0% 0% !important;
+  width: min-content !important;
+  background-color: #f62e28 !important;
+  color: #f6cd13 !important;
+}
+
+.tamaños-card {
+  border-radius: 15% !important;
+  margin: 0% 1.5% 0% 0% !important;
+  width: min-content !important;
+}
+
+.cantidad-card {
+  border-radius: 15% !important;
+  margin: 0% 1.5% 0% 0% !important;
+  width: 30% !important;
+}
+
+.carrito-card {
+  border-radius: 15% !important;
+  margin: 0% 0% 0% 0% !important;
+  width: auto !important;
+}
+
+div.card-body {
+  background-color: #969a97 !important;
+  border-radius: 10% !important;
+}
+
+div.card.shadow-ms,
+div.card.shadow-ms img {
+  border-radius: 10% !important;
+}
+
+div.card.shadow-ms {
+  border-radius: 8% !important;
+}
+
+a {
+  text-decoration: none;
+}

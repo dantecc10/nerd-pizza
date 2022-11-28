@@ -1,0 +1,29 @@
+.fit-cover {
+  object-fit: cover;
+}
+
+body {
+  background-color: #F6CD13;
+}
+
+#RedesSociales {
+}
+
+#ContactoCorreo {
+  text-decoration: none;
+}
+
+.menubutton {
+  text-decoration: none;
+  color: red;
+}
+
+.carouselButton1 {
+  background-color: #F62E28;
+}
+
+.carouselButton2 {
+  background-color: white;
+  color: black;
+}
+
