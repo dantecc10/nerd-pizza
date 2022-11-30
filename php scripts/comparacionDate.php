@@ -2,7 +2,7 @@
     $date1 = new DateTime("25 Dec 2021");
     $now = new DateTime("now");
 
-    $diffDays = $now->diff($next);
+    $diffDays = $now->diff($date1);
 
     echo $days_next->format('%a days');
    
