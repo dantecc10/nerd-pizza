@@ -4,7 +4,9 @@
 
     $diffDays = $now->diff($date1);
 
-    echo $now . "<br>";
+    $now2 = new DateTime("now");
+
+    echo $now2 . "<br>";
 
     echo $diffDays->format('%a days');
 
