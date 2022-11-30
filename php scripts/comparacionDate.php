@@ -4,9 +4,9 @@
 
     $diffDays = $now->diff($date1);
 
-    echo $days_next->format('%a days');
+    echo $diffDays->format('%a days');
    
-    if ($date2 < $date1) {
+    if ($now < $date1) {
         echo "aun no es navidad";
     }
 ?>
