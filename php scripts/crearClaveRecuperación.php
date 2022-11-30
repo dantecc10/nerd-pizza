@@ -2,7 +2,7 @@
 include "funciónEmail.php";
 $claveRecuperación = 0;
 $claveRecuperaciónEmail;
-function generaClave($claveRecuperación, $claveRecuperaciónEmail)
+function generaClave($claveRecuperación)
 {
     $contadorDígitos = 0;
     $min = 0;
@@ -17,14 +17,18 @@ function generaClave($claveRecuperación, $claveRecuperaciónEmail)
         $contadorDígitos++;
     }
 
-    echo $claveRecuperación;
+    # echo $claveRecuperación; #Comento la impresión para obtener sólo el valor
     return $claveRecuperación;
 }
-
+$claveRecuperaciónEmail = generaClave($claveRecuperación);
 echo "Aquí se va a enviar el email";
-enviarEmail('dante@castelancarpinteyro.club', 'nerdpizza@equipo1.prog5a.com', 'Clave de recuperación', ("Su clave de recuperación es " . generaClave($claveRecuperación, $claveRecuperaciónEmail)));
+enviarEmail('dante@castelancarpinteyro.club', 'nerdpizza@equipo1.prog5a.com', 'Clave de recuperación', ("Su clave de recuperación es " . $claveRecuperaciónEmail));
 echo "Aquí ya se debió enviar el email";
 
+function cargarClaveRecuperación($claveRecuperaciónEmail)
+{
+    
+}
 /* 
 
 function enviarEmail($destinatario, $remitente, $asunto, $mensaje)
