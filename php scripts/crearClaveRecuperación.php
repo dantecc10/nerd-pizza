@@ -57,6 +57,7 @@ function cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $desti
 #return $éxitoCarga;
 #}
 $claveRecuperaciónEmail = generaClave($claveRecuperación);
+cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $destinatario);
     
     #cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $destinatario);
     #if (($éxitoCarga) == true) {
