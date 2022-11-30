@@ -35,7 +35,7 @@ function cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $desti
     $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
     $consulta = "SELECT COUNT(*) `id_clave` FROM `claves` WHERE `clave_recuperación` <> $claveRecuperaciónEmail";
     $total = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
-
+    echo $total;
     if ($total != 0) {
         enviarEmail($destinatario, 'nerdpizza@equipo1.prog5a.com', 'Clave de recuperación', ("Su clave de recuperación es " . $claveRecuperaciónEmail));
     } else {
