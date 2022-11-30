@@ -1,8 +1,8 @@
 <?php
-/*     $date1 = new DateTime("25 Dec 2021");
+    $date1 = new DateTime("25 Dec 2021");
     $date2 = new DateTime("now");
 
-    $diffDays = $now->diff($next);
+/*     $diffDays = $now->diff($next);
 
     echo $days_next->format('%a days');
 
