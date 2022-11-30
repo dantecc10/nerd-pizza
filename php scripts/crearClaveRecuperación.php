@@ -40,7 +40,7 @@ function cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $desti
         enviarEmail($destinatario, 'nerdpizza@equipo1.prog5a.com', 'Clave de recuperación', ("Su clave de recuperación es " . $claveRecuperaciónEmail));
     } else {
         echo "Hubo un error al generar y cargar su clave de recuperación, por favor, vuelva a intentarlo...";
-        echo $éxitoCarga;
+        #echo $éxitoCarga;
     }
     #while ($columna = mysqli_fetch_array($resultado)) {
     #    if ($columna['clave_recuperación'] == $claveRecuperaciónEmail) {
