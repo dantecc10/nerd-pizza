@@ -27,15 +27,22 @@ echo "Aquí ya se debió enviar el email";
 
 function cargarClaveRecuperación($claveRecuperaciónEmail)
 {
-    
+    $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
 }
-/* 
+
+
+$consulta = "SELECT * FROM `claves`";
+$resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
+
+while ($columna = mysqli_fetch_array($resultado)) {
+}
+/*
 
 function enviarEmail($destinatario, $remitente, $asunto, $mensaje)
 {
-    include('Mail.php');
-    $origenDestino = "From: $remitente" . " /r/n" . "CC: " . $destinatario;
-    mail($destinatario, $asunto, $mensaje, $origenDestino);
+include('Mail.php');
+$origenDestino = "From: $remitente" . " /r/n" . "CC: " . $destinatario;
+mail($destinatario, $asunto, $mensaje, $origenDestino);
 }
 generaClave($claveRecuperación, $claveRecuperaciónEmail);
 ?> */
