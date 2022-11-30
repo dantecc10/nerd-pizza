@@ -8,7 +8,7 @@
 
     echo $diffDays->format('%a days');
 
-    if ($now > $date1) {
+/*     if ($now > $date1) {
         echo "aun no es navidad";
-    }
+    } */
 ?>
