@@ -51,7 +51,7 @@ function cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $desti
     return $éxitoCarga;
 }
 
-echo (cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $destinatario));
+cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $destinatario);
 if (($éxitoCarga) == true) {
     enviarEmail($destinatario, 'nerdpizza@equipo1.prog5a.com', 'Clave de recuperación', ("Su clave de recuperación es " . $claveRecuperaciónEmail));
 } else {
