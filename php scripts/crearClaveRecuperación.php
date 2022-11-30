@@ -24,8 +24,6 @@ function generaClave($claveRecuperación)
     # echo $claveRecuperación; #Comento la impresión para obtener sólo el valor
     return $claveRecuperación;
 }
-$claveRecuperaciónEmail = generaClave($claveRecuperación);
-
 function cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $destinatario)
 {
     $pruebaClave = true;
@@ -42,31 +40,33 @@ function cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $desti
         echo "Hubo un error al generar y cargar su clave de recuperación, por favor, vuelva a intentarlo...";
         #echo $éxitoCarga;
     }
-    #while ($columna = mysqli_fetch_array($resultado)) {
-    #    if ($columna['clave_recuperación'] == $claveRecuperaciónEmail) {
-    #        $usadaClave = true;
-    #        break;
-    #        $éxitoCarga = false;
-    #    } else {
-    #        $usadaClave = false;
-    #        $consulta = "INSERT INTO `claves` (`id_clave`, `correo_clave`, `clave_recuperación`, `emisión_clave`, `usada_clave`, `prueba_clave`) VALUES ('', '$destinatario', '$claveRecuperaciónEmail', '$emisiónClave', $usadaClave, $pruebaClave)";
-    #        echo $consulta;
-    #        $resultado = mysqli_query($conexión, $consulta) or die("Error en la inserción de la clave de recuperación");
-    #        $éxitoCarga = true;
-    #    }
-    #}
-    #return $éxitoCarga;
 }
-
-#cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $destinatario);
-#if (($éxitoCarga) == true) {
-#    enviarEmail($destinatario, 'nerdpizza@equipo1.prog5a.com', 'Clave de recuperación', ("Su clave de recuperación es " . $claveRecuperaciónEmail));
-#} else {
-#    echo "Hubo un error al generar y cargar su clave de recuperación, por favor, vuelva a intentarlo...";
-#    echo $éxitoCarga;
+#while ($columna = mysqli_fetch_array($resultado)) {
+#    if ($columna['clave_recuperación'] == $claveRecuperaciónEmail) {
+#        $usadaClave = true;
+#        break;
+#        $éxitoCarga = false;
+#    } else {
+#        $usadaClave = false;
+#        $consulta = "INSERT INTO `claves` (`id_clave`, `correo_clave`, `clave_recuperación`, `emisión_clave`, `usada_clave`, `prueba_clave`) VALUES ('', '$destinatario', '$claveRecuperaciónEmail', '$emisiónClave', $usadaClave, $pruebaClave)";
+#        echo $consulta;
+#        $resultado = mysqli_query($conexión, $consulta) or die("Error en la inserción de la clave de recuperación");
+#        $éxitoCarga = true;
+#    }
 #}
-
-
+#return $éxitoCarga;
+#}
+$claveRecuperaciónEmail = generaClave($claveRecuperación);
+    
+    #cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $destinatario);
+    #if (($éxitoCarga) == true) {
+        #    enviarEmail($destinatario, 'nerdpizza@equipo1.prog5a.com', 'Clave de recuperación', ("Su clave de recuperación es " . $claveRecuperaciónEmail));
+        #} else {
+            #    echo "Hubo un error al generar y cargar su clave de recuperación, por favor, vuelva a intentarlo...";
+            #    echo $éxitoCarga;
+            #}
+            
+            
 
 
 /*
