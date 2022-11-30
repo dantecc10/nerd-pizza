@@ -67,11 +67,7 @@ cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $destinatario);
             #    echo $éxitoCarga;
             #}
             
-            
-
-
 /*
-
 function enviarEmail($destinatario, $remitente, $asunto, $mensaje)
 {
 include('Mail.php');
