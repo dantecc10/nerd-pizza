@@ -3,6 +3,9 @@ include "funciónEmail.php";
 $claveRecuperación = 0;
 $claveRecuperaciónEmail;
 $éxitoCarga;
+
+$destinatario = $_POST['CorreoRecuperación'];
+
 function generaClave($claveRecuperación)
 {
     $contadorDígitos = 0;
@@ -23,9 +26,8 @@ function generaClave($claveRecuperación)
 }
 $claveRecuperaciónEmail = generaClave($claveRecuperación);
 
-function cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga)
+function cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $destinatario)
 {
-    $destinatario = $_POST['CorreoRecuperación'];
     $pruebaClave = true;
 
     $emisiónClave = new DateTime('now');
@@ -41,15 +43,15 @@ function cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga)
         } else {
             $usadaClave = false;
             $consulta = "INSERT INTO `claves` (`id_clave`, `correo_clave`, `clave_recuperación`, `emisión_clave`, `usada_clave`, `prueba_clave`) VALUES ('', '$destinatario', '$claveRecuperaciónEmail', '$emisiónClave', $usadaClave, $pruebaClave)";
-            $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
+            $resultado = mysqli_query($conexión, $consulta) or die("Error en la inserción de la clave de recuperación");
             $éxitoCarga = true;
         }
     }
     return $éxitoCarga;
 }
 
-if ((cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga)) == true) {
-    enviarEmail('dante@castelancarpinteyro.club', 'nerdpizza@equipo1.prog5a.com', 'Clave de recuperación', ("Su clave de recuperación es " . $claveRecuperaciónEmail));
+if ((cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $destinatario)) == true) {
+    enviarEmail($destinatario, 'nerdpizza@equipo1.prog5a.com', 'Clave de recuperación', ("Su clave de recuperación es " . $claveRecuperaciónEmail));
 } else {
     echo "Hubo un error al generar y cargar su clave de recuperación, por favor, vuelva a intentarlo...";
 }
