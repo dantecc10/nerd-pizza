@@ -24,7 +24,7 @@ function madreFunciones()
 
     $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
 
-    if ($resultado == 0) {
+    if ($resultado == true) {
         echo "Validación exitosa";
     } else {
         echo "Algo anda mal en la comparación de claves o resultó ser 123456";
