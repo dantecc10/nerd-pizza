@@ -12,6 +12,7 @@
     <form action="php scripts/crearClaveRecuperación.php" method="post">
         <label for="correoRecuperación">Ingrese su correo electrónico:</label><br>
         <input type="email" name="correoRecuperación" id="InputMail">
+        <input type="submit" value="Enviar">
     </form>
 </body>
 
