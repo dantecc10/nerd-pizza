@@ -27,7 +27,7 @@ function madreFunciones()
     if ($resultado == true) {
         echo "Validación exitosa";
     } else {
-        echo "Algo anda mal en la comparación de claves o resultó ser 123456";
+        echo "La clave ya existe o no pudo ser validad en la base de datos.";
     }
 
     /*
