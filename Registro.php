@@ -72,6 +72,7 @@
                     <input type="text" name="direccion">
                     </label>
                 </p>
+                <script src="assets\js\validadarContraseña.js"></script>
                 <input type="submit" value="enviar">
                 </fieldset>
             </form>
