@@ -59,12 +59,12 @@
                 </p>
                 <p>
                     <label>Escriba una contraseña:
-                    <input type="text" name="pass">
+                    <input type="password" name="pass">
                     </label>
                 </p>
                 <p>
                     <label>Escriba de nuevo la contraseña:
-                    <input type="text" name="pass2">
+                    <input type="password" name="pass2" hidden>
                     </label>
                 </p>
                 <p>
