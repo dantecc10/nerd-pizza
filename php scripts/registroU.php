@@ -11,9 +11,9 @@
             $email = $_POST["email"];
             $pass = $_POST["pass"];
             $direccion = $_POST["direccion"];
-            $inserta = "INSERT INTO `usuarios`(`idUsuario`, `nombreU`, `apellidosU`, `emailU`, `contraseñaU`) VALUES ('$nombre','$apellido','$email','$pass');";
+            $inserta = "INSERT INTO `usuarios`(`idUsuario`, `nombreU`, `apellidosU`, `emailU`, `contraseñaU`) VALUES ('$nombre','$apellido','$email','$pass', '$direccion');";
         } 
     else{
-        echo '<p>Por favor, complete el <a href="form_php.html">formulario</a></p>';
+        echo '<p>Por favor, complete el <a href="Registro.php">Registro</a></p>';
     }
 ?>
