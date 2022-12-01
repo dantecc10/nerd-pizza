@@ -26,10 +26,10 @@ function madreFunciones()
     echo ("Aquí está la clave de recuperación heredada de la función generadora: " . $claveRecuperaciónEmail);
 
     # Carga a base de datos
-    $consulta = "SELECT * FROM `claves` WHERE `clave_recuperación`=$claveRecuperaciónEmail";
+    $consulta = "SELECT count(*) FROM `claves` WHERE `clave_recuperación`=$claveRecuperaciónEmail";
     $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
 
-    if ($resultado = null) {
+    if ($resultado == true) {
         # Envío de email y clave validada
         echo "Validación exitosa";
 
