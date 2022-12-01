@@ -30,14 +30,7 @@ function madreFunciones()
         echo "Algo anda mal en la comparación de claves o resultó ser 123456";
     }
 
-    echo ('<tr>');
-    echo ('<th>`id_clave`</th>');
-    echo ('<th>`correo_clave`</th>');
-    echo ('<th>`clave_recuperación`</th>');
-    echo ('<th>`emisión_clave`</th>');
-    echo ('<th>`usada_clave`</th>');
-    echo ('<th>`prueba_clave`</th>');
-    echo ('</tr>');
+    /*
     while ($columna = mysqli_fetch_array($resultado)) {
         echo ("<tr>");
 
@@ -49,7 +42,7 @@ function madreFunciones()
         echo ("<td>" . $columna['prueba_clave'] . "</td>");
 
         echo ("</tr>");
-    }
+    }*/
 
     # Envío de email y clave validada
     # Sección de email
