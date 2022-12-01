@@ -64,7 +64,7 @@
                 </p>
                 <p>
                     <label>Escriba de nuevo la contraseña:
-                    <input type="password" name="pass2" hidden>
+                    <input type="password" name="pass2">
                     </label>
                 </p>
                 <p>
