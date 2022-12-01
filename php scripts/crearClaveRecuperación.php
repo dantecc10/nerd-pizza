@@ -28,7 +28,7 @@ function madreFunciones()
         # Envío de email y clave validada
         echo "Validación exitosa";
 
-        $correoRecuperación = "dantecc10@gmail.com";
+        $correoRecuperación = $_POST['correoRecuperación'];
 
         $consulta = "INSERT INTO `claves`
         (`id_clave`, `correo_clave`, `clave_recuperación`, `emisión_clave`, `usada_clave`, `prueba_clave`)
@@ -39,7 +39,7 @@ function madreFunciones()
         include('Mail.php');
         $mensaje = ("Nerd Pizza ha recibido una solicitud de reestablecimiento de contraseña; ingresa el siguiente código para poder cambiar tu contraseña: " . $claveRecuperaciónEmail . ".");
         $remitente = "nerdpizza@equipo1.prog5a.com";
-        $destinatario = "dante@castelancarpinteyro.club";
+        $destinatario = $correoRecuperación;
         $asunto = "Reestablecimiento de contraseña";
 
         $origenDestino = "From: $remitente" . " /r/n" . "CC: " . $destinatario;
