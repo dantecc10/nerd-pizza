@@ -16,7 +16,7 @@
             echo $pass;
             $direccion = $_POST["direccion"];
             echo $direccion;
-            $inserta = "INSERT INTO `usuarios`(`nombreU`, `apellidosU`, `emailU`, `contraseñaU`, `direccionU`) VALUES ('', '$nombre','$apellido','$email','$pass', '$direccion');";
+            $inserta = "INSERT INTO `usuarios` VALUES ('', '$nombre','$apellido','$email','$pass', '$direccion');";
         } 
     else{
         echo '<p>Por favor, complete el <a href="NERD-PIZZA/Registro.php">Registro</a></p>';
