@@ -1,78 +1,34 @@
 <?php
-include "funciónEmail.php";
-$claveRecuperación = 0;
-$claveRecuperaciónEmail;
-$éxitoCarga;
 
-$destinatario = $_POST['CorreoRecuperación'];
-
-function generaClave($claveRecuperación)
+function madreFunciones()
 {
-    $contadorDígitos = 0;
-    $min = 0;
-    $max = 9;
-    $dígitoAleatorioGenerado = rand(1, $max);
-    $claveRecuperación = ($claveRecuperación . $dígitoAleatorioGenerado);
+    # Generación de clave
+    function generaClave()
+    {
+        # $contadorDígitos = 0;
+        $min = 100000;
+        $max = 999999;
+        # $dígitoAleatorioGenerado = rand(1, $max);
+        $claveRecuperación = rand($min, $max);
 
-    while ($contadorDígitos < 5) {
-        $dígitoAleatorioGenerado = rand($min, $max);
-        $claveRecuperación = ($claveRecuperación . $dígitoAleatorioGenerado);
-
-        $contadorDígitos++;
+        echo $claveRecuperación;
+        return $claveRecuperación;
     }
 
-    # echo $claveRecuperación; #Comento la impresión para obtener sólo el valor
-    return $claveRecuperación;
-}
-function cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $destinatario)
-{
-    $pruebaClave = true;
+    $claveRecuperaciónEmail = generaClave();
+    echo ("Aquí está la clave de recuperación heredada de la función generadora: " . $claveRecuperaciónEmail);
 
-    $emisiónClave = new DateTime('now');
+    # Carga a base de datos
 
-    $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
-    $consulta = "SELECT COUNT(*) `id_clave` FROM `claves` WHERE `clave_recuperación` <> $claveRecuperaciónEmail";
-    $total = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
-    echo $total;
-    if ($total != 0) {
-        enviarEmail($destinatario, 'nerdpizza@equipo1.prog5a.com', 'Clave de recuperación', ("Su clave de recuperación es " . $claveRecuperaciónEmail));
-    } else {
-        echo "Hubo un error al generar y cargar su clave de recuperación, por favor, vuelva a intentarlo...";
-        #echo $éxitoCarga;
-    }
+    # Envío de email y clave validada
+    # Sección de email
+    include('Mail.php');
+    $mensaje = ("Nerd Pizza ha recibido una solicitud de reestablecimiento de contraseña; ingresa el siguiente código para poder cambiar tu contraseña: " . $claveRecuperaciónEmail . ".");
+    $remitente = "nerdpizza@equipo1.prog5a.com";
+    $destinatario = "dante@castelancarpinteyro.club";
+
+    $origenDestino = "From: $remitente" . " /r/n" . "CC: " . $destinatario;
+    mail($destinatario, $asunto, $mensaje, $origenDestino);
+
+    echo ("Aquí ya se envió la clave... se supone");
 }
-#while ($columna = mysqli_fetch_array($resultado)) {
-#    if ($columna['clave_recuperación'] == $claveRecuperaciónEmail) {
-#        $usadaClave = true;
-#        break;
-#        $éxitoCarga = false;
-#    } else {
-#        $usadaClave = false;
-#        $consulta = "INSERT INTO `claves` (`id_clave`, `correo_clave`, `clave_recuperación`, `emisión_clave`, `usada_clave`, `prueba_clave`) VALUES ('', '$destinatario', '$claveRecuperaciónEmail', '$emisiónClave', $usadaClave, $pruebaClave)";
-#        echo $consulta;
-#        $resultado = mysqli_query($conexión, $consulta) or die("Error en la inserción de la clave de recuperación");
-#        $éxitoCarga = true;
-#    }
-#}
-#return $éxitoCarga;
-#}
-$claveRecuperaciónEmail = generaClave($claveRecuperación);
-cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $destinatario);
-    
-    #cargarClaveRecuperación($claveRecuperaciónEmail, $éxitoCarga, $destinatario);
-    #if (($éxitoCarga) == true) {
-        #    enviarEmail($destinatario, 'nerdpizza@equipo1.prog5a.com', 'Clave de recuperación', ("Su clave de recuperación es " . $claveRecuperaciónEmail));
-        #} else {
-            #    echo "Hubo un error al generar y cargar su clave de recuperación, por favor, vuelva a intentarlo...";
-            #    echo $éxitoCarga;
-            #}
-            
-/*
-function enviarEmail($destinatario, $remitente, $asunto, $mensaje)
-{
-include('Mail.php');
-$origenDestino = "From: $remitente" . " /r/n" . "CC: " . $destinatario;
-mail($destinatario, $asunto, $mensaje, $origenDestino);
-}
-generaClave($claveRecuperación, $claveRecuperaciónEmail);
-?> */
