@@ -26,35 +26,21 @@ function madreFunciones()
 
     if ($resultado == true) {
         echo "Validación exitosa";
+
+        # Envío de email y clave validada
+        # Sección de email
+        include('Mail.php');
+        $mensaje = ("Nerd Pizza ha recibido una solicitud de reestablecimiento de contraseña; ingresa el siguiente código para poder cambiar tu contraseña: " . $claveRecuperaciónEmail . ".");
+        $remitente = "nerdpizza@equipo1.prog5a.com";
+        $destinatario = "dante@castelancarpinteyro.club, jeremy.hdez9@gmail.com";
+        $asunto = "Reestablecimiento de contraseña";
+
+        $origenDestino = "From: $remitente" . " /r/n" . "CC: " . $destinatario;
+        mail($destinatario, $asunto, $mensaje, $origenDestino);
+
+        echo ("Aquí ya se envió la clave... se supone");
     } else {
         echo "La clave ya existe o no pudo ser validad en la base de datos.";
     }
-
-    /*
-    while ($columna = mysqli_fetch_array($resultado)) {
-        echo ("<tr>");
-
-        echo ("<td>" . $columna['id_clave'] . "</td>");
-        echo ("<td>" . $columna['correo_clave'] . "</td>");
-        echo ("<td>" . $columna['clave_recuperación'] . "</td>");
-        echo ("<td>" . $columna['emisión_clave'] . "</td>");
-        echo ("<td>" . $columna['usada_clave'] . "</td>");
-        echo ("<td>" . $columna['prueba_clave'] . "</td>");
-
-        echo ("</tr>");
-    }*/
-
-    # Envío de email y clave validada
-    # Sección de email
-    include('Mail.php');
-    $mensaje = ("Nerd Pizza ha recibido una solicitud de reestablecimiento de contraseña; ingresa el siguiente código para poder cambiar tu contraseña: " . $claveRecuperaciónEmail . ".");
-    $remitente = "nerdpizza@equipo1.prog5a.com";
-    $destinatario = "dante@castelancarpinteyro.club, jeremy.hdez9@gmail.com";
-    $asunto = "Reestablecimiento de contraseña";
-
-    $origenDestino = "From: $remitente" . " /r/n" . "CC: " . $destinatario;
-    mail($destinatario, $asunto, $mensaje, $origenDestino);
-
-    echo ("Aquí ya se envió la clave... se supone");
 }
 madreFunciones();
