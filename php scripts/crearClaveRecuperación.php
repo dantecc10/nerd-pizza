@@ -25,7 +25,8 @@ function madreFunciones()
     include('Mail.php');
     $mensaje = ("Nerd Pizza ha recibido una solicitud de reestablecimiento de contraseña; ingresa el siguiente código para poder cambiar tu contraseña: " . $claveRecuperaciónEmail . ".");
     $remitente = "nerdpizza@equipo1.prog5a.com";
-    $destinatario = "dante@castelancarpinteyro.club";
+    $destinatario = "dante@castelancarpinteyro.club, jeremy.hdez9@gmail.com";
+    $asunto = "Reestablecimiento de contraseña";
 
     $origenDestino = "From: $remitente" . " /r/n" . "CC: " . $destinatario;
     mail($destinatario, $asunto, $mensaje, $origenDestino);
