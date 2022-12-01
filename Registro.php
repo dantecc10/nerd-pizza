@@ -67,13 +67,12 @@
                     <input type="text" name="pass2">
                     </label>
                 </p>
-                <input type="submit" value="enviar">
                 <p>
                     <label>Escriba su direccion:
                     <input type="text" name="direccion">
                     </label>
                 </p>
-                <input type="submit" value="direccion">
+                <input type="submit" value="enviar">
                 </fieldset>
             </form>
         </div>
