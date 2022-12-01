@@ -2,8 +2,7 @@
 
     $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
     $basededatos = "nerdpizza";
-    $db = mysqli_select_db($conexiòn,$basededatos) or 
-    die("No se ha podido conectar al servidor de Base de Datos");
+    $db = mysqli_select_db($conexiòn,$basededatos)
     
     if (isset($_POST["nombre"], $_POST["apellido"], $_POST["email"], $_POST["pass"]) and $_POST["nombre"] !="" and $_POST["apellido"]!="" and $_POST["email"]!="" and $_POST["nombre"] !=""){
             $nombre = $_POST["nombre"];
