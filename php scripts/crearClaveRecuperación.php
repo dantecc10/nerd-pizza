@@ -11,7 +11,7 @@ function madreFunciones()
         # $dígitoAleatorioGenerado = rand(1, $max);
         $claveRecuperación = rand($min, $max);
 
-        echo $claveRecuperación;
+        # echo $claveRecuperación;
         return $claveRecuperación;
     }
 
