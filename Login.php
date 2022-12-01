@@ -37,6 +37,7 @@
         </nav>
         <div align="center">
             <h1>En construcción</h1>
+            <a href="Registro.php">Registro</a>
         </div>
     </section>
     <!-- Pie de pagina -->
