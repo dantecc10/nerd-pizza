@@ -37,9 +37,38 @@
                 </div>
             </div>
         </nav>
-        <div align="center">
-            <h1>En construcción</h1>
-        </div>
+        <!-- Content -->
+        <form method="post" action="php scripts\registroU.php">
+            <fieldset>
+            <legend> Registro </legend>
+            <p>
+                <label> Escriba su nombre:
+                <input type="text" name="nombre">
+                </label>
+            </p>
+            <p>
+                <label> Escriba su apellido:
+                <input type="text" name="apellido">
+                </label>
+            </p>
+            <p>
+                <label>Escriba su correo electrónico:
+                <input type="text" name="email">
+                </label>
+            </p>
+            <p>
+                <label>Escriba una contraseña:
+                <input type="text" name="pass">
+                </label>
+            </p>
+            <p>
+                <label>Escriba de nuevo la contraseña:
+                <input type="text" name="pass2">
+                </label>
+            </p>
+            <input type="submit" value="enviar">
+            </fieldset>
+        </form>
     </section>
     <!-- Pie de pagina -->
     <div class="container text-center py-4 py-lg-5" style="background-color: #969A97;">
