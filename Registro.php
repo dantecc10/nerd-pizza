@@ -37,8 +37,44 @@
                 </div>
             </div>
         </nav>
+        <!-- Content -->
         <div align="center">
-            <h1>En construcción</h1>
+            <form method="post" action="php scripts\registroU.php">
+                <fieldset>
+                <legend> Registro </legend>
+                <p>
+                    <label> Escriba su nombre:
+                    <input type="text" name="nombre">
+                    </label>
+                </p>
+                <p>
+                    <label> Escriba su apellido:
+                    <input type="text" name="apellido">
+                    </label>
+                </p>
+                <p>
+                    <label>Escriba su correo electrónico:
+                    <input type="text" name="email">
+                    </label>
+                </p>
+                <p>
+                    <label>Escriba una contraseña:
+                    <input type="password" name="pass">
+                    </label>
+                </p>
+                <p>
+                    <label>Escriba de nuevo la contraseña:
+                    <input type="password" name="pass2">
+                    </label>
+                </p>
+                <p>
+                    <label>Escriba su direccion:
+                    <input type="text" name="direccion">
+                    </label>
+                </p>
+                <input type="submit" value="enviar">
+                </fieldset>
+            </form>
         </div>
     </section>
     <!-- Pie de pagina -->
