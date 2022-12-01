@@ -29,6 +29,7 @@ function madreFunciones()
         echo "Validación exitosa";
 
         $correoRecuperación = $_POST['correoRecuperación'];
+        echo $correoRecuperación;
 
         $consulta = "INSERT INTO `claves`
         (`id_clave`, `correo_clave`, `clave_recuperación`, `emisión_clave`, `usada_clave`, `prueba_clave`)
