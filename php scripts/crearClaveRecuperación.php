@@ -26,10 +26,10 @@ function madreFunciones()
     echo ("Aquí está la clave de recuperación heredada de la función generadora: " . $claveRecuperaciónEmail);
 
     # Carga a base de datos
-    $consulta = "SELECT count(*) FROM `claves` WHERE `clave_recuperación`=$claveRecuperaciónEmail";
+    $consulta = "SELECT * FROM `claves` WHERE `clave_recuperación`=$claveRecuperaciónEmail";
     $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
 
-    #if ($resultado == true) {
+    if ($resultado = null) {
         # Envío de email y clave validada
         echo "Validación exitosa";
 
@@ -51,9 +51,9 @@ function madreFunciones()
         mail($destinatario, $asunto, $mensaje, $origenDestino);
 
         echo ("Aquí ya se envió la clave... se supone");
-    #} else {
+    } else {
         echo "La clave ya existe o no pudo ser validad en la base de datos.";
-    #}
+    }
     /*
     if ($noExistenciaUsuario == false) {
 
