@@ -5,9 +5,6 @@ function madreFunciones()
     $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
     $correoRecuperación = $_POST['correoRecuperación'];
 
-    $consulta = "SELECT count(*) FROM `usuarios` WHERE `emailU` = '$correoRecuperación'";
-    $existenciaUsuario = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
-
     # Generación de clave
     function generaClave()
     {
@@ -21,7 +18,11 @@ function madreFunciones()
         return $claveRecuperación;
     }
 
-    if ($existenciaUsuario == true) {
+    $consulta = "SELECT count(*) FROM `usuarios` WHERE `emailU` = '$correoRecuperación'";
+    $existenciaUsuario = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
+
+
+    if ($existenciaUsuario == false) {
 
         $claveRecuperaciónEmail = generaClave();
         echo ("Aquí está la clave de recuperación heredada de la función generadora: " . $claveRecuperaciónEmail);
