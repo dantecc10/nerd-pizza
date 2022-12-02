@@ -2,7 +2,7 @@
 
 function madreFunciones()
 {
-    $contadorUsuario = 0;
+    $contadorUsuario = 1;
     $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
     $correoRecuperación = $_POST['correoRecuperación'];
 
@@ -29,7 +29,7 @@ function madreFunciones()
         }
     }
 
-    if ($contadorUsuario = 0) {
+    if ($contadorUsuario = 1) {
         echo "<br>Usuario no validado: $contadorUsuario<br>";
     } else {
         echo "<br>Repito, usuario validado<br>";
