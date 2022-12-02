@@ -40,10 +40,11 @@ function madreFunciones()
         echo "Validación exitosa";
 
         echo $correoRecuperación;
+        $fechaHora = date('y/m/d h:i:s');
 
         $consulta = "INSERT INTO `claves`
         (`id_clave`, `correo_clave`, `clave_recuperación`, `emisión_clave`, `usada_clave`, `prueba_clave`)
-        VALUES ('','$correoRecuperación','$claveRecuperaciónEmail','2022-11-30','0','1')";
+        VALUES ('','$correoRecuperación','$claveRecuperaciónEmail','$fechaHora','0','1')";
         $inserción = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
 
         # Sección de email
