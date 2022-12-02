@@ -2,6 +2,7 @@
 
 function madreFunciones()
 {
+    $contadorUsuario = 0;
     $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
     $correoRecuperación = $_POST['correoRecuperación'];
 
@@ -20,7 +21,6 @@ function madreFunciones()
 
     $consulta = "SELECT * FROM `usuarios` WHERE `emailU` = '$correoRecuperación'";
     $noExistenciaUsuario = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
-    $contadorUsuario = 0;
     while ($columna = mysqli_fetch_array($noExistenciaUsuario)) {
         if (($columna['emailU']) == $correoRecuperación) {
             echo "Hay una coincidencia con la cuenta de correo $correoRecuperación";
@@ -69,5 +69,6 @@ function madreFunciones()
     } else {
         echo "La clave ya existe o no pudo ser validad en la base de datos.";
     }
+    mysqli_close($conexión);
 }
 madreFunciones();
