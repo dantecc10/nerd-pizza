@@ -30,7 +30,7 @@ function madreFunciones()
     }
 
     if ($contadorUsuario = 0) {
-        echo "<br>Usuario no validado<br>";
+        echo "<br>Usuario no validado: $contadorUsuario<br>";
     } else {
         echo "<br>Repito, usuario validado<br>";
     }
