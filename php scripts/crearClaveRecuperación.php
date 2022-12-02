@@ -18,7 +18,7 @@ function madreFunciones()
         return $claveRecuperación;
     }
 
-    $consulta = "SELECT count(*) FROM `usuarios` WHERE `emailU` = '$correoRecuperación'";
+    $consulta = "SELECT * FROM `usuarios` WHERE `emailU` = '$correoRecuperación'";
     $noExistenciaUsuario = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
     $contadorUsuario = 0;
     while ($columna = mysqli_fetch_array($noExistenciaUsuario)) {
