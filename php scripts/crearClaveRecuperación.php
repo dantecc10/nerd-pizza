@@ -20,11 +20,19 @@ function madreFunciones()
 
     $consulta = "SELECT count(*) FROM `usuarios` WHERE `emailU` = '$correoRecuperación'";
     $noExistenciaUsuario = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
+    $contadorUsuario = 0;
+    while ($noExistenciaUsuario = mysqli_fetch_array($noExistenciaUsuario)) {
+        if (($noExistenciaUsuario['emailU']) == $correoRecuperación) {
+            echo "Hay una coincidencia con la cuenta de correo $correoRecuperación";
+            echo "<br>Usuario validado<br>";
+            $contadorUsuario++;
+        }
+    }
 
-    if ($noExistenciaUsuario = false) {
-        echo "<br>Usuario validado<br>";
-    } else {
+    if ($contadorUsuario = 0) {
         echo "<br>Usuario no validado<br>";
+    } else {
+        echo "<br>Repito, usuario validado<br>";
     }
 
 
