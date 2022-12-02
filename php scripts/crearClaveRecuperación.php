@@ -21,7 +21,7 @@ function madreFunciones()
     $consulta = "SELECT count(*) FROM `usuarios` WHERE `emailU` = '$correoRecuperación'";
     $noExistenciaUsuario = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
 
-    if ($noExistenciaUsuario = true) {
+    if ($noExistenciaUsuario = false) {
         echo "<br>Usuario validado<br>";
     } else {
         echo "<br>Usuario no validado<br>";
