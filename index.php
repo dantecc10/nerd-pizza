@@ -29,37 +29,10 @@ include "php scripts/InicioSesión.php";
 
 <body class="text-body" style="background-color: #969A97;">
     <!-- Login -->
-    <div id="DivInicioSesión" class="modal">
-        <form class="modal-content animate myForm" action="" method="post">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('DivInicioSesión').style.display='none'" class="CerrarCuadro" title="Close Modal">×</span>
-                <img src="assets/img/Nerd-Pizza.png" alt="Avatar" class="avatar">
-            </div>
+    <?php
+    include "modalLogin.php";
+    ?>
 
-            <div class="container">
-                <label for="Usuario"><b>Usuario</b></label>
-                <input type="text" placeholder="Usuario de Nerd Pizza*" name="Usuario" required="">
-                <br>
-                <label for="Contraseña"><b>Contraseña</b></label>
-                <input type="password" placeholder="Ingresa tu contraseña*" name="Contraseña" required="">
-
-                <input type="hidden" name="latitude" value="">
-                <input type="hidden" name="longitude" value="">
-
-                <input type="submit" name="InicioSesión" value="Iniciar sesión" class="IniciarSesión DecoradoBotón">
-
-                <label>
-                    <input type="checkbox" checked="checked" name="remember">Recordarme
-                </label>
-
-            </div>
-
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('DivInicioSesión').style.display='none'" class="BotónCancelar DecoradoBotón">Cancel</button>
-                <span class="psw">¿Olvidaste tu <a href="formPruebaRecuperar.php">contraseña</a>?</span>
-            </div>
-        </form>
-    </div>
     <section class="py-4 py-xl-5" style="background-color: #F6CD13;">
         <!-- Header -->
         <nav class="navbar navbar-light navbar-expand-md py-3">
