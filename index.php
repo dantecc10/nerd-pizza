@@ -76,7 +76,7 @@ include "php scripts/InicioSesión.php";
                         <li class="nav-item"></li>
                         <li class="nav-item"></li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="document.getElementById('DivInicioSesión').style.display='absolute'"> <i class="far fa-user" style="font-size: 18px;"></i>&nbsp;Iniciar sesión</a>
+                            <a class="nav-link" onclick="document.getElementById('DivInicioSesión').style.display='absolute'"> <i class="far fa-user" style="font-size: 18px;"></i>&nbsp;Iniciar sesión</a>
                         </li>
                     </ul>
                     <div class="dropdown show">
