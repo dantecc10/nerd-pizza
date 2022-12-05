@@ -33,15 +33,15 @@ include "php scripts/InicioSesión.php";
         <form class="modal-content animate myForm" action="" method="post">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('DivInicioSesión').style.display='none'" class="CerrarCuadro" title="Close Modal">×</span>
-                <img src="IMG/img_avatar2.png" alt="Avatar" class="avatar">
+                <img src="assets/img/Nerd-Pizza.png" alt="Avatar" class="avatar">
             </div>
 
             <div class="container">
                 <label for="Usuario"><b>Usuario</b></label>
-                <input type="text" placeholder="usuario@prog5a*" name="Usuario" required="">
+                <input type="text" placeholder="Usuario de Nerd Pizza*" name="Usuario" required="">
                 <br>
                 <label for="Contraseña"><b>Contraseña</b></label>
-                <input type="password" placeholder="Contraseña (@prog5a!!)*" name="Contraseña" required="">
+                <input type="password" placeholder="Ingresa tu contraseña*" name="Contraseña" required="">
 
                 <input type="hidden" name="latitude" value="">
                 <input type="hidden" name="longitude" value="">
