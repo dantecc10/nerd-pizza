@@ -45,8 +45,7 @@
                 <p>
                     <label> Escriba su nombre:
                         <input type="text" name="nombre">
-                    </label>
-                    
+                    </label>                    
                 </p>
                 <label for="correoRecuperación">Ingrese su correo electrónico:</label><br>
                 <input type="email" name="correoRecuperación" id="InputMail">
