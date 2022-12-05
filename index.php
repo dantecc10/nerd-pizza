@@ -82,7 +82,7 @@ include "php scripts/InicioSesión.php";
                         </li>
                     </ul>
                     <div class="dropdown show">
-                        <a class="dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown" href="#">MENU </a>
+                        <button class="dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown" href="#">Menú</button>
                         <div class="dropdown-menu" data-bs-popper="none">
                             <a class="dropdown-item" href="prototipo.php">Inicio</a>
                             <a class="dropdown-item" href="ingredientes.php">Ingredientes</a>
