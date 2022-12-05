@@ -78,7 +78,7 @@ include "php scripts/InicioSesión.php";
                         <li class="nav-item"></li>
                         <li class="nav-item"></li>
                         <li class="nav-item">
-                            <button class="nav-link" onclick="document.getElementById('DivInicioSesión').style.display='block'"> <i class="far fa-user" style="font-size: 18px;"></i>&nbsp;Iniciar sesión</button>
+                            <a class="nav-link" onclick="document.getElementById('DivInicioSesión').style.display='block'"> <i class="far fa-user" style="font-size: 18px;"></i>&nbsp;Iniciar sesión</a>
                         </li>
                     </ul>
                     <div class="dropdown show">
