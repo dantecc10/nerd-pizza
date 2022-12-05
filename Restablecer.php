@@ -41,14 +41,12 @@
     <section style="background-color: #F6CD13;">
         <form action="php scripts/crearClaveRecuperación.php" method="post">
             <fieldset>
-                <legend> Registro </legend>
+                <legend> Recuperación de contraseña </legend>
                 <p>
-                    <label> Escriba su nombre:
-                        <input type="text" name="nombre">
-                    </label>                    
+                    <label>Ingrese su correo electrónico:
+                        <input type="email" name="correoRecuperación" id="InputMail">
+                    </label>
                 </p>
-                <label for="correoRecuperación">Ingrese su correo electrónico:</label><br>
-                <input type="email" name="correoRecuperación" id="InputMail">
                 <input type="submit" value="Enviar">
             </fieldset>
         </form>
