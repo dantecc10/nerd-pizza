@@ -56,7 +56,7 @@ include "php scripts/InicioSesión.php";
 
             <div class="container" style="background-color:#f1f1f1">
                 <button type="button" onclick="document.getElementById('DivInicioSesión').style.display='none'" class="BotónCancelar DecoradoBotón">Cancel</button>
-                <span class="psw">¿Olvidaste tu <a href="#">contraseña</a>?</span>
+                <span class="psw">¿Olvidaste tu <a href="formPruebaRecuperar.php">contraseña</a>?</span>
             </div>
         </form>
     </div>

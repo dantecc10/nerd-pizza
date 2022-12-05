@@ -187,3 +187,10 @@ div.card.shadow-ms {
 a {
   text-decoration: none;
 }
+
+button.dropdown-toggle {
+  background-color: #e32b03;
+  color: white;
+  border-radius: 15%;
+  padding: 3%;
+}
