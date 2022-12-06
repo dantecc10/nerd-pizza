@@ -18,7 +18,7 @@ session_start();
     {
 
 
-        echo ("idUsuario: " . $_SESSION['idUsuario'] . "<br>");
+        echo ("<br>idUsuario: " . $_SESSION['idUsuario'] . "<br>");
         echo ("nombreU: " . $_SESSION['nombreU'] . "<br>");
         echo ("apellidosU: " . $_SESSION['apellidosU'] . "<br>");
         echo ("emailU: " . $_SESSION['emailU'] . "<br>");
