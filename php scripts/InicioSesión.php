@@ -17,7 +17,7 @@ if (!empty($_POST['InicioSesión'])) {
 
         # $sql = $conexión->query("INSERT INTO `localizaciones` VALUES ('', '$NombreCompleto', '$usuario', '$latitude', '$longitude')");
 
-        header("location: Acceso.php");
+        header("location: landingExitoso.php");
     } else {
         echo "<div>Acceso denegado<div>";
     }
