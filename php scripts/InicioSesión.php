@@ -19,9 +19,9 @@ if (!empty($_POST['InicioSesión'])) {
 
         header("location: landingExitoso.php");
     } else {
-        echo "<div>Acceso denegado<div>";
+        echo "<div>Acceso denegado<div> o";
+        echo "Campos vacíos";
     }
     //} else {
-    echo "Campos vacíos";
     //}
 }
