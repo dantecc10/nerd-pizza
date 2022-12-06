@@ -13,7 +13,7 @@ if (!empty($_POST['InicioSesión'])) {
         $_SESSION['apellidosU'] = $datos->apellidosU;
         $_SESSION['correoU'] = $datos->correoU;
         $_SESSION['direccionU'] = $datos->direccionU;
-        $NombreCompleto = ($_SESSION['Nombre'] . " " . $_SESSION['Apellidos']);
+        $NombreCompleto = ($_SESSION['nombreU'] . " " . $_SESSION['apellidosU']);
 
         # $sql = $conexión->query("INSERT INTO `localizaciones` VALUES ('', '$NombreCompleto', '$usuario', '$latitude', '$longitude')");
 
