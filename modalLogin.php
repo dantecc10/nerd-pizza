@@ -31,7 +31,7 @@
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
-            <span class="psw">Regitrate<a href="Registro.php"></a></span>
+            <span class="psw"><a href="Registro.php">Registrate</a></span>
         </div>
     </form>
 </div>
