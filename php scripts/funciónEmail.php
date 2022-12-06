@@ -12,3 +12,4 @@ function enviarEmail($destinatario, $remitente, $asunto, $mensaje)
 #$mensaje = '¿Ves esto?';
 #mail($para, $asunto, $mensaje, $remitente);
 #echo $para . $asunto . $mensaje . $remitente;
+?>

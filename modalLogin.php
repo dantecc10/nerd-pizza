@@ -1,10 +1,12 @@
 <div id="DivInicioSesión" class="modal">
+    <?php #nada
+    ?>
     <form class="modal-content animate myForm" action="" method="post">
         <div class="imgcontainer">
             <span onclick="document.getElementById('DivInicioSesión').style.display='none'" class="CerrarCuadro" title="Close Modal">×</span>
             <img src="assets/img/Nerd-Pizza.png" alt="Avatar" class="avatar">
         </div>
- 
+
         <div class="container">
             <label for="Usuario"><b>Usuario</b></label>
             <input type="text" placeholder="Usuario de Nerd Pizza*" name="Usuario" required="">
