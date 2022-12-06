@@ -57,7 +57,7 @@ include "php scripts/InicioSesión.php";
                     <div class="dropdown show">
                         <button class="dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown" href="#">Menú</button>
                         <div class="dropdown-menu" data-bs-popper="none">
-                            <a class="dropdown-item" href="prototipo.php">Inicio</a>
+                            <a class="dropdown-item" href="index.php">Inicio</a>
                             <a class="dropdown-item" href="ingredientes.php">Ingredientes</a>
                             <!-- <a class="dropdown-item" href="#"><button onclick="document.getElementById('DivInicioSesión').style.display='block'" class="IniciarSesión DecoradoBotón" style="width:auto;" id="BotónAbreInicioSesión">Iniciar sesión</button></a> -->
                         </div>
