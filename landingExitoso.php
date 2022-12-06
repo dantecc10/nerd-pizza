@@ -22,7 +22,7 @@ session_start();
         echo ("nombreU: " . $_SESSION['nombreU'] . "<br>");
         echo ("apellidosU: " . $_SESSION['apellidosU'] . "<br>");
         echo ("emailU: " . $_SESSION['emailU'] . "<br>");
-        echo ("contraseñaU: " . $_SESSION['contraseñaU'] . "<br>");
+        #echo ("contraseñaU: " . $_SESSION['contraseñaU'] . "<br>");
         echo ("direccionU: " . $_SESSION['direccionU'] . "<br>");
     }
     mostrarSesión();
