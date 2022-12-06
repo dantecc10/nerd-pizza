@@ -51,9 +51,9 @@ include "php scripts/InicioSesión.php";
                                 &nbsp;
                                 <?php
                                 if (!empty($_SESSION(['idUsuario']))) {
-                                    echo "Iniciar sesión";
-                                } else {
                                     echo $_SESSION['nombreU'];
+                                } else {
+                                    echo "Iniciar sesión";
                                 }
                                 ?>
                             </a>
