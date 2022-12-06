@@ -2,7 +2,7 @@
 if (!empty($_POST['InicioSesión'])) {
     session_start();
     //if (!empty($_POST['Usuario']) and !empty($_POST['Contraseña'])) {
-    $correoU = $_POST['correoU'];
+    $emailU = $_POST['emailU'];
     $contraseñaU = $_POST['contraseñaU'];
     # $latitude = $_POST['latitude'];
     # $longitude = $_POST['longitude'];
@@ -11,7 +11,7 @@ if (!empty($_POST['InicioSesión'])) {
         $_SESSION['idUsuario'] = $datos->idUsuario;
         $_SESSION['nombreU'] = $datos->nombreU;
         $_SESSION['apellidosU'] = $datos->apellidosU;
-        $_SESSION['correoU'] = $datos->correoU;
+        $_SESSION['emailU'] = $datos->emailU;
         $_SESSION['direccionU'] = $datos->direccionU;
         $NombreCompleto = ($_SESSION['nombreU'] . " " . $_SESSION['apellidosU']);
 

@@ -8,8 +8,8 @@
         </div>
 
         <div class="container">
-            <label for="correoU"><b>Email</b></label>
-            <input type="text" placeholder="Correo vinculado a Nerd Pizza*" name="correoU" required="">
+            <label for="emailU"><b>Email</b></label>
+            <input type="text" placeholder="Correo vinculado a Nerd Pizza*" name="emailU" required="">
             <br>
             <label for="contraseñaU"><b>Contraseña</b></label>
             <input type="password" placeholder="Ingresa tu contraseña*" name="contraseñaU" required="">
