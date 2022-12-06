@@ -1,6 +1,6 @@
 <?php
-session_start();
 if (!empty($_POST['InicioSesión'])) {
+    session_start();
     //if (!empty($_POST['Usuario']) and !empty($_POST['Contraseña'])) {
     $correoU = $_POST['correoU'];
     $contraseñaU = $_POST['contraseñaU'];
