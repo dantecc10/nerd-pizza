@@ -36,7 +36,7 @@ include "php scripts/InicioSesión.php";
     <section class="py-4 py-xl-5" style="background-color: #F6CD13;">
         <!-- Header -->
         <nav class="navbar navbar-light navbar-expand-md py-3">
-            <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center bs-icon me-2">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center bs-icon me-2" id="spanPizza">
                         <img src="assets/img/Nerd-Pizza.png" alt="Nerd Pizza" id="LogoNerdPizza"> </span>
                     <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z">
                     </path>
@@ -57,7 +57,6 @@ include "php scripts/InicioSesión.php";
                     <div class="dropdown show">
                         <button class="dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown" href="#">Menú</button>
                         <div class="dropdown-menu" data-bs-popper="none">
-                            <a class="dropdown-item" href="prototipo.php">Inicio</a>
                             <a class="dropdown-item" href="ingredientes.php">Ingredientes</a>
                             <!-- <a class="dropdown-item" href="#"><button onclick="document.getElementById('DivInicioSesión').style.display='block'" class="IniciarSesión DecoradoBotón" style="width:auto;" id="BotónAbreInicioSesión">Iniciar sesión</button></a> -->
                         </div>
@@ -204,7 +203,7 @@ include "php scripts/InicioSesión.php";
         <div class="row justify-content-center">
             <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last item social">
                 <div class="fw-bold d-flex align-items-center mb-2">
-                    <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center bs-icon me-2">
+                    <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center bs-icon me-2" id="spanPizza">
                         <img src="assets/img/Nerd-Pizza.png" alt="Nerd Pizza" id="LogoNerdPizza"> </span><span>Nerd Pizza</span>
                 </div>
                 <p>Con todo el sabor de la pizza con lentes...</p>

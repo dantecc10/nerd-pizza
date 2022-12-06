@@ -194,3 +194,7 @@ button.dropdown-toggle {
   border-radius: 15%;
   padding: 5%;
 }
+
+#spanPizza{
+  background-color: red;
+}
