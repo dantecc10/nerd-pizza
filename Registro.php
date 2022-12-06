@@ -15,7 +15,9 @@
     <section style="background-color: #F6CD13;">
         <!-- Header -->
         <nav class="navbar navbar-light navbar-expand-md py-3">
-            <div class="container"><a class="navbar-brand d-flex align-items-center" href="https://equipo1.prog5a.com"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="https://equipo1.prog5a.com">
+                    <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
                             <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z">
                             </path>
                             <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z">
@@ -31,7 +33,6 @@
                         <div class="dropdown-menu" style="background-color: #f62e28;padding-right: 0px;margin-right: 4px;padding-left: 0px;margin-left: -8px;">
                             <a class="dropdown-item" href="index.php">Inicio</a>
                             <a class="dropdown-item" href="ingredientes.php">Ingredientes</a>
-                            <a class="dropdown-item" href="Login.html">Inicio de sesión</a>
                         </div>
                     </div>
                 </div>
@@ -41,39 +42,39 @@
         <div align="center">
             <form method="post" action="php scripts\registroU.php">
                 <fieldset>
-                <legend> Registro </legend>
-                <p>
-                    <label> Escriba su nombre:
-                    <input type="text" name="nombre">
-                    </label>
-                </p>
-                <p>
-                    <label> Escriba su apellido:
-                    <input type="text" name="apellido">
-                    </label>
-                </p>
-                <p>
-                    <label>Escriba su correo electrónico:
-                    <input type="text" name="email">
-                    </label>
-                </p>
-                <p>
-                    <label>Escriba una contraseña:
-                    <input type="password" name="pass">
-                    </label>
-                </p>
-                <p>
-                    <label>Escriba de nuevo la contraseña:
-                    <input type="password" name="pass2">
-                    </label>
-                </p>
-                <p>
-                    <label>Escriba su direccion:
-                    <input type="text" name="direccion">
-                    </label>
-                </p>
-                <script src="assets\js\validadarContraseña.js"></script>
-                <input type="submit" value="enviar">
+                    <legend> Registro </legend>
+                    <p>
+                        <label> Escriba su nombre:
+                            <input type="text" name="nombre">
+                        </label>
+                    </p>
+                    <p>
+                        <label> Escriba su apellido:
+                            <input type="text" name="apellido">
+                        </label>
+                    </p>
+                    <p>
+                        <label>Escriba su correo electrónico:
+                            <input type="text" name="email">
+                        </label>
+                    </p>
+                    <p>
+                        <label>Escriba una contraseña:
+                            <input type="password" name="pass">
+                        </label>
+                    </p>
+                    <p>
+                        <label>Escriba de nuevo la contraseña:
+                            <input type="password" name="pass2">
+                        </label>
+                    </p>
+                    <p>
+                        <label>Escriba su direccion:
+                            <input type="text" name="direccion">
+                        </label>
+                    </p>
+                    <script src="assets\js\validadarContraseña.js"></script>
+                    <input type="submit" value="enviar">
                 </fieldset>
             </form>
         </div>

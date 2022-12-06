@@ -27,5 +27,9 @@
             <button type="button" onclick="document.getElementById('DivInicioSesión').style.display='none'" class="BotónCancelar DecoradoBotón">Cancel</button>
             <span class="psw">¿Olvidaste tu <a href="Restablecer.php">contraseña</a>?</span>
         </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <span class="psw">Regitrate<a href="Registro.php"></a></span>
+        </div>
     </form>
 </div>

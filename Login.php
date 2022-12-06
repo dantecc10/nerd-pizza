@@ -16,7 +16,7 @@
         <!-- Header -->
         <nav class="navbar navbar-light navbar-expand-md py-3">
             <div class="container"><a class="navbar-brand d-flex align-items-center" href="https://equipo1.prog5a.com">
-                    <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
+                    <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon" id="spanPizza">
                         <img src="assets/img/Nerd-Pizza.png" alt="Nerd Pizza" id="LogoNerdPizza">
                     </span><span>Nerd Pizza</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-3">
