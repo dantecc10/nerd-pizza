@@ -9,14 +9,14 @@
 
         <div class="container">
             <label for="Usuario"><b>Usuario</b></label>
-            <input type="text" placeholder="Usuario de Nerd Pizza*" name="Usuario" required="">
+            <input type="text" placeholder="Usuario de Nerd Pizza*" name="correoU" required="">
             <br>
             <label for="Contraseña"><b>Contraseña</b></label>
-            <input type="password" placeholder="Ingresa tu contraseña*" name="Contraseña" required="">
-
+            <input type="password" placeholder="Ingresa tu contraseña*" name="contraseñaU" required="">
+            <!--
             <input type="hidden" name="latitude" value="">
             <input type="hidden" name="longitude" value="">
-
+            -->
             <input type="submit" name="InicioSesión" value="Iniciar sesión" class="IniciarSesión DecoradoBotón">
 
             <label>
@@ -31,7 +31,7 @@
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
-            <span class="psw"><a href="Registro.php">Registrate</a></span>
+            <span class="psw"><a href="Registro.php">Regístrate</a></span>
         </div>
     </form>
 </div>

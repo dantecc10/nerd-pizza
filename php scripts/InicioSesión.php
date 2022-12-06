@@ -2,19 +2,20 @@
 session_start();
 if (!empty($_POST['InicioSesión'])) {
     //if (!empty($_POST['Usuario']) and !empty($_POST['Contraseña'])) {
-    $usuario = $_POST['Usuario'];
-    $contraseña = $_POST['Contraseña'];
-    $latitude = $_POST['latitude'];
-    $longitude = $_POST['longitude'];
+    $correoU = $_POST['correoU'];
+    $contraseñaU = $_POST['contraseñaU'];
+    # $latitude = $_POST['latitude'];
+    # $longitude = $_POST['longitude'];
     $sql = $conexión->query("SELECT * FROM `usuarios` WHERE `emailU`='$emailU' AND `contraseñaU`='$contraseñaU'");
     if ($datos = $sql->fetch_object()) {
-        $_SESSION['ID'] = $datos->ID;
-        $_SESSION['Nombre'] = $datos->Nombre;
-        $_SESSION['Apellidos'] = $datos->Apellidos;
-        $_SESSION['Usuario'] = $datos->Usuario;
+        $_SESSION['idUsuario'] = $datos->idUsuario;
+        $_SESSION['nombreU'] = $datos->nombreU;
+        $_SESSION['apellidosU'] = $datos->apellidosU;
+        $_SESSION['correoU'] = $datos->correoU;
+        $_SESSION['direccionU'] = $datos->direccionU;
         $NombreCompleto = ($_SESSION['Nombre'] . " " . $_SESSION['Apellidos']);
 
-        $sql = $conexión->query("INSERT INTO `localizaciones` VALUES ('', '$NombreCompleto', '$usuario', '$latitude', '$longitude')");
+        # $sql = $conexión->query("INSERT INTO `localizaciones` VALUES ('', '$NombreCompleto', '$usuario', '$latitude', '$longitude')");
 
         header("location: Acceso.php");
     } else {
@@ -24,4 +25,3 @@ if (!empty($_POST['InicioSesión'])) {
     echo "Campos vacíos";
     //}
 }
-?>
