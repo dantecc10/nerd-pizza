@@ -9,3 +9,4 @@
     if ($fechaActual < $navidad) {
         echo "aun no es navidad";
     }
+?>
