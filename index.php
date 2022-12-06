@@ -49,12 +49,12 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
                             <a class="nav-link" onclick="document.getElementById('DivInicioSesión').style.display='block'"> <i class="far fa-user" style="font-size: 18px;"></i>
                                 &nbsp;
                                 <?php
-                                if (!empty($_SESSION(['idUsuario']))) {
-                                    echo $_SESSION['nombreU'];
-                                } else {
-                                    echo "Iniciar sesión";
-                                }
-                                ?>
+                                #if (!empty($_SESSION(['idUsuario']))) {
+                                #    echo $_SESSION['nombreU'];
+                                #} else {
+                                #    echo "Iniciar sesión";
+                                #}
+                                ?>Iniciar sesión
                             </a>
                         </li>
                     </ul>
