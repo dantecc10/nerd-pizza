@@ -66,45 +66,19 @@ include "php scripts/InicioSesión.php";
             </div>
         </nav>
         <!-- Contenido -->
-        <div align="center">
-            <form method="post" action="php scripts\registroU.php">
+        <section style="background-color: #F6CD13;">
+            <form action="php scripts/crearClaveRecuperación.php" method="post">
                 <fieldset>
-                    <legend> Registro </legend>
+                    <legend> Recuperación de contraseña </legend>
                     <p>
-                        <label> Escriba su nombre:
-                            <input type="text" name="nombre">
+                        <label>Ingrese su correo electrónico:
+                            <input type="email" name="correoRecuperación" id="InputMail">
                         </label>
                     </p>
-                    <p>
-                        <label> Escriba su apellido:
-                            <input type="text" name="apellido">
-                        </label>
-                    </p>
-                    <p>
-                        <label>Escriba su correo electrónico:
-                            <input type="text" name="email">
-                        </label>
-                    </p>
-                    <p>
-                        <label>Escriba una contraseña:
-                            <input type="password" name="pass">
-                        </label>
-                    </p>
-                    <p>
-                        <label>Escriba de nuevo la contraseña:
-                            <input type="password" name="pass2">
-                        </label>
-                    </p>
-                    <p>
-                        <label>Escriba su direccion:
-                            <input type="text" name="direccion">
-                        </label>
-                    </p>
-                    <script src="assets\js\validadarContraseña.js"></script>
-                    <input type="submit" value="enviar">
+                    <input type="submit" value="Enviar">
                 </fieldset>
             </form>
-        </div>
+        </section>
     <!-- Pie de pagina -->
     <div class="container text-center py-4 py-lg-5" style="background-color: #969A97;">
         <div class="row justify-content-center">
@@ -161,18 +135,3 @@ include "php scripts/InicioSesión.php";
 </body>
 
 </html>
-
-
-<section style="background-color: #F6CD13;">
-        <form action="php scripts/crearClaveRecuperación.php" method="post">
-            <fieldset>
-                <legend> Recuperación de contraseña </legend>
-                <p>
-                    <label>Ingrese su correo electrónico:
-                        <input type="email" name="correoRecuperación" id="InputMail">
-                    </label>
-                </p>
-                <input type="submit" value="Enviar">
-            </fieldset>
-        </form>
-    </section>

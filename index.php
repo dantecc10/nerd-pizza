@@ -204,7 +204,7 @@ include "php scripts/InicioSesión.php";
         <div class="row justify-content-center">
             <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last item social">
                 <div class="fw-bold d-flex align-items-center mb-2">
-                    <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center bs-icon me-2">
+                    <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center bs-icon me-2" id="spanPizza">
                         <img src="assets/img/Nerd-Pizza.png" alt="Nerd Pizza" id="LogoNerdPizza"> </span><span>Nerd Pizza</span>
                 </div>
                 <p>Con todo el sabor de la pizza con lentes...</p>
