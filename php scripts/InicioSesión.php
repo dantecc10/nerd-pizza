@@ -6,7 +6,7 @@ if (!empty($_POST['InicioSesión'])) {
     $contraseña = $_POST['Contraseña'];
     $latitude = $_POST['latitude'];
     $longitude = $_POST['longitude'];
-    $sql = $conexión->query("SELECT * FROM `usuarios_prog5a` WHERE `Usuario`='$usuario' AND `Contraseña`='$contraseña'");
+    $sql = $conexión->query("SELECT * FROM `usuarios` WHERE `emailU`='$emailU' AND `contraseñaU`='$contraseñaU'");
     if ($datos = $sql->fetch_object()) {
         $_SESSION['ID'] = $datos->ID;
         $_SESSION['Nombre'] = $datos->Nombre;
