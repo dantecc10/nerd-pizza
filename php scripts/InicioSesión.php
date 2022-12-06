@@ -6,6 +6,8 @@ if (!empty($_POST['InicioSesión'])) {
     $contraseñaU = $_POST['contraseñaU'];
     # $latitude = $_POST['latitude'];
     # $longitude = $_POST['longitude'];
+    $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
+
     $sql = $conexión->query("SELECT * FROM `usuarios` WHERE `emailU`='$emailU' AND `contraseñaU`='$contraseñaU'");
     if ($datos = $sql->fetch_object()) {
         $_SESSION['idUsuario'] = $datos->idUsuario;
