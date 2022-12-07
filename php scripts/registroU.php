@@ -14,6 +14,6 @@
             $sql = $conexión->query ("INSERT INTO usuarios VALUES ('','$nombre','$apellido','$email','$pass','$direccion');");
         } 
     else{
-        echo '<p>Por favor, complete el <a href="NERD-PIZZA/Registro.php">Registro</a></p>';
+        echo '<p>Por favor, complete el <a href="Registro.php">Registro</a></p>';
     }
 ?>
