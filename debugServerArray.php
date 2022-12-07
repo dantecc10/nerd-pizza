@@ -1,7 +1,12 @@
 <?php
 setcookie("Sesión", "Iniciada", time() + 24 * 3600, "/", "equipo1.prog5a.com");
 
-echo ($_COOKIE['Sesión'] . "<br>");
+
+if ($_COOKIE['Sesión'] != '') {
+    echo "pues no se imprime pero fue validada";
+} else {
+    echo "No se ha podido validar el contenido de la cookie";
+}
 
 
 echo ($_SERVER['PHP_SELF'] . "<br>");
