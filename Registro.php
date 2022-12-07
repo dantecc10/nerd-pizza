@@ -67,37 +67,37 @@ include "php scripts/InicioSesión.php";
         </nav>
         <!-- Contenido -->
         <div align="center">
-            <form method="post" action="php scripts\registroU.php">
+            <form method="post" action="php scripts\registroU.php" name="formRegistro">
                 <fieldset>
                     <legend> Registro </legend>
                     <p>
                         <label> Escriba su nombre:
-                            <input type="text" name="nombre">
+                            <input type="text" name="nombre" required="">
                         </label>
                     </p>
                     <p>
                         <label> Escriba su apellido:
-                            <input type="text" name="apellido">
+                            <input type="text" name="apellido" required="">
                         </label>
                     </p>
                     <p>
                         <label>Escriba su correo electrónico:
-                            <input type="text" name="email">
+                            <input type="text" name="email" required="">
                         </label>
                     </p>
                     <p>
                         <label>Escriba una contraseña:
-                            <input type="password" name="pass">
+                            <input type="password" name="pass" required="">
                         </label>
                     </p>
                     <p>
                         <label>Escriba de nuevo la contraseña:
-                            <input type="password" name="pass2">
+                            <input type="password" name="pass2" required="">
                         </label>
                     </p>
                     <p>
                         <label>Escriba su direccion:
-                            <input type="text" name="direccion">
+                            <input type="text" name="direccion" required="">
                         </label>
                     </p>
                     <script src="assets\js\validadarContraseña.js"></script>
