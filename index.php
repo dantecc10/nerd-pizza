@@ -1,5 +1,6 @@
 <?php
 session_start();
+#setcookie($país, $_SERVER['country']);
 
 require 'php scripts/config.php';
 require 'php scripts/conexión_pdo.php';
@@ -42,7 +43,15 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
                         <li class="nav-item"></li>
                         <li class="nav-item"></li>
                         <li class="nav-item">
-                            <a class="nav-link" onclick="document.getElementById('DivInicioSesión').style.display='block'"> <i class="far fa-user" style="font-size: 18px;"></i>
+                            <a class="nav-link" <?php
+                                                $comilla = '"';
+                                                if ($_SESSION['idUsuario'] != "") {
+                                                    echo ("onclick=" . $comilla . "document.getElementById('DivInicioSesión').style.display='block'" . $comilla);
+                                                } else {
+                                                    echo "href='MiCuenta.php'";
+                                                }
+
+                                                ?>> <i class="far fa-user" style="font-size: 18px;"></i>
                                 &nbsp; <?php
                                         if ($_SESSION['idUsuario'] != "") {
                                             echo $_SESSION['nombreU'];
@@ -56,7 +65,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
                         <button class="dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown" href="#">Menú</button>
                         <div class="dropdown-menu" data-bs-popper="none">
                             <a class="dropdown-item" href="ingredientes.php">Ingredientes</a>
-                            <!-- <a class="dropdown-item" href="#"><button onclick="document.getElementById('DivInicioSesión').style.display='block'" class="IniciarSesión DecoradoBotón" style="width:auto;" id="BotónAbreInicioSesión">Iniciar sesión</button></a> -->
+                            <!-- <a class="dropdown-item" href="#"><button onclick="document.getElementById(' DivInicioSesión').style.display='block'" class=" IniciarSesión DecoradoBotón" style="width:auto;" id="BotónAbreInicioSesión">Iniciar sesión</button></a> -->
                         </div>
                     </div>
                 </div>
