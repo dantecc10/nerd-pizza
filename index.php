@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 #setcookie($país, $_SERVER['country']);
 
 require 'php scripts/config.php';
