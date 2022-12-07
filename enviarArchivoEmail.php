@@ -13,8 +13,9 @@ $subject = 'Correo electrónico PHP con datos adjuntos de BaulPHP';
 $file = "Manifiesto del Partido Comunista (Carlos Marx y Federico Engels) (z-lib.org).pdf";
 
 //Contenido del Email
-$htmlContent = '<h1>Hola Jeremías</h1>
-    <p>La destitución y detención de Pedro Castillo me dejó con mucha furia comunista, así que decidí enviarte el Manifiesto del Partido Comunista.</p>';
+$htmlContent = "<h1>Hola Jeremías</h1>
+    <p>La destitución y detención de Pedro Castillo me dejó con mucha furia comunista, así que decidí enviarte el Manifiesto del Partido Comunista.</p>
+    <p>Este correo fue enviado para tí desde el server, a través de un nuevo script que puedes comprobar desde <a href='equipo1.prog5a.com/enviarArchivoEmail.php'>este link</a>. Podremos usarlo para muchas cosas, de momento <i>no le menies</i></p>";
 
 //Encabezado para información del remitente
 $headers = "De: $fromName" . " <" . $from . ">";
