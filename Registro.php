@@ -98,7 +98,7 @@ include "php scripts/InicioSesión.php";
                         </label>
                     </p>
                     <script src="assets\js\validadarContraseña.js"></script>
-                    <input type="submit" value="enviar">
+                    <input type="submit" value="enviar" id="btnRegistro">
                 </fieldset>
             </form>
         </div>
