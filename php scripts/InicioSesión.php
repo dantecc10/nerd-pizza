@@ -1,27 +1,30 @@
 <?php
-session_start();
 if (!empty($_POST['InicioSesión'])) {
+    session_start();
     //if (!empty($_POST['Usuario']) and !empty($_POST['Contraseña'])) {
-    $usuario = $_POST['Usuario'];
-    $contraseña = $_POST['Contraseña'];
-    $latitude = $_POST['latitude'];
-    $longitude = $_POST['longitude'];
-    $sql = $conexión->query("SELECT * FROM `usuarios_prog5a` WHERE `Usuario`='$usuario' AND `Contraseña`='$contraseña'");
+    $emailU = $_POST['emailU'];
+    $contraseñaU = $_POST['contraseñaU'];
+    # $latitude = $_POST['latitude'];
+    # $longitude = $_POST['longitude'];
+    $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
+
+    $sql = $conexión->query("SELECT * FROM `usuarios` WHERE `emailU`='$emailU' AND `contraseñaU`='$contraseñaU'");
     if ($datos = $sql->fetch_object()) {
-        $_SESSION['ID'] = $datos->ID;
-        $_SESSION['Nombre'] = $datos->Nombre;
-        $_SESSION['Apellidos'] = $datos->Apellidos;
-        $_SESSION['Usuario'] = $datos->Usuario;
-        $NombreCompleto = ($_SESSION['Nombre'] . " " . $_SESSION['Apellidos']);
+        $_SESSION['idUsuario'] = $datos->idUsuario;
+        $_SESSION['nombreU'] = $datos->nombreU;
+        $_SESSION['apellidosU'] = $datos->apellidosU;
+        $_SESSION['emailU'] = $datos->emailU;
+        $_SESSION['direccionU'] = $datos->direccionU;
+        $NombreCompleto = ($_SESSION['nombreU'] . " " . $_SESSION['apellidosU']);
+        $_SESSION['NombreCompleto'] = ($_SESSION['nombreU'] . " " . $_SESSION['apellidosU']);
 
-        $sql = $conexión->query("INSERT INTO `localizaciones` VALUES ('', '$NombreCompleto', '$usuario', '$latitude', '$longitude')");
+        # $sql = $conexión->query("INSERT INTO `localizaciones` VALUES ('', '$NombreCompleto', '$usuario', '$latitude', '$longitude')");
 
-        header("location: Acceso.php");
+        header("location: ../landingExitoso.php");
     } else {
-        echo "<div>Acceso denegado<div>";
+        echo "<div>Acceso denegado<div> o";
+        echo "Campos vacíos";
     }
     //} else {
-    echo "Campos vacíos";
     //}
 }
-?>
