@@ -1,6 +1,6 @@
 <?php
 //Recipiente
-$to = 'dantecc10@gmail.com';
+$to = 'jeremy.hdez9@gmail.com';
 
 //remitente del correo
 $from = 'nerdpizza@equipo1.prog5a.com';
