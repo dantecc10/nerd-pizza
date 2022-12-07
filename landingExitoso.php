@@ -16,8 +16,6 @@ session_start();
     <?php
     function mostrarSesión()
     {
-
-
         echo ("<br>idUsuario: " . $_SESSION['idUsuario'] . "<br>");
         echo ("nombreU: " . $_SESSION['nombreU'] . "<br>");
         echo ("apellidosU: " . $_SESSION['apellidosU'] . "<br>");
@@ -26,7 +24,9 @@ session_start();
         echo ("direccionU: " . $_SESSION['direccionU'] . "<br>");
     }
     mostrarSesión();
+    echo ("Index: <a href='index.php'>index.php</a>");
     ?>
+
 
 </body>
 
