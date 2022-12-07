@@ -1,11 +1,9 @@
 <?php
 session_start();
-$conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
-include "php scripts/InicioSesión.php";
 
-#if (!empty($_SESSION(['idUsuario']))) {
-#} else {
-#}
+require 'php scripts/config.php';
+require 'php scripts/conexión_pdo.php';
+$conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
 ?>
 
 <!DOCTYPE html>
@@ -48,13 +46,21 @@ include "php scripts/InicioSesión.php";
                         <li class="nav-item"></li>
                         <li class="nav-item"></li>
                         <li class="nav-item">
-                            <a class="nav-link" onclick="document.getElementById('DivInicioSesión').style.display='block'"> <i class="far fa-user" style="font-size: 18px;"></i>&nbsp;Iniciar sesión</a>
+                            <a class="nav-link" onclick="document.getElementById('DivInicioSesión').style.display='block'"> <i class="far fa-user" style="font-size: 18px;"></i>
+                                &nbsp;
+                                <?php
+                                #if (!empty($_SESSION(['idUsuario']))) {
+                                #    echo $_SESSION['nombreU'];
+                                #} else {
+                                #    echo "Iniciar sesión";
+                                #}
+                                ?>Iniciar sesión
+                            </a>
                         </li>
                     </ul>
                     <div class="dropdown show">
                         <button class="dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown" href="#">Menú</button>
                         <div class="dropdown-menu" data-bs-popper="none">
-                            <a class="dropdown-item" href="index.php">Inicio</a>
                             <a class="dropdown-item" href="ingredientes.php">Ingredientes</a>
                             <!-- <a class="dropdown-item" href="#"><button onclick="document.getElementById('DivInicioSesión').style.display='block'" class="IniciarSesión DecoradoBotón" style="width:auto;" id="BotónAbreInicioSesión">Iniciar sesión</button></a> -->
                         </div>
@@ -102,6 +108,7 @@ include "php scripts/InicioSesión.php";
                 </fieldset>
             </form>
         </div>
+    </section>
     <!-- Pie de pagina -->
     <div class="container text-center py-4 py-lg-5" style="background-color: #969A97;">
         <div class="row justify-content-center">
