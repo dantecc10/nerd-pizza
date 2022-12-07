@@ -10,11 +10,11 @@ $fromName = 'Nerd Pizza';
 $subject = 'Correo electrónico PHP con datos adjuntos de BaulPHP';
 
 //Ruta del archivo adjunto
-$file = "mipdf.pdf";
+$file = "Manifiesto del Partido Comunista (Carlos Marx y Federico Engels) (z-lib.org).pdf";
 
 //Contenido del Email
-$htmlContent = '<h1>Correo electrónico PHP con datos adjuntos de BaulPHP</h1>
-    <p>Este correo electrónico ha enviado desde script PHP con datos adjuntos.</p>';
+$htmlContent = '<h1>Hola Jeremías</h1>
+    <p>La destitución y detención de Pedro Castillo me dejó con mucha furia comunista, así que decidí enviarte el Manifiesto del Partido Comunista.</p>';
 
 //Encabezado para información del remitente
 $headers = "De: $fromName" . " <" . $from . ">";
