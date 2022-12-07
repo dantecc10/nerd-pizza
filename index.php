@@ -47,8 +47,12 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
                         <li class="nav-item"></li>
                         <li class="nav-item">
                             <a class="nav-link" onclick="document.getElementById('DivInicioSesión').style.display='block'"> <i class="far fa-user" style="font-size: 18px;"></i>
-                                &nbsp;                              <?php
-                                if ($_SESSION['idUsuario'] != "") {echo $_SESSION['nombreU'];} else {echo "Iniciar sesión";}?>Iniciar sesión
+                                &nbsp; <?php
+                                        if ($_SESSION['idUsuario'] != "") {
+                                            echo $_SESSION['nombreU'];
+                                        } else {
+                                            echo "Iniciar sesión";
+                                        } ?>
                             </a>
                         </li>
                     </ul>
