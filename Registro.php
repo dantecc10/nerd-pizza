@@ -104,7 +104,7 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
                         </label>
                     </p>
                     <script src="assets\js\validadarContraseña.js"></script>
-                    <input type="submit" value="enviar" id="btnRegistro">
+                    <input type="submit" value="enviar" id="button.dropdown-toggle">
                 </fieldset>
             </form>
         </div>
