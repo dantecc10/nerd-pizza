@@ -9,6 +9,14 @@ if ($_COOKIE['Sesión'] != '') {
 }
 
 
+
+if ($_COOKIE['Inexistente'] != '') {
+    echo "Cookie inexistente por validar";
+} else {
+    echo "Un valor, o de plano no detecta";
+}
+
+
 echo ($_SERVER['PHP_SELF'] . "<br>");
 echo ($_SERVER['SERVER_ADDR'] . "<br>");
 echo ($_SERVER['SERVER_NAME'] . "<br>");

@@ -18,6 +18,8 @@ if (!empty($_POST['InicioSesión'])) {
         $NombreCompleto = ($_SESSION['nombreU'] . " " . $_SESSION['apellidosU']);
         $_SESSION['NombreCompleto'] = ($_SESSION['nombreU'] . " " . $_SESSION['apellidosU']);
 
+        
+
         # $sql = $conexión->query("INSERT INTO `localizaciones` VALUES ('', '$NombreCompleto', '$usuario', '$latitude', '$longitude')");
 
         header("location: ../landingExitoso.php");
