@@ -46,9 +46,9 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
                             <a class="nav-link" <?php
                                                 $comilla = '"';
                                                 if ($_SESSION['idUsuario'] != "") {
-                                                    echo ("onclick=" . $comilla . "document.getElementById('DivInicioSesión').style.display='block'" . $comilla);
-                                                } else {
                                                     echo "href='MiCuenta.php'";
+                                                } else {
+                                                    echo ("onclick=" . $comilla . "document.getElementById('DivInicioSesión').style.display='block'" . $comilla);
                                                 }
 
                                                 ?>> <i class="far fa-user" style="font-size: 18px;"></i>
