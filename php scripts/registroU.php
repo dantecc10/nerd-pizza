@@ -12,6 +12,8 @@
             $pass = $_POST["pass"];
             $direccion = $_POST["direccion"];
             $sql = $conexión->query ("INSERT INTO usuarios VALUES ('','$nombre','$apellido','$email','$pass','$direccion');");
+
+            header("location: index.php");
         } 
     else{
         echo '<p>Por favor, complete el <a href="Registro.php">Registro</a></p>';
