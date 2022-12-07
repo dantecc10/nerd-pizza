@@ -200,7 +200,8 @@ button.dropdown-toggle {
 }
 
 #btnRegistro{
-  background-color: #04AA6D;
+  background-color: #e32b03;
   color: white;
-  border: none;
+  border-radius: 15%;
+  padding: 5%;
 }
