@@ -4,7 +4,7 @@
     <form class="modal-content animate myForm" action="php scripts/InicioSesión.php" method="post">
         <div class="imgcontainer">
             <span onclick="document.getElementById('DivInicioSesión').style.display='none'" class="CerrarCuadro" title="Close Modal">×</span>
-            <img src="assets/img/Nerd-Pizza.png" alt="Avatar" class="avatar">
+            <img src="https://equipo1.prog5a.com/assets/img/Nerd-Pizza.png" alt="Avatar" class="avatar">
         </div>
 
         <div class="container">
