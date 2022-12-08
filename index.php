@@ -43,24 +43,25 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"></li>
                         <li class="nav-item"></li>
-                        <li class="nav-item">
-                            <a class="nav-link" <?php
-                                                $comilla = '"';
-                                                if ($_SESSION['idUsuario'] != "") {
-                                                    echo "href='MiCuenta.php'";
-                                                } else {
-                                                    echo ("onclick=" . $comilla . "document.getElementById('DivInicioSesión').style.display='block'" . $comilla);
-                                                }
+                        <?php
+                        echo ("<li class='nav-item'>
+                            <a class='nav-link'");
+                        $comilla = '"';
+                        if ($_SESSION['idUsuario'] != "") {
+                            echo "href='MiCuenta.php'";
+                        } else {
+                            echo ("onclick=" . $comilla . "document.getElementById('DivInicioSesión').style.display='block'" . $comilla);
+                        }
+                        ?>><i class="far fa-user" style="font-size: 18px;"></i>
+                        &nbsp;
+                        <?php
+                        if ($_SESSION['idUsuario'] != "") {
+                            echo ($_SESSION['nombreU'] . "</a></li>");
+                            echo ("<li class='nav-item'><a class='nav-link' href='php scripts/CerrarSesión.php'></a></li>");
+                        } else {
+                            echo "Iniciar sesión</a></li>";
+                        } ?>
 
-                                                ?>> <i class="far fa-user" style="font-size: 18px;"></i>
-                                &nbsp; <?php
-                                        if ($_SESSION['idUsuario'] != "") {
-                                            echo $_SESSION['nombreU'];
-                                        } else {
-                                            echo "Iniciar sesión";
-                                        } ?>
-                            </a>
-                        </li>
                     </ul>
                     <div class="dropdown show">
                         <button class="dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown" href="#">Menú</button>

@@ -18,6 +18,8 @@ if (!empty($_POST['InicioSesión'])) {
         $NombreCompleto = ($_SESSION['nombreU'] . " " . $_SESSION['apellidosU']);
         $_SESSION['NombreCompleto'] = ($_SESSION['nombreU'] . " " . $_SESSION['apellidosU']);
 
+        setcookie("Sesión", "Iniciada", time() + 24 * 3600, "/", "equipo1.prog5a.com");
+
         # $sql = $conexión->query("INSERT INTO `localizaciones` VALUES ('', '$NombreCompleto', '$usuario', '$latitude', '$longitude')");
 
         header("location: ../landingExitoso.php");
