@@ -16,8 +16,8 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Nerd Pizza</title>
-    <link rel="stylesheet" href="https://equipo1.prog5a.com/https://equipo1.prog5a.com/assets/css/NerdPizza.css">
-    <script src="https://equipo1.prog5a.com/https://equipo1.prog5a.com/assets/js/ModalInicioSesión.js"></script>
+    <link rel="stylesheet" href="https://equipo1.prog5a.com/assets/css/NerdPizza.css">
+    <script src="https://equipo1.prog5a.com/assets/js/ModalInicioSesión.js"></script>
 </head>
 
 <body class="text-body" style="background-color: #969A97;">
