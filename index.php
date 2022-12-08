@@ -244,7 +244,6 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
                 </ul>
             </div>
         </div>
-        <hr>
         <div id="RedesSociales" align="center">
             <hr id="AntesSociales">
             <script lang="JavaScript" src="https://equipo1.prog5a.com/assets/js/Redes Sociales.js"></script>
