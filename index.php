@@ -57,11 +57,13 @@ $conexión = new mysqli("localhost", "nerdpizza", "nerdpizza!", "nerdpizza");
                         <?php
                         if ($_SESSION['idUsuario'] != "") {
                             echo ($_SESSION['nombreU'] . "</a></li>");
-                            echo ("<li class='nav-item'><a class='nav-link' href='php scripts/CerrarSesión.php'>&nbsp; Cerrar sesión</a></li>");
-                        } else {
-                            echo "Iniciar sesión</a></li>";
-                        }
+                            echo ("<li class='nav-item'><a class='nav-link' href='php scripts/CerrarSesión.php'>");
                         ?>
+                            &nbsp; <?php echo ("Cerrar sesión</a></li>");
+                                } else {
+                                    echo "Iniciar sesión</a></li>";
+                                }
+                                    ?>
                     </ul>
                     <div class="dropdown show">
                         <button class="dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown" href="#">Menú</button>
