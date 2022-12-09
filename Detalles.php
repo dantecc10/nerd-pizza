@@ -19,5 +19,12 @@ switch ($categoría) {
 
 include "php scripts/Conexión.php";
 
-$consulta = "SELECT * FROM `$categoría` WHERE ";
+$consulta = "SELECT * FROM `$categoría` WHERE `$idConsulta` = `$id`";
 $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
+
+#while ($columna = mysqli_fetch_array($resultado)) {
+#    $idProducto = $columna['idPizza'];
+#    $nombrePizza = $columna['nombrePizza'];
+#    $ingredientes = $columna['ingredientes'];
+#    $fotoPizza = $columna['fotoPizza'];
+#}
