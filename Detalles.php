@@ -1,5 +1,5 @@
 <?php
-$categoría = $_GET['categoría'];
+$categoría = $_GET['categoria'];
 $id = $_GET['id'];
 
 include "php scripts/Conexión.php";
