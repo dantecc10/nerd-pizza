@@ -20,6 +20,7 @@ switch ($categoría) {
 include "php scripts/Conexión.php";
 
 $consulta = "SELECT * FROM `$categoría` WHERE `$idConsulta` = `$id`";
+echo $consulta;
 $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
 
 #while ($columna = mysqli_fetch_array($resultado)) {
