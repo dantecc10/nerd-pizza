@@ -7,7 +7,7 @@ switch ($categoría) {
         $idConsulta = "idPizza";
         break;
     case 'complementos':
-        $idConsulta = "idComplementof";
+        $idConsulta = "idComplemento";
         break;
     case 'bebidas':
         $idConsulta = "idBebidas";
