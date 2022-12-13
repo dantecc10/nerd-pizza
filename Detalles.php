@@ -21,7 +21,12 @@ include "php scripts/Conexión.php";
 
 $consulta = "SELECT * FROM `$categoría` WHERE `$idConsulta` = $id";
 echo $consulta;
-$resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
+$resultado = mysqli_query($conexión, $consulta) or die($error = true);
+
+if ($error == true) {
+    echo "Algo salió mal en la base de datos.";
+}
+
 
 #while ($columna = mysqli_fetch_array($resultado)) {
 #    $idProducto = $columna['idPizza'];
