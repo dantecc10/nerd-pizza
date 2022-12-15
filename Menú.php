@@ -80,7 +80,8 @@
         </nav>
     </section>
     <section style="background-color: #F6CD13;">
-
+        <main>
+        </main>
         <!-- Copia de tarjetas de catálogo prueba-pagos -->
         <div class='container'>
 
@@ -107,7 +108,7 @@
                             <p class='card-text'>Contiene: $ingredientes </p>
                             <div class='d-flex justify-content-between align-items-center'>
                                 <div class='btn-group'>
-                                    <a 'onclick = document.getElementById('DivInicioSesión').style.display='block' href='' class='btn btn-primary detalles-card'>Detalles</a>
+                                    <a href='details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7' class='btn btn-primary detalles-card'>Detalles</a>
                                     <select name='tamaño' class='tamaño-card'>
                                         <option for='tamaño' value='1'>Chica</option>
                                         <option for='tamaño' value='2'>Mediana</option>
@@ -147,7 +148,7 @@
                             <p class='card-text'>Contiene: $ingredientes </p>
                             <div class='d-flex justify-content-between align-items-center'>
                                 <div class='btn-group'>
-                                    <a href='Detalles.php?categoría=pizzas&id=$idPizza' class='btn btn-primary detalles-card'>Detalles</a>
+                                <a 'onclick = document.getElementById('DivInicioSesión').style.display='block' href='' class='btn btn-primary detalles-card'>Detalles</a>
                                     <select name='tamaño' class='tamaño-card'>
                                         <option for='tamaño' value='1'>Chica</option>
                                         <option for='tamaño' value='2'>Mediana</option>
@@ -181,8 +182,8 @@
                             <p class='card-text'>$descripcionC </p>
                             <div class='d-flex justify-content-between align-items-center'>
                                 <div class='btn-group'>
-                                    <a href='details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7' class='btn btn-primary detalles-card'>Detalles</a>
-                                    <!--<select name='tamaño' class='tamaño-card'>
+                                <a 'onclick = document.getElementById('DivInicioSesión').style.display='block' href='' class='btn btn-primary detalles-card'>Detalles</a>
+                                <!--<select name='tamaño' class='tamaño-card'>
                                         <option for='tamaño' value='1'>Chica</option>
                                         <option for='tamaño' value='2'>Mediana</option>
                                         <option for='tamaño' value='3'>Grande</option>
