@@ -29,11 +29,6 @@
 </head>
 
 <body class="text-body" style="background-color: #969A97;">
-
-    <!-- Login -->
-    <?php
-    include "modalLogin.php";
-    ?>
     <section style="background-color: #F6CD13;">
         <!-- Header -->
         <nav class="navbar navbar-light navbar-expand-md py-3">
@@ -135,7 +130,7 @@
             function generarCatálogoTotal($conexión)
             {
                 echo "<div class='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 align-items-center'>";
-                $comilla = '"';
+                $contador = 1;
                 $consulta = "SELECT * FROM `pizzas`";
                 $resultado = mysqli_query($conexión, $consulta) or die("Error en la consulta a la base de datos");
                 while ($columna = mysqli_fetch_array($resultado)) {
@@ -153,7 +148,7 @@
                             <p class='card-text'>Contiene: $ingredientes </p>
                             <div class='d-flex justify-content-between align-items-center'>
                                 <div class='btn-group'>
-                                <a 'onclick = . $comilla . 'document.getElementById('DivInicioSesión').style.display='block'' . $comilla href='' class='btn btn-primary detalles-card'>Detalles</a>
+                                    <a href='details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7' class='btn btn-primary detalles-card'>Detalles</a>
                                     <select name='tamaño' class='tamaño-card'>
                                         <option for='tamaño' value='1'>Chica</option>
                                         <option for='tamaño' value='2'>Mediana</option>
@@ -187,8 +182,8 @@
                             <p class='card-text'>$descripcionC </p>
                             <div class='d-flex justify-content-between align-items-center'>
                                 <div class='btn-group'>
-                                <a 'onclick = . $comilla . 'document.getElementById('DivInicioSesión').style.display='block'' . $comilla href='' class='btn btn-primary detalles-card'>Detalles</a>
-                                <!--<select name='tamaño' class='tamaño-card'>
+                                    <a href='details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7' class='btn btn-primary detalles-card'>Detalles</a>
+                                    <!--<select name='tamaño' class='tamaño-card'>
                                         <option for='tamaño' value='1'>Chica</option>
                                         <option for='tamaño' value='2'>Mediana</option>
                                         <option for='tamaño' value='3'>Grande</option>
