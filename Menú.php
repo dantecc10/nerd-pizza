@@ -29,6 +29,11 @@
 </head>
 
 <body class="text-body" style="background-color: #969A97;">
+
+    <!-- Login -->
+    <?php
+    include "modalLogin.php";
+    ?>
     <section style="background-color: #F6CD13;">
         <!-- Header -->
         <nav class="navbar navbar-light navbar-expand-md py-3">
