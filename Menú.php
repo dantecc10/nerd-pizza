@@ -108,7 +108,7 @@
                             <p class='card-text'>Contiene: $ingredientes </p>
                             <div class='d-flex justify-content-between align-items-center'>
                                 <div class='btn-group'>
-                                    <a href='details.php?id=1&amp;token=bf072c2eadbfadc7cd53cf14a205624f33357ac7' class='btn btn-primary detalles-card'>Detalles</a>
+                                    <a 'onclick = document.getElementById('DivInicioSesión').style.display='block' href='' class='btn btn-primary detalles-card'>Detalles</a>
                                     <select name='tamaño' class='tamaño-card'>
                                         <option for='tamaño' value='1'>Chica</option>
                                         <option for='tamaño' value='2'>Mediana</option>
